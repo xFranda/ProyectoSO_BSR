@@ -12,3 +12,4 @@ Planta 2: Rick & Morty (Gabriella Suarez) Conformado por: Rick and Morty: 1 Intr
 
 Planta 3: Game Of Thrones (Roy Rodriguez) Conformado por: Game of Thrones (Animada): 1 Intro, 1 Inicios, 2 cierre/plotTwist, 1 credito ➔Audiencia: 980K por capitulo
 
+HBO MAX cobra $100K por cada 150K de audiencia.
