@@ -13,9 +13,18 @@ public class Dashboard extends javax.swing.JFrame {
 
     /**
      * Creates new form Dashboard
+     * 
      */
+    
+    /*Hbo hbo;*/
     public Dashboard() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.setVisible(true);
+        /**hbo = new Hbo();
+        hbo.start();
+        */
     }
 
     /**
@@ -84,6 +93,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Dashboard().setVisible(true);
             }
