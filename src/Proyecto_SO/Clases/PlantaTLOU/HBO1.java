@@ -14,6 +14,7 @@ import java.util.concurrent.Semaphore;
 public class HBO1 {
     
     //Atributos de la clase
+    public static Drive drive[];
     
     public static int tiempoHora; // Tiempo que dura un dia en el programa
     public static int empleadosMax; // Cantidad maxima de empleados
@@ -35,10 +36,10 @@ public class HBO1 {
     public static int Plot; // Numero de partes de Plot
     
     public static int inicioDrive; //Almacenamiento de Inicios en el Drive
-    public static int introDrive; //Almacenamiento de Inicios en el Drive
-    public static int credDrive; //Almacenamiento de Inicios en el Drive
-    public static int cierreDrive; //Almacenamiento de Inicios en el Drive
-    public static int plotDrive; //Almacenamiento de Inicios en el Drive
+    public static int introDrive; //Almacenamiento de Intros en el Drive
+    public static int credDrive; //Almacenamiento de Creditos en el Drive
+    public static int cierreDrive; //Almacenamiento de Cierres en el Drive
+    public static int plotDrive; //Almacenamiento de Plot twist en el Drive
     
     public static int ensamblador; // Cantidad de ensambladores
     
@@ -82,7 +83,40 @@ public class HBO1 {
     public void inicializarValores(){
         
         //Creando los drives
+        HBO1.drive = new Drive[5];
+        HBO1.drive[0] = new Drive(inicioDrive,1);
+        HBO1.drive[1] = new Drive(introDrive,2);
+        HBO1.drive[2] = new Drive(credDrive,3);
+        HBO1.drive[3] = new Drive(cierreDrive,4);
+        HBO1.drive[4] = new Drive(plotDrive,5);
+        
     
+    }
+    
+    //Metodo para craer Hilos
+    public void crearHilo(int tipo, int numDrive){
+        switch(tipo){
+        
+            case 0:
+                //Se crea un productor de Inicio
+            
+            case 1:
+                //Se crea un productor de Intros
+            
+            case 2:
+                //Se crea un productor de cred
+            
+            case 3:
+                //Se crea un productor de Cierre
+            
+            case 4:
+                //Se crea un productor de Plot
+            
+            case 5:
+                //Se crea un Ensamblador
+            
+        
+        }
     
     }
 }
