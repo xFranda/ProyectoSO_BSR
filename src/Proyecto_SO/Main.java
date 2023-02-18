@@ -5,6 +5,9 @@
  */
 package Proyecto_SO;
 
+import java.io.FileNotFoundException;
+import java.text.ParseException;
+
 /**
  *
  * @author frand
@@ -14,7 +17,7 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)throws FileNotFoundException, InterruptedException, ParseException {
         // TODO code application logic here
         System.out.println("Hola Gebrayel");
         Dashboard dashboard = new Dashboard();
