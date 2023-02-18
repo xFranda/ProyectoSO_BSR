@@ -13,13 +13,11 @@ import java.util.concurrent.Semaphore;
 
 public abstract class Productor extends Thread {
     
-    protected Semaphore x;
     protected Semaphore ensamblador;
     protected Semaphore productor;
     protected Semaphore activo; 
 
-    public Productor(Semaphore x, Semaphore ensamblador, Semaphore productor, Semaphore activo) {
-        this.x = x;
+    public Productor(Semaphore ensamblador, Semaphore productor, Semaphore activo) {
         this.ensamblador = ensamblador;
         this.productor = productor;
         this.activo = activo; 

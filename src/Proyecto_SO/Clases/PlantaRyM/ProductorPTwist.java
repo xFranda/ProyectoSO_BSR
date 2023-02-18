@@ -4,10 +4,23 @@
  */
 package Proyecto_SO.Clases.PlantaRyM;
 
+import java.util.concurrent.Semaphore;
+
 /**
  *
  * @author Gab
  */
-public class ProductorPTwist {
+public class ProductorPTwist extends Productor{
     
+      public int dCantidadPTwist; 
+      public int cantidadMaxPTwist; 
+    
+    public ProductorPTwist(Semaphore ensamblador, Semaphore productor, Semaphore activo){
+        super(ensamblador, productor, activo);
+        
+    }
+    @Override
+    public void run(){
+        
+    }
 }

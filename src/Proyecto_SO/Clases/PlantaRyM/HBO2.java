@@ -41,6 +41,13 @@ public class HBO2 {
     public static int cantidadProdCierre; 
     public static int cantidadProdCreditos; 
     
+    //Cantidad de partes en Drive
+    public static int dCantidadIntro;
+    public static int dCantidadInicio;
+    public static int dCantidadPTwist;
+    public static int dCantidadCierre;
+    public static int dCantidadCreditos;
+   
     // Semaforos de productores
 
      static Semaphore intr = new Semaphore(1, true);
