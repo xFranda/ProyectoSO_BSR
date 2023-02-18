@@ -41,8 +41,17 @@ public class HBO2 {
     public static int cantidadProdCierre; 
     public static int cantidadProdCreditos; 
     
-    // Semaforos de Project Manager y Director
-    
+    // Semaforos de productores
+
+     static Semaphore intr = new Semaphore(1, true);
+     static Semaphore ini = new Semaphore(1, true);
+     static Semaphore ptwist = new Semaphore(1, true);
+     static Semaphore cierre = new Semaphore(1, true);
+     static Semaphore cred = new Semaphore(1, true);
+     
+     // Semaforos de PManager and Director
+     
+     
     
     
 }
