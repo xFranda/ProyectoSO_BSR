@@ -36,7 +36,13 @@ public class Updater extends Thread{
        
        dashboard.CapsTLOU.setText(String.valueOf(HBO1.CapituloTLOU));
        
-        
+       dashboard.NumEmpIntros.setText(String.valueOf(HBO1.prodIntro));
+       dashboard.NumEmpInicios.setText(String.valueOf(HBO1.prodInicio));
+       dashboard.NumEmpCred.setText(String.valueOf(HBO1.prodCred));
+       dashboard.NumEmpPlot.setText(String.valueOf(HBO1.prodPlot));
+       dashboard.NumEmpCierre.setText(String.valueOf(HBO1.prodCierre));
+               
+       
         }
     
     }

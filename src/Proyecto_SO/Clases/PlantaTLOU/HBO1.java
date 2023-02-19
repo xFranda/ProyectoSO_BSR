@@ -26,8 +26,6 @@ public class HBO1 {
     
     public static int tiempoHora; // Tiempo que dura un dia en el programa
     public static int empleadosMax; // Cantidad maxima de empleados
-    public static int directorMax;  // Cantidad maxima del director
-    public static int ProyectMax; //Cantidad maxima del Proyect Manager
     
     
     //Datos a mostrar en el Dashboard
@@ -128,6 +126,15 @@ public class HBO1 {
         cierreDrive= 55; //Almacenamiento de Cierres en el Drive
         plotDrive=40; //Almacenamiento de Plot en el Drive
         
+        empleadosMax=10;
+        prodInicio =1; // Numero de productores de Inicio
+        prodIntro=2; // Numero de productores de Intros
+        prodCred=1; // Numero de productores de Creditos
+        prodCierre=3; // Numero de productores de Cierres
+        prodPlot=1; // Numero de productores de Plot
+        ensamblador=1;//Numeros de ensambladores 
+        
+        
         vecProductoresIntro = new ProductorIntro[10];
         vecProductoresInicio = new ProductorInicio[10];
         vecProductoresCred = new ProductorCred[10];
@@ -142,15 +149,32 @@ public class HBO1 {
     //Metodo para craer Hilos y empleados
     public void Start() throws ParseException, InterruptedException{
         InicializarValores();
-        CrearDirector();
-        CrearProyectM();
-        ProductorIntro();
-        ProductorInicio();
-        ProductorCred();
-        ProductorPlot();
-        ProductorCierre();
-        ProductorCierre();
-        Ensamblador();
+        //CrearDirector();
+        //CrearProyectM();
+        if ((prodInicio+prodIntro+prodCred+prodCierre+prodPlot+ensamblador)<empleadosMax){
+            for(int i=0; i < prodIntro; i++){  //1 productores iniciales
+                ProductorIntro ();
+            }
+            for(int i=0; i < prodInicio; i++){  //1 
+                ProductorInicio ();
+            }
+            for(int i=0; i < prodCred; i++){  //1 
+                ProductorCred ();
+            }
+            for(int i=0; i < prodPlot; i++){  //1 
+                ProductorPlot ();
+            }
+            for(int i=0; i < prodCierre; i++){  //1 
+                ProductorCierre ();
+            }
+            for(int i=0; i < ensamblador; i++){  //1 
+                Ensamblador ();
+            }
+        }else{
+            
+        
+        }
+
             
         
         }
