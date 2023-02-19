@@ -149,6 +149,7 @@ public class HBO1 {
         ProductorCred();
         ProductorPlot();
         ProductorCierre();
+        ProductorCierre();
         Ensamblador();
             
         
