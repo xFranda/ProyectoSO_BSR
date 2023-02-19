@@ -15,8 +15,8 @@ public class ProductorCreditos extends Productor{
       public int dCantidadCreditos; 
       public int cantidadMaxCreditos; 
     
-    public ProductorCreditos(Semaphore ensamblador, Semaphore productor, Semaphore activo){
-        super(ensamblador, productor, activo);
+    public ProductorCreditos(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
+        super(drive, ensamblador, productor, activo);
         
     }
     @Override
