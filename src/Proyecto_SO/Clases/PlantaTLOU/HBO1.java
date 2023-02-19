@@ -142,6 +142,8 @@ public class HBO1 {
     //Metodo para craer Hilos y empleados
     public void Start() throws ParseException, InterruptedException{
         InicializarValores();
+        CrearDirector();
+        CrearProyectM();
         ProductorIntro();
         ProductorInicio();
         ProductorCred();
@@ -189,6 +191,21 @@ public class HBO1 {
        vecEnsamblador[PosVecEnsamblador].start();
        PosVecEnsamblador++;
     }
+    
+        public void CrearDirector (){
+        Director Dir = new Director(Reloj, Capitulo);
+        Dir.start();
+    }
+    
+    public void CrearProyectM (){
+        ProyectM PM = new ProyectM(Reloj);
+        PM.start();
+    }
+    /*
+    public void CrearContadoDia (){
+        Dia Dia = new Dia();
+        Dia.start();
+    }*/
     
     }
     
