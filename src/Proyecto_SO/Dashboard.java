@@ -22,6 +22,7 @@ public class Dashboard extends javax.swing.JFrame {
     
     private final Updater up;
     HBO1 hbo = new HBO1();
+    
     public Dashboard() throws FileNotFoundException, InterruptedException, ParseException{
         initComponents();
         this.up = new Updater(this, this.hbo);
@@ -29,6 +30,8 @@ public class Dashboard extends javax.swing.JFrame {
         this.setResizable(false);
         this.setVisible(true);
         hbo.Start();
+        this.up.start();
+        
         
       
     }
@@ -43,20 +46,56 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextIntros = new javax.swing.JTextField();
+        NumIntros = new javax.swing.JTextField();
+        NumInicios = new javax.swing.JTextField();
+        NumCred = new javax.swing.JTextField();
+        NumPlot = new javax.swing.JTextField();
+        NumCierre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextIntros.setText("0");
-        jTextIntros.addActionListener(new java.awt.event.ActionListener() {
+        NumIntros.setText("0");
+        NumIntros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextIntrosActionPerformed(evt);
+                NumIntrosActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextIntros, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, 50, 40));
+        jPanel1.add(NumIntros, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, 30, 30));
+
+        NumInicios.setText("0");
+        NumInicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumIniciosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumInicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 30, 30));
+
+        NumCred.setText("0");
+        NumCred.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumCredActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 160, 30, 30));
+
+        NumPlot.setText("0");
+        NumPlot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumPlotActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumPlot, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 30, 30));
+
+        NumCierre.setText("0");
+        NumCierre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumCierreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 240, 30, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         jLabel1.setRequestFocusEnabled(false);
@@ -76,9 +115,25 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextIntrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIntrosActionPerformed
+    private void NumIntrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumIntrosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextIntrosActionPerformed
+    }//GEN-LAST:event_NumIntrosActionPerformed
+
+    private void NumIniciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumIniciosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumIniciosActionPerformed
+
+    private void NumCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCredActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumCredActionPerformed
+
+    private void NumPlotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumPlotActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumPlotActionPerformed
+
+    private void NumCierreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCierreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumCierreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,8 +141,12 @@ public class Dashboard extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextField NumCierre;
+    public javax.swing.JTextField NumCred;
+    public javax.swing.JTextField NumInicios;
+    public javax.swing.JTextField NumIntros;
+    public javax.swing.JTextField NumPlot;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextIntros;
     // End of variables declaration//GEN-END:variables
 }
