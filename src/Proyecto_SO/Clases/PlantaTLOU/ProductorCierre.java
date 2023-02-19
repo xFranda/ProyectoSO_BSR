@@ -65,6 +65,9 @@ public class ProductorCierre extends Thread{
         }
         
     }
+    public void DespProdCierre() {
+        activo = false;
+    }
     
     
 }

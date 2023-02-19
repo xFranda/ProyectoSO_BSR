@@ -65,6 +65,9 @@ public class ProductorPlot extends Thread{
         }
         
     }
+    public void DespProdPlot() {
+        activo = false;
+    }
     
     
 }

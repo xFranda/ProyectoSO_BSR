@@ -63,6 +63,11 @@ public class ProductorIntro extends Thread{
             
         }
         
+       
+        
+    }
+     public void DespProdIntro() {
+        activo = false;
     }
     
     
