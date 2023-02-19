@@ -93,7 +93,7 @@ public class Ensamblador extends Thread{
                         System.out.println("Ensamblando...");
         while (activo){
             try {
-                if (HBO1.CapituloTLOU %5 == 0 && HBO1.CapituloTLOU > 1){
+                if (HBO1.CapituloTLOU %5 == 0/* && HBO1.CapituloTLOU > 1*/){
                 EIntro.acquire(1);
                 EInicio.acquire(2);
                 ECred.acquire(1);
