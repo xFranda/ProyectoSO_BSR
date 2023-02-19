@@ -20,12 +20,12 @@ public class Dashboard extends javax.swing.JFrame {
      * 
      */
     
-    private final Updater up;
+    private final Actualizador up;
     HBO1 hbo = new HBO1();
     
     public Dashboard() throws FileNotFoundException, InterruptedException, ParseException{
         initComponents();
-        this.up = new Updater(this, this.hbo);
+        this.up = new Actualizador(this, this.hbo);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
