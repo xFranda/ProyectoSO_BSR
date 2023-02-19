@@ -56,7 +56,13 @@ public class HBO2 {
      static Semaphore cierre = new Semaphore(1, true);
      static Semaphore cred = new Semaphore(1, true);
      
-     // Semaforos de PManager and Director
+     // Salarios 
+     
+     public static int salarioIntro;
+     public static int salarioInicio;
+     public static int salarioPTwist;
+     public static int salarioCierre;
+     public static int salarioCreditos;
      
      
     

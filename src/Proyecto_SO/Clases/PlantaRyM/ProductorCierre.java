@@ -21,6 +21,9 @@ public class ProductorCierre extends Productor{
     }
     @Override
     public void run(){
+        while(true){
+            
+        }
         
     }
       
