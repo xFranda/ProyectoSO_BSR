@@ -5,6 +5,10 @@
  */
 package Proyecto_SO;
 
+import Proyecto_SO.Clases.PlantaTLOU.HBO1;
+import java.io.FileNotFoundException;
+import java.text.ParseException;
+
 /**
  *
  * @author frand
@@ -16,15 +20,17 @@ public class Dashboard extends javax.swing.JFrame {
      * 
      */
     
-    /*Hbo hbo;*/
-    public Dashboard() {
+    private final Updater up;
+    HBO1 hbo = new HBO1();
+    public Dashboard() throws FileNotFoundException, InterruptedException, ParseException{
         initComponents();
+        this.up = new Updater(this, this.hbo);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
-        /**hbo = new Hbo();
-        hbo.start();
-        */
+        hbo.Start();
+        
+      
     }
 
     /**
@@ -37,16 +43,22 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jTextIntros = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextIntros.setText("0");
+        jTextIntros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextIntrosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextIntros, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, 50, 40));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(1366, 768));
-        jLabel1.setMinimumSize(new java.awt.Dimension(1366, 768));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1366, 768));
         jLabel1.setRequestFocusEnabled(false);
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -64,44 +76,18 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTextIntrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIntrosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextIntrosActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Dashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Dashboard().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextIntros;
     // End of variables declaration//GEN-END:variables
 }
