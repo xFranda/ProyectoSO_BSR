@@ -15,8 +15,8 @@ public class ProductorInicio extends Productor{
       public int dCantidadInicio;
       public int cantidadMaxInicio;
     
-    public ProductorInicio(Semaphore ensamblador, Semaphore productor, Semaphore activo){
-        super(ensamblador, productor, activo);
+    public ProductorInicio(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
+        super(drive, ensamblador, productor, activo);
         
     }
     @Override

@@ -35,18 +35,18 @@ public class HBO2 {
     
     //Cantidad maxima de Productores
     
-    public static int cantidadProdIntro; 
-    public static int cantidadProdInicio; 
-    public static int cantidadProdPTwist; 
-    public static int cantidadProdCierre; 
-    public static int cantidadProdCreditos; 
+    public int cantidadProdIntro; 
+    public int cantidadProdInicio; 
+    public int cantidadProdPTwist; 
+    public int cantidadProdCierre; 
+    public int cantidadProdCreditos; 
     
     //Cantidad de partes en Drive
-    public static int dCantidadIntro;
-    public static int dCantidadInicio;
-    public static int dCantidadPTwist;
-    public static int dCantidadCierre;
-    public static int dCantidadCreditos;
+    public int dCantidadIntro;
+    public int dCantidadInicio;
+    public int dCantidadPTwist;
+    public int dCantidadCierre;
+    public int dCantidadCreditos;
    
     // Semaforos de productores
 
@@ -56,7 +56,15 @@ public class HBO2 {
      static Semaphore cierre = new Semaphore(1, true);
      static Semaphore cred = new Semaphore(1, true);
      
-     // Semaforos de PManager and Director
+     // Salarios 
+     
+     public static int salarioIntro;
+     public static int salarioInicio;
+     public static int salarioPTwist;
+     public static int salarioCierre;
+     public static int salarioCreditos;
+     
+     
      
      
     

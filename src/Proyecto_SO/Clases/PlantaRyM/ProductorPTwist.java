@@ -15,8 +15,8 @@ public class ProductorPTwist extends Productor{
       public int dCantidadPTwist; 
       public int cantidadMaxPTwist; 
     
-    public ProductorPTwist(Semaphore ensamblador, Semaphore productor, Semaphore activo){
-        super(ensamblador, productor, activo);
+    public ProductorPTwist(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
+        super(drive, ensamblador, productor, activo);
         
     }
     @Override

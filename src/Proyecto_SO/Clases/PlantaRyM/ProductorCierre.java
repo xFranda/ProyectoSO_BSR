@@ -15,12 +15,32 @@ public class ProductorCierre extends Productor{
     public int dCantidadCierre; 
     public int cantidadMaxCierre; 
     
-    public ProductorCierre(Semaphore ensamblador, Semaphore productor, Semaphore activo){
-        super(ensamblador, productor, activo);
+    public ProductorCierre(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
+        super(drive, ensamblador, productor, activo);
         
     }
     @Override
     public void run(){
+        while(true){
+            try{
+            if(this.drive.getCantidad()< this.drive.getCapacidad()){
+                this.productor.acquire();
+                this.drive.setCantidad(this.drive.getCantidad()+1);
+                this.ensamblador.acquire();
+                
+                dCantidadCierre = this.drive.getCantidad();
+                
+                this.productor.release();
+                this.ensamblador.release();
+                                        
+                
+            }
+            }catch (Exception e){
+                    System.out.println("Dio error");
+                    }
+                
+            
+        }
         
     }
       
