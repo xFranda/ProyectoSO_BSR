@@ -11,12 +11,12 @@ import javax.swing.JFrame;
  *
  * @author frand
  */
-public class Updater extends Thread{
+public class Actualizador extends Thread{
     
     Dashboard dashboard;
     HBO1 hbo1;
     
-    public Updater(Dashboard dashboard, HBO1 hbo1){
+    public Actualizador(Dashboard dashboard, HBO1 hbo1){
         this.dashboard = dashboard;
         this.hbo1 = hbo1;
         
