@@ -13,6 +13,11 @@ import java.util.concurrent.Semaphore;
  */
 public class HBO2 {
     
+    
+    //Cantidad episodios 
+    
+    public int capitulos; 
+    
     // Limites empleados
     public static int cantidadMaxProductores; 
     public static int cantidadMaxProjectManager;
@@ -54,7 +59,7 @@ public class HBO2 {
      static Semaphore intr = new Semaphore(cantidadMaxIntro, true);
      static Semaphore ini = new Semaphore(cantidadMaxInicio, true);
      static Semaphore ptwist = new Semaphore(cantidadMaxPTwist, true);
-     static Semaphore cierre = new Semaphore(cantidadMaxCierre, true);
+     static Semaphore cierre = new Semaphore(1, true);
      static Semaphore cred = new Semaphore(cantidadMaxCreditos, true);
      
      // Semaforos de productores  
@@ -99,12 +104,35 @@ public class HBO2 {
      Drive driveCierre;
      Drive drivePlot;
     
-     
+   
      
     public void start(){
+        duracionDia = 1000;
+        
+        driveIntros = new Drive(30, 0 ); 
+        driveInicio = new Drive(25, 0 );     
+        driveCred = new Drive(50, 0 ); 
+        driveCierre = new Drive(55, 0 ); 
+        drivePlot = new Drive(40, 0 ); 
+   
+        
+        
+        cantidadIntro =0; 
+        cantidadInicio =0; 
+        cantidadCreditos =0; 
+        cantidadCierre =0; 
+        cantidadPTwist =0; 
+        
+        capitulos = 0; 
+        cantidadMaxProductores = 19; 
+        
+        cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
+        cierresProducciones.get(0).start();   
         
     } 
      
+    
+
      
     
     

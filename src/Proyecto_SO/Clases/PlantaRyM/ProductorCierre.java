@@ -13,7 +13,7 @@ import java.util.concurrent.Semaphore;
 public class ProductorCierre extends Productor{
     
     public int dCantidadCierre; 
-    public int cantidadMaxCierre; 
+    public int cantidadMaxCierre = 30; 
     
     public ProductorCierre(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
         super(drive, ensamblador, productor, activo);
@@ -23,11 +23,14 @@ public class ProductorCierre extends Productor{
     public void run(){
         while(true){
             try{
-            if(this.drive.getCantidad()< this.drive.getCapacidad()){
-                this.productor.acquire();
-                this.drive.setCantidad(this.drive.getCantidad()+1);
-                this.ensamblador.acquire();
                 
+            if(this.drive.getCantidad()< this.drive.getCapacidad()){
+       
+                this.productor.acquire();
+
+                this.drive.setCantidad(this.drive.getCantidad()+1);
+                        
+                this.ensamblador.acquire();
                 dCantidadCierre = this.drive.getCantidad();
                 
                 this.productor.release();
@@ -35,6 +38,7 @@ public class ProductorCierre extends Productor{
                                         
                 
             }
+            System.out.println("Aqui");
             }catch (Exception e){
                     System.out.println("Dio error");
                     }

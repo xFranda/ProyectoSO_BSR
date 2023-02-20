@@ -9,20 +9,15 @@ package Proyecto_SO.Clases.PlantaRyM;
  * @author Gab
  */
 public class Drive extends Thread{
-    
-    String parte;
+
     int capacidad;
     int cantidad; 
     
-    public Drive(String parte, int capacidad, int cantidad){
-        this.parte = parte; 
+    public Drive(int capacidad, int cantidad){
         this.capacidad = capacidad; 
         this.cantidad = cantidad; 
     }
     
-    public void setParte(String parte){
-        this.parte = parte; 
-    }
     
     public void setCapacidad(int capacidad){
         this.capacidad = capacidad; 
