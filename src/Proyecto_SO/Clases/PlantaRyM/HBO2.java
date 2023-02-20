@@ -110,8 +110,8 @@ public class HBO2 {
         duracionDia = 1000;
         
         driveIntros = new Drive(30, 0 ); 
-        driveInicio = new Drive(25, 0 );     
-        driveCred = new Drive(50, 0 ); 
+        driveInicio = new Drive(50, 0 );     
+        driveCred = new Drive(25, 0 ); 
         driveCierre = new Drive(55, 0 ); 
         drivePlot = new Drive(40, 0 ); 
    
