@@ -22,6 +22,27 @@ public class ProductorCreditos extends Productor{
     @Override
     public void run(){
         
+        while(true){
+            try{
+            if(this.drive.getCantidad()< this.drive.getCapacidad()){
+                this.productor.acquire();
+                this.drive.setCantidad(this.drive.getCantidad()+1);
+                this.ensamblador.acquire();
+                
+                dCantidadCreditos = this.drive.getCantidad();
+                
+                this.productor.release();
+                this.ensamblador.release();
+                                        
+                
+            }
+            }catch (Exception e){
+                    System.out.println("Dio error");
+                    }
+                
+            
+        }
+        
     }
     
 }
