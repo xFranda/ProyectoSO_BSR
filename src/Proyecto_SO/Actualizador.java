@@ -41,6 +41,9 @@ public class Actualizador extends Thread{
        dashboard.NumEmpCred.setText(String.valueOf(HBO1.prodCred));
        dashboard.NumEmpPlot.setText(String.valueOf(HBO1.prodPlot));
        dashboard.NumEmpCierre.setText(String.valueOf(HBO1.prodCierre));
+       dashboard.NumEmpEnsamblador.setText(String.valueOf(HBO1.ensamblador));
+       
+       dashboard.NumEmpDispo.setText(String.valueOf(HBO1.empleadosMax-(HBO1.prodIntro+HBO1.prodInicio+HBO1.prodCred+HBO1.prodPlot+HBO1.prodCierre+HBO1.ensamblador)));
                
        
         }

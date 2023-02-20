@@ -65,6 +65,9 @@ public class ProductorCred extends Thread{
         }
         
     }
+    public void DespProdCred() {
+        activo = false;
+    }
     
     
 }

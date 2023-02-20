@@ -52,17 +52,17 @@ public class HBO1 {
     public static int plotDrive; //Almacenamiento de Plot twist en el Drive
     
     public static ProductorIntro[] vecProductoresIntro;
-    int PosVecIntro; 
+    public static int PosVecIntro; 
     public static ProductorInicio[] vecProductoresInicio;
-    int PosVecInicio;
+    public int PosVecInicio;
     public static ProductorCred[] vecProductoresCred;
-    int PosVecCred;
+    public int PosVecCred;
     public static ProductorCierre[] vecProductoresCierre;
-    int PosVecCierre; 
+    public int PosVecCierre; 
     public static ProductorPlot[] vecProductoresPlot;
-    int PosVecPlot; 
+    public int PosVecPlot; 
     public static Ensamblador[] vecEnsamblador;
-    int PosVecEnsamblador; 
+    public int PosVecEnsamblador; 
     
     public static int gananciasTLOU; // Ganancias TLOU
     
@@ -184,12 +184,20 @@ public class HBO1 {
         PosVecIntro++;
     
     }
+    public void DespProductorIntro () {
+            PosVecIntro--;
+            vecProductoresIntro[PosVecIntro].DespProdIntro();
+    }
     
     public void ProductorInicio(){
         vecProductoresInicio[PosVecInicio] = new ProductorInicio(driveInicio,PInicio,MInicio,EInicio);
         vecProductoresInicio[PosVecInicio].start();
         PosVecInicio++;
     
+    }
+    public void DespProductorInicio () {
+            PosVecInicio--;
+            vecProductoresInicio[PosVecInicio].DespProdInicio();
     }
     
     public void ProductorCred(){
@@ -198,11 +206,19 @@ public class HBO1 {
         PosVecCred++;
     
     }
+    public void DespProductorCred () {
+            PosVecCred--;
+            vecProductoresCred[PosVecCred].DespProdCred();
+    }
     public void ProductorCierre(){
         vecProductoresCierre[PosVecCierre] = new ProductorCierre(driveCierre,PCierre,MCierre,ECierre);
         vecProductoresCierre[PosVecCierre].start();
         PosVecCierre++;
     
+    }
+    public void DespProductorCierre () {
+            PosVecCierre--;
+            vecProductoresCierre[PosVecCierre].DespProdCierre();
     }
     public void ProductorPlot(){
         vecProductoresPlot[PosVecPlot] = new ProductorPlot(drivePlot,PPlot,MPlot,EPlot);
@@ -210,11 +226,19 @@ public class HBO1 {
         PosVecPlot++;
     
     }
+    public void DespProductorPlot () {
+            PosVecPlot--;
+            vecProductoresPlot[PosVecPlot].DespProdPlot();
+    }
     
     public void Ensamblador(){
        vecEnsamblador[PosVecEnsamblador] = new Ensamblador (driveIntros, driveInicio, driveCred, driveCierre,drivePlot,PIntro, PInicio, PCred, PCierre,MIntro,MInicio,MCred,MCierre,MPlot, PPlot, EIntro, EInicio, ECred,ECierre, EPlot, Capitulo);
        vecEnsamblador[PosVecEnsamblador].start();
        PosVecEnsamblador++;
+    }
+    public void DespProductorE () {
+            PosVecEnsamblador--;
+            vecEnsamblador[PosVecEnsamblador].DespedirEnsamblador();
     }
     
         public void CrearDirector (){

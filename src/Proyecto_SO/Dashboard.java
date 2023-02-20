@@ -63,13 +63,37 @@ public class Dashboard extends javax.swing.JFrame {
         NumEmpIntros = new javax.swing.JTextField();
         EmpIntrosTLOU = new javax.swing.JLabel();
         NumEmpInicios = new javax.swing.JTextField();
-        EmpIntrosTLOU1 = new javax.swing.JLabel();
+        EmpIniciosTLOU = new javax.swing.JLabel();
         NumEmpCred = new javax.swing.JTextField();
-        EmpIntrosTLOU2 = new javax.swing.JLabel();
+        EmpCredsTLOU = new javax.swing.JLabel();
         NumEmpPlot = new javax.swing.JTextField();
-        EmpIntrosTLOU3 = new javax.swing.JLabel();
+        EmpPlotTLO = new javax.swing.JLabel();
         NumEmpCierre = new javax.swing.JTextField();
-        EmpIntrosTLOU4 = new javax.swing.JLabel();
+        EmpCierreTLOU = new javax.swing.JLabel();
+        NumEmpDispo = new javax.swing.JTextField();
+        EmpDispoTLOU = new javax.swing.JLabel();
+        NumEmpEnsamblador = new javax.swing.JTextField();
+        EmpEnsambladorTLOU = new javax.swing.JLabel();
+        EmpIntroDesp = new javax.swing.JButton();
+        EmpInicioDesp = new javax.swing.JButton();
+        EmpCredDesp = new javax.swing.JButton();
+        EmpPlotDesp = new javax.swing.JButton();
+        EmpCierreDesp = new javax.swing.JButton();
+        EmpEnsambladorDesp = new javax.swing.JButton();
+        EmpIntro = new javax.swing.JButton();
+        EmpInicio = new javax.swing.JButton();
+        EmpCred = new javax.swing.JButton();
+        EmpPlot = new javax.swing.JButton();
+        EmpCierre = new javax.swing.JButton();
+        EmpEnsamblador = new javax.swing.JButton();
+        PMStatus = new javax.swing.JTextField();
+        ProyectMTLOU = new javax.swing.JLabel();
+        DirTLOU = new javax.swing.JTextField();
+        DirTextTLOU = new javax.swing.JLabel();
+        GananciasTLOU = new javax.swing.JTextField();
+        GananciasTextTLOU = new javax.swing.JLabel();
+        DiasRestantesTLOU = new javax.swing.JTextField();
+        DiasRestantesTextTLOU = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -210,7 +234,7 @@ public class Dashboard extends javax.swing.JFrame {
         EmpIntrosTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         EmpIntrosTLOU.setForeground(new java.awt.Color(255, 255, 255));
         EmpIntrosTLOU.setText("Intros");
-        jPanel1.add(EmpIntrosTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 110, -1, -1));
+        jPanel1.add(EmpIntrosTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 110, -1, -1));
 
         NumEmpInicios.setEditable(false);
         NumEmpInicios.setBackground(new java.awt.Color(0, 39, 76));
@@ -225,10 +249,10 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(NumEmpInicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 140, 30, 30));
 
-        EmpIntrosTLOU1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        EmpIntrosTLOU1.setForeground(new java.awt.Color(255, 255, 255));
-        EmpIntrosTLOU1.setText("Inicios");
-        jPanel1.add(EmpIntrosTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 150, -1, -1));
+        EmpIniciosTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpIniciosTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        EmpIniciosTLOU.setText("Inicios");
+        jPanel1.add(EmpIniciosTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 150, -1, -1));
 
         NumEmpCred.setEditable(false);
         NumEmpCred.setBackground(new java.awt.Color(0, 39, 76));
@@ -243,10 +267,10 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(NumEmpCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 180, 30, 30));
 
-        EmpIntrosTLOU2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        EmpIntrosTLOU2.setForeground(new java.awt.Color(255, 255, 255));
-        EmpIntrosTLOU2.setText("Creditos");
-        jPanel1.add(EmpIntrosTLOU2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 190, -1, -1));
+        EmpCredsTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpCredsTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        EmpCredsTLOU.setText("Creditos");
+        jPanel1.add(EmpCredsTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 190, -1, -1));
 
         NumEmpPlot.setEditable(false);
         NumEmpPlot.setBackground(new java.awt.Color(0, 39, 76));
@@ -261,10 +285,10 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(NumEmpPlot, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 220, 30, 30));
 
-        EmpIntrosTLOU3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        EmpIntrosTLOU3.setForeground(new java.awt.Color(255, 255, 255));
-        EmpIntrosTLOU3.setText("Plot Twist");
-        jPanel1.add(EmpIntrosTLOU3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 230, -1, -1));
+        EmpPlotTLO.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpPlotTLO.setForeground(new java.awt.Color(255, 255, 255));
+        EmpPlotTLO.setText("Plot Twist");
+        jPanel1.add(EmpPlotTLO, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 230, -1, -1));
 
         NumEmpCierre.setEditable(false);
         NumEmpCierre.setBackground(new java.awt.Color(0, 39, 76));
@@ -279,10 +303,250 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(NumEmpCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 260, 30, 30));
 
-        EmpIntrosTLOU4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        EmpIntrosTLOU4.setForeground(new java.awt.Color(255, 255, 255));
-        EmpIntrosTLOU4.setText("Cierres");
-        jPanel1.add(EmpIntrosTLOU4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 270, -1, -1));
+        EmpCierreTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpCierreTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        EmpCierreTLOU.setText("Cierres");
+        jPanel1.add(EmpCierreTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 270, -1, -1));
+
+        NumEmpDispo.setEditable(false);
+        NumEmpDispo.setBackground(new java.awt.Color(0, 39, 76));
+        NumEmpDispo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NumEmpDispo.setForeground(new java.awt.Color(255, 255, 255));
+        NumEmpDispo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NumEmpDispo.setText("0");
+        NumEmpDispo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumEmpDispoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumEmpDispo, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 340, 30, 30));
+
+        EmpDispoTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpDispoTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        EmpDispoTLOU.setText("Disponibles");
+        jPanel1.add(EmpDispoTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 350, -1, -1));
+
+        NumEmpEnsamblador.setEditable(false);
+        NumEmpEnsamblador.setBackground(new java.awt.Color(0, 39, 76));
+        NumEmpEnsamblador.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NumEmpEnsamblador.setForeground(new java.awt.Color(255, 255, 255));
+        NumEmpEnsamblador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NumEmpEnsamblador.setText("0");
+        NumEmpEnsamblador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumEmpEnsambladorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumEmpEnsamblador, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 300, 30, 30));
+
+        EmpEnsambladorTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpEnsambladorTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        EmpEnsambladorTLOU.setText("Ensamblador");
+        jPanel1.add(EmpEnsambladorTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 310, -1, -1));
+
+        EmpIntroDesp.setBackground(new java.awt.Color(0, 39, 76));
+        EmpIntroDesp.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EmpIntroDesp.setForeground(new java.awt.Color(255, 255, 255));
+        EmpIntroDesp.setText("-");
+        EmpIntroDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpIntroDespActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpIntroDesp, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 100, -1, 30));
+
+        EmpInicioDesp.setBackground(new java.awt.Color(0, 39, 76));
+        EmpInicioDesp.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EmpInicioDesp.setForeground(new java.awt.Color(255, 255, 255));
+        EmpInicioDesp.setText("-");
+        EmpInicioDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpInicioDespActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpInicioDesp, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 140, -1, 30));
+
+        EmpCredDesp.setBackground(new java.awt.Color(0, 39, 76));
+        EmpCredDesp.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EmpCredDesp.setForeground(new java.awt.Color(255, 255, 255));
+        EmpCredDesp.setText("-");
+        EmpCredDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpCredDespActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpCredDesp, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 180, -1, 30));
+
+        EmpPlotDesp.setBackground(new java.awt.Color(0, 39, 76));
+        EmpPlotDesp.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EmpPlotDesp.setForeground(new java.awt.Color(255, 255, 255));
+        EmpPlotDesp.setText("-");
+        EmpPlotDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpPlotDespActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpPlotDesp, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 220, -1, 30));
+
+        EmpCierreDesp.setBackground(new java.awt.Color(0, 39, 76));
+        EmpCierreDesp.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EmpCierreDesp.setForeground(new java.awt.Color(255, 255, 255));
+        EmpCierreDesp.setText("-");
+        EmpCierreDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpCierreDespActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpCierreDesp, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 260, -1, 30));
+
+        EmpEnsambladorDesp.setBackground(new java.awt.Color(0, 39, 76));
+        EmpEnsambladorDesp.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EmpEnsambladorDesp.setForeground(new java.awt.Color(255, 255, 255));
+        EmpEnsambladorDesp.setText("-");
+        EmpEnsambladorDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpEnsambladorDespActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpEnsambladorDesp, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 300, -1, 30));
+
+        EmpIntro.setBackground(new java.awt.Color(0, 39, 76));
+        EmpIntro.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        EmpIntro.setForeground(new java.awt.Color(255, 255, 255));
+        EmpIntro.setText("+");
+        EmpIntro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpIntroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 100, -1, 30));
+
+        EmpInicio.setBackground(new java.awt.Color(0, 39, 76));
+        EmpInicio.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        EmpInicio.setForeground(new java.awt.Color(255, 255, 255));
+        EmpInicio.setText("+");
+        EmpInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpInicioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 140, -1, 30));
+
+        EmpCred.setBackground(new java.awt.Color(0, 39, 76));
+        EmpCred.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        EmpCred.setForeground(new java.awt.Color(255, 255, 255));
+        EmpCred.setText("+");
+        EmpCred.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpCredActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 180, -1, 30));
+
+        EmpPlot.setBackground(new java.awt.Color(0, 39, 76));
+        EmpPlot.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        EmpPlot.setForeground(new java.awt.Color(255, 255, 255));
+        EmpPlot.setText("+");
+        EmpPlot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpPlotActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpPlot, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 220, -1, 30));
+
+        EmpCierre.setBackground(new java.awt.Color(0, 39, 76));
+        EmpCierre.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        EmpCierre.setForeground(new java.awt.Color(255, 255, 255));
+        EmpCierre.setText("+");
+        EmpCierre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpCierreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 260, -1, 30));
+
+        EmpEnsamblador.setBackground(new java.awt.Color(0, 39, 76));
+        EmpEnsamblador.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        EmpEnsamblador.setForeground(new java.awt.Color(255, 255, 255));
+        EmpEnsamblador.setText("+");
+        EmpEnsamblador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpEnsambladorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpEnsamblador, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 300, -1, 30));
+
+        PMStatus.setEditable(false);
+        PMStatus.setBackground(new java.awt.Color(0, 39, 76));
+        PMStatus.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        PMStatus.setForeground(new java.awt.Color(255, 255, 255));
+        PMStatus.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PMStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PMStatusActionPerformed(evt);
+            }
+        });
+        jPanel1.add(PMStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 70, 120, 30));
+
+        ProyectMTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ProyectMTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        ProyectMTLOU.setText("Proyect Manager");
+        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 50, -1, -1));
+
+        DirTLOU.setEditable(false);
+        DirTLOU.setBackground(new java.awt.Color(0, 39, 76));
+        DirTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DirTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        DirTLOU.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        DirTLOU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DirTLOUActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DirTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 130, 120, 30));
+
+        DirTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DirTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        DirTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DirTextTLOU.setText("Director");
+        jPanel1.add(DirTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 110, 120, -1));
+
+        GananciasTLOU.setEditable(false);
+        GananciasTLOU.setBackground(new java.awt.Color(0, 39, 76));
+        GananciasTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GananciasTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        GananciasTLOU.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GananciasTLOU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GananciasTLOUActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 290, 120, 30));
+
+        GananciasTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GananciasTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        GananciasTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        GananciasTextTLOU.setText("Ganancias");
+        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 270, 120, -1));
+
+        DiasRestantesTLOU.setEditable(false);
+        DiasRestantesTLOU.setBackground(new java.awt.Color(0, 39, 76));
+        DiasRestantesTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DiasRestantesTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        DiasRestantesTLOU.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        DiasRestantesTLOU.setText("0");
+        DiasRestantesTLOU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DiasRestantesTLOUActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DiasRestantesTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 210, 40, 40));
+
+        DiasRestantesTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DiasRestantesTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        DiasRestantesTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DiasRestantesTextTLOU.setText("Dias restantes");
+        jPanel1.add(DiasRestantesTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 190, 120, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
@@ -346,6 +610,126 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NumEmpCierreActionPerformed
 
+    private void NumEmpDispoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumEmpDispoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumEmpDispoActionPerformed
+
+    private void EmpIntroDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpIntroDespActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecIntro != 0) {
+            hbo.DespProductorIntro();
+            hbo.prodIntro--;
+        }
+    }//GEN-LAST:event_EmpIntroDespActionPerformed
+
+    private void EmpInicioDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpInicioDespActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecInicio != 0) {
+            hbo.DespProductorInicio();
+            hbo.prodInicio--;
+        }
+    }//GEN-LAST:event_EmpInicioDespActionPerformed
+
+    private void EmpCredDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCredDespActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecCred != 0) {
+            hbo.DespProductorCred();
+            hbo.prodCred--;
+        }
+    }//GEN-LAST:event_EmpCredDespActionPerformed
+
+    private void EmpPlotDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpPlotDespActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecPlot != 0) {
+            hbo.DespProductorPlot();
+            hbo.prodPlot--;
+        }
+    }//GEN-LAST:event_EmpPlotDespActionPerformed
+
+    private void EmpCierreDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCierreDespActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecCierre != 0) {
+            hbo.DespProductorCierre();
+            hbo.prodCierre--;
+        }
+    }//GEN-LAST:event_EmpCierreDespActionPerformed
+
+    private void NumEmpEnsambladorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumEmpEnsambladorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumEmpEnsambladorActionPerformed
+
+    private void EmpEnsambladorDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpEnsambladorDespActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecEnsamblador != 0) {
+            hbo.DespProductorE();
+            hbo.ensamblador--;
+        }
+    }//GEN-LAST:event_EmpEnsambladorDespActionPerformed
+
+    private void EmpIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpIntroActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecIntro < hbo.empleadosMax && (hbo.empleadosMax -(hbo.prodIntro+hbo.prodInicio+hbo.prodCred+hbo.prodPlot+hbo.prodCierre+hbo.ensamblador) !=0)) {
+            hbo.ProductorIntro();
+            hbo.prodIntro++;
+        }
+    }//GEN-LAST:event_EmpIntroActionPerformed
+
+    private void EmpInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpInicioActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecInicio < hbo.empleadosMax && (hbo.empleadosMax -(hbo.prodIntro+hbo.prodInicio+hbo.prodCred+hbo.prodPlot+hbo.prodCierre+hbo.ensamblador) !=0)) {
+            hbo.ProductorInicio();
+            hbo.prodInicio++;
+        }
+    }//GEN-LAST:event_EmpInicioActionPerformed
+
+    private void EmpCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCredActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecCred < hbo.empleadosMax && (hbo.empleadosMax -(hbo.prodIntro+hbo.prodInicio+hbo.prodCred+hbo.prodPlot+hbo.prodCierre+hbo.ensamblador) !=0)) {
+            hbo.ProductorCred();
+            hbo.prodCred++;
+        }
+    }//GEN-LAST:event_EmpCredActionPerformed
+
+    private void EmpPlotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpPlotActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecPlot < hbo.empleadosMax && (hbo.empleadosMax -(hbo.prodIntro+hbo.prodInicio+hbo.prodCred+hbo.prodPlot+hbo.prodCierre+hbo.ensamblador) !=0)) {
+            hbo.ProductorPlot();
+            hbo.prodPlot++;
+        }
+    }//GEN-LAST:event_EmpPlotActionPerformed
+
+    private void EmpCierreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCierreActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecCierre < hbo.empleadosMax && (hbo.empleadosMax -(hbo.prodIntro+hbo.prodInicio+hbo.prodCred+hbo.prodPlot+hbo.prodCierre+hbo.ensamblador) !=0)) {
+            hbo.ProductorCierre();
+            hbo.prodCierre++;
+        }
+    }//GEN-LAST:event_EmpCierreActionPerformed
+
+    private void EmpEnsambladorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpEnsambladorActionPerformed
+        // TODO add your handling code here:
+        if (hbo.PosVecEnsamblador < hbo.empleadosMax && (hbo.empleadosMax -(hbo.prodIntro+hbo.prodInicio+hbo.prodCred+hbo.prodPlot+hbo.prodCierre+hbo.ensamblador) !=0)) {
+            hbo.Ensamblador();
+            hbo.ensamblador++;
+        }
+    }//GEN-LAST:event_EmpEnsambladorActionPerformed
+
+    private void PMStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PMStatusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PMStatusActionPerformed
+
+    private void DirTLOUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirTLOUActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DirTLOUActionPerformed
+
+    private void GananciasTLOUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GananciasTLOUActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GananciasTLOUActionPerformed
+
+    private void DiasRestantesTLOUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiasRestantesTLOUActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DiasRestantesTLOUActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -356,27 +740,51 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField CapsTLOU;
     private javax.swing.JLabel CierreTLOU;
     private javax.swing.JLabel CredTLOU;
+    public javax.swing.JTextField DiasRestantesTLOU;
+    private javax.swing.JLabel DiasRestantesTextTLOU;
+    public javax.swing.JTextField DirTLOU;
+    private javax.swing.JLabel DirTextTLOU;
+    private javax.swing.JButton EmpCierre;
+    private javax.swing.JButton EmpCierreDesp;
+    private javax.swing.JLabel EmpCierreTLOU;
+    private javax.swing.JButton EmpCred;
+    private javax.swing.JButton EmpCredDesp;
+    private javax.swing.JLabel EmpCredsTLOU;
+    private javax.swing.JLabel EmpDispoTLOU;
+    private javax.swing.JButton EmpEnsamblador;
+    private javax.swing.JButton EmpEnsambladorDesp;
+    private javax.swing.JLabel EmpEnsambladorTLOU;
+    private javax.swing.JButton EmpInicio;
+    private javax.swing.JButton EmpInicioDesp;
+    private javax.swing.JLabel EmpIniciosTLOU;
+    private javax.swing.JButton EmpIntro;
+    private javax.swing.JButton EmpIntroDesp;
     private javax.swing.JLabel EmpIntrosTLOU;
-    private javax.swing.JLabel EmpIntrosTLOU1;
-    private javax.swing.JLabel EmpIntrosTLOU2;
-    private javax.swing.JLabel EmpIntrosTLOU3;
-    private javax.swing.JLabel EmpIntrosTLOU4;
+    private javax.swing.JButton EmpPlot;
+    private javax.swing.JButton EmpPlotDesp;
+    private javax.swing.JLabel EmpPlotTLO;
     private javax.swing.JLabel Empleados;
     private javax.swing.JLabel Fondo;
+    public javax.swing.JTextField GananciasTLOU;
+    private javax.swing.JLabel GananciasTextTLOU;
     private javax.swing.JLabel IniciosTLOU;
     private javax.swing.JLabel IntrosTLOU;
     public javax.swing.JTextField NumCierre;
     public javax.swing.JTextField NumCred;
     public javax.swing.JTextField NumEmpCierre;
     public javax.swing.JTextField NumEmpCred;
+    public javax.swing.JTextField NumEmpDispo;
+    public javax.swing.JTextField NumEmpEnsamblador;
     public javax.swing.JTextField NumEmpInicios;
     public javax.swing.JTextField NumEmpIntros;
     public javax.swing.JTextField NumEmpPlot;
     public javax.swing.JTextField NumInicios;
     public javax.swing.JTextField NumIntros;
     public javax.swing.JTextField NumPlot;
+    public javax.swing.JTextField PMStatus;
     private javax.swing.JLabel PlotTLOU;
     private javax.swing.JLabel Produccion;
+    private javax.swing.JLabel ProyectMTLOU;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

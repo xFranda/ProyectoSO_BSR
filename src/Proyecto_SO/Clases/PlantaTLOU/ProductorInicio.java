@@ -64,6 +64,9 @@ public class ProductorInicio extends Thread{
         }
         
     }
+    public void DespProdInicio() {
+       activo = false;
+    }
     
     
 }
