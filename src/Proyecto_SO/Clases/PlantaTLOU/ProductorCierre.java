@@ -38,7 +38,7 @@ public class ProductorCierre extends Thread{
             
             
             try{
-           
+                
 
                 Productor.acquire(); //Trata de adquirir un espacio para subir la parte que le toca
                 this.sleep(HBO1.DiaDuracion*4); //Tiempo que tarda en subir su parte

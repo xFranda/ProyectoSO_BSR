@@ -5,6 +5,7 @@
  */
 package Proyecto_SO.Clases.PlantaTLOU;
 
+import static java.lang.Math.round;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
@@ -16,9 +17,11 @@ public class Director extends Thread {
         Semaphore Reloj = new Semaphore(1);
         Semaphore Capitulo = new Semaphore(1);
         Random r = new Random();
+        public static int DiasParaCorte;
         public static String DIR;
-        int NumMax = 900;
-        int NumMin = 300;
+        int audiencia= 1100000;
+        int dineroCap = 150000;
+        public static int contadorRM =0;
         
         public Director (Semaphore Reloj, Semaphore Capitulo){
             this.Reloj = Reloj;
@@ -31,28 +34,39 @@ public class Director extends Thread {
             while(true){
             
                 try{
-                    Thread.sleep(r.nextInt(1800-1200)+1200);
                     do {
+                        Thread.sleep(round(Math.random()*(HBO1.DiaDuracion/16-HBO1.DiaDuracion/48)+HBO1.DiaDuracion/48));
+                        //Thread.sleep(r.nextInt(1800-1200)+1200);
                         System.out.println("Revisando al PM");
                         DIR ="Revisando";
-                        Thread.sleep(r.nextInt(NumMax-NumMin)+NumMin);
-                        if ("Rick y Morty Time!".equals(ProyectM.PM)){
+                        if ("RM Time".equals(ProyectM.PM)){
                             System.out.println("Agarrado con las Manos en el Morty");
+                            contadorRM++;
                         }
                         
                     
                     
-                    }while(HBO1.DiasParaCorte!=0);
-                    System.out.println("El Dir esta despachando");
-                    DIR = "Despachando";
-                    Thread.sleep(1000);
-                    Reloj.acquire(1);
-                        DIR = "Despacho";
-                        Thread.sleep(200);
+                    }while(Dia.Dia!=DiasParaCorte);
+                    
+                    Reloj.acquire();
+                        DIR = "Despachando";
+                        Thread.sleep(HBO1.DiaDuracion/4);
+                        Dia.Dia = HBO1.DiasParaCorte;
+                        DIR = "Despachado";
+                        Thread.sleep(HBO1.DiaDuracion/4);
                         Capitulo.acquire();
+                            for (int i=0;i<HBO1.CapituloTLOU-1;i++){
+                                HBO1.Ganancias = HBO1.Ganancias + (7.333*100000*(i+1));
+                            }
+                            HBO1.LoteTLOU = HBO1.CapituloTLOU;
                             HBO1.CapituloTLOU =0;
+                            HBO1.GastosM= HBO1.GastosM-contadorRM;
+                            contadorRM=0;
+                            
                         Capitulo.release();
-                    Reloj.release(1);
+                        
+                    Reloj.release();
+                    HBO1.GastosM = HBO1.Gastos;
                     
                 
                 
