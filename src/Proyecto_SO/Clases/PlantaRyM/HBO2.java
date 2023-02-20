@@ -91,7 +91,7 @@ public class HBO2 {
      //Listas de Productores y Ensambladores
      
      public static ArrayList<ProductorIntro> introProducciones = new ArrayList<>();
-     public static ArrayList<ProductorIntro> openingProducciones = new ArrayList<>();
+     public static ArrayList<ProductorInicio> openingProducciones = new ArrayList<>();
      public static ArrayList<ProductorCierre> cierresProducciones = new ArrayList<>();
      public static ArrayList<ProductorCreditos> creditosProducciones = new ArrayList<>();
      public static ArrayList<ProductorPTwist> twistProducciones = new ArrayList<>();
@@ -127,7 +127,15 @@ public class HBO2 {
         cantidadMaxProductores = 19; 
         
         cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
-        cierresProducciones.get(0).start();   
+        cierresProducciones.get(0).start(); 
+        openingProducciones.add(new ProductorInicio(driveIntros, intrProd, intr, EIntro ) );
+        introProducciones.get(0).start(); 
+        cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
+        cierresProducciones.get(0).start(); 
+        cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
+        cierresProducciones.get(0).start(); 
+        cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
+        cierresProducciones.get(0).start(); 
         
     } 
      

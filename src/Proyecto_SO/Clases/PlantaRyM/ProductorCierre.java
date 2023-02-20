@@ -35,10 +35,10 @@ public class ProductorCierre extends Productor{
                 
                 this.productor.release();
                 this.ensamblador.release();
-                                        
+                System.out.println("Aqui");                        
                 
             }
-            System.out.println("Aqui");
+            
             }catch (Exception e){
                     System.out.println("Dio error");
                     }
