@@ -31,7 +31,7 @@ public class ProductorCreditos extends Productor{
                 this.ensamblador.acquire();
                 this.drive.setCantidad(this.drive.getCantidad()+1);
                 dCantidadCreditos = this.drive.getCantidad();
-                System.out.println("Creditos:" + dCantidadCreditos);
+               
                 this.productor.release();
                 this.ensamblador.release();
                                        

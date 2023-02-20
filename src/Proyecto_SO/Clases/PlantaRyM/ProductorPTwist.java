@@ -30,7 +30,7 @@ public class ProductorPTwist extends Productor{
                 this.ensamblador.acquire();
                 this.drive.setCantidad(this.drive.getCantidad()+1);
                 dCantidadPTwist = this.drive.getCantidad();
-                System.out.println("PTwist:" + dCantidadPTwist);
+                
                 this.productor.release();
                 this.ensamblador.release();
               

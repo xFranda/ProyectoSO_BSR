@@ -72,11 +72,11 @@ public class HBO2 {
      
      // Semaforo de ensambladores
      
-     Semaphore EIntro = new Semaphore(0);
-     Semaphore EInicio = new Semaphore(0);
-     Semaphore ECred = new Semaphore(0);
-     Semaphore ECierre = new Semaphore(0);
-     Semaphore EPlot = new Semaphore(0);
+     Semaphore EIntro = new Semaphore(2);
+     Semaphore EInicio = new Semaphore(1);
+     Semaphore ECred = new Semaphore(1);
+     Semaphore ECierre = new Semaphore(1);
+     Semaphore EPlot = new Semaphore(1);
      
      
        
@@ -108,7 +108,7 @@ public class HBO2 {
    
      
     public void start(){
-        duracionDia = 2000;
+        duracionDia = 100;
         
         driveIntros = new Drive(30, 0 ); 
         driveInicio = new Drive(50, 0 );     
@@ -127,36 +127,31 @@ public class HBO2 {
         
         
         // Gebrayel estos son pruebas de la capacidad en el Drive por favor no las veas que estan horribles
-        for (int i = 0; i < 10; i++) {
+        
         cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
-        cierresProducciones.get(i).start();
-        }
+        cierresProducciones.get(0).start();
        
-        for (int i = 0; i < 10; i++) {
+  
        openingProducciones.add(new ProductorInicio(driveInicio, iniProd, ini, EInicio ) );
-       openingProducciones.get(i).start(); 
-        }
+       openingProducciones.get(0).start(); 
         
-        for (int i = 0; i < 10; i++) {
+        
+       
         introProducciones.add(new ProductorIntro(driveIntros, intrProd, intr, EIntro ) );
-        introProducciones.get(i).start(); 
-        } 
+        introProducciones.get(0).start(); 
         
-        for (int i = 0; i < 10; i++) {
+        
         creditosProducciones.add(new ProductorCreditos(driveCred, credProd, cred, ECred ) );
-        creditosProducciones.get(i).start(); 
-        }
-        
-        for (int i = 0; i < 10; i++) {
+        creditosProducciones.get(0).start(); 
+
         twistProducciones.add(new ProductorPTwist(drivePlot, ptwistProd, ptwist, EPlot ) );
-        twistProducciones.get(i).start(); 
-        }
+        twistProducciones.get(0).start(); 
+       
         
-        //for (int i = 0; i < 10; i++) {
-        //ensambladorLista.add(new Ensamblador(ini, intr, ptwist, cierre, cred, intrProd,iniProd , ptwistProd, credProd, cierreProd,EIntro , EInicio, 
-        //EPlot, ECred, ECierre , driveIntros, driveInicio, driveCred, driveCierre, drivePlot, true, 0));
-        //ensambladorLista.get(i).start();
-        //}
+        ensambladorLista.add(new Ensamblador(intr, ini, ptwist, cierre, cred, intrProd,iniProd , ptwistProd, credProd, cierreProd,EIntro , EInicio, 
+        EPlot, ECred, ECierre , driveIntros, driveInicio, driveCred, driveCierre, drivePlot, true, 0));
+        ensambladorLista.get(0).start();
+        
     } 
 }
      

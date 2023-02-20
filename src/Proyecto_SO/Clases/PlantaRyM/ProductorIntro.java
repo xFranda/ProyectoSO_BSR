@@ -30,7 +30,7 @@ public class ProductorIntro extends Productor{
                 this.ensamblador.acquire();
                 this.drive.setCantidad(this.drive.getCantidad()+1);
                 dCantidadIntro = this.drive.getCantidad();
-                System.out.println("Intro:" + dCantidadIntro);
+                
                 this.productor.release();
                 this.ensamblador.release();
              

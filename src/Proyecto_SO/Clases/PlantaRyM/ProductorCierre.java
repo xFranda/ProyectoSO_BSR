@@ -33,7 +33,7 @@ public class ProductorCierre extends Productor{
                 this.drive.setCantidad(this.drive.getCantidad()+1);
                
                 dCantidadCierre = this.drive.getCantidad();
-                System.out.println("Cierre:" + dCantidadCierre);
+                
                 this.productor.release();
                 this.ensamblador.release();
                                        
