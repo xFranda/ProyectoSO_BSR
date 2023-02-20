@@ -95,6 +95,7 @@ public class HBO2 {
      public static ArrayList<ProductorCierre> cierresProducciones = new ArrayList<>();
      public static ArrayList<ProductorCreditos> creditosProducciones = new ArrayList<>();
      public static ArrayList<ProductorPTwist> twistProducciones = new ArrayList<>();
+     public static ArrayList<Ensamblador> ensambladorLista = new ArrayList<>();
      
      //Drive de cada parte 
      
@@ -107,15 +108,13 @@ public class HBO2 {
    
      
     public void start(){
-        duracionDia = 1000;
+        duracionDia = 2000;
         
         driveIntros = new Drive(30, 0 ); 
         driveInicio = new Drive(50, 0 );     
         driveCred = new Drive(25, 0 ); 
         driveCierre = new Drive(55, 0 ); 
-        drivePlot = new Drive(40, 0 ); 
-   
-        
+        drivePlot = new Drive(40, 0 );         
         
         cantidadIntro =0; 
         cantidadInicio =0; 
@@ -128,27 +127,42 @@ public class HBO2 {
         
         
         // Gebrayel estos son pruebas de la capacidad en el Drive por favor no las veas que estan horribles
-        
+        for (int i = 0; i < 10; i++) {
         cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
-        cierresProducciones.get(0).start(); 
+        cierresProducciones.get(i).start();
+        }
        
+        for (int i = 0; i < 10; i++) {
        openingProducciones.add(new ProductorInicio(driveInicio, iniProd, ini, EInicio ) );
-       openingProducciones.get(0).start(); 
+       openingProducciones.get(i).start(); 
+        }
         
+        for (int i = 0; i < 10; i++) {
         introProducciones.add(new ProductorIntro(driveIntros, intrProd, intr, EIntro ) );
-        introProducciones.get(0).start(); 
+        introProducciones.get(i).start(); 
+        } 
         
+        for (int i = 0; i < 10; i++) {
         creditosProducciones.add(new ProductorCreditos(driveCred, credProd, cred, ECred ) );
-        creditosProducciones.get(0).start(); 
+        creditosProducciones.get(i).start(); 
+        }
         
+        for (int i = 0; i < 10; i++) {
         twistProducciones.add(new ProductorPTwist(drivePlot, ptwistProd, ptwist, EPlot ) );
-        twistProducciones.get(0).start(); 
+        twistProducciones.get(i).start(); 
+        }
         
+        //for (int i = 0; i < 10; i++) {
+        //ensambladorLista.add(new Ensamblador(ini, intr, ptwist, cierre, cred, intrProd,iniProd , ptwistProd, credProd, cierreProd,EIntro , EInicio, 
+        //EPlot, ECred, ECierre , driveIntros, driveInicio, driveCred, driveCierre, drivePlot, true, 0));
+        //ensambladorLista.get(i).start();
+        //}
     } 
+}
      
     
 
      
     
-    
-}
+   
+

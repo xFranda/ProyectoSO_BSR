@@ -26,14 +26,15 @@ public class ProductorCreditos extends Productor{
             try{
             if(this.drive.getCantidad()< this.drive.getCapacidad()){
                 this.productor.acquire();
-                this.drive.setCantidad(this.drive.getCantidad()+1);
+                this.sleep(HBO2.duracionDia/3);
+                
                 this.ensamblador.acquire();
-                
+                this.drive.setCantidad(this.drive.getCantidad()+1);
                 dCantidadCreditos = this.drive.getCantidad();
-                
+                System.out.println("Creditos:" + dCantidadCreditos);
                 this.productor.release();
                 this.ensamblador.release();
-                System.out.println("Creditos");                          
+                                       
                 
             }
             }catch (Exception e){
