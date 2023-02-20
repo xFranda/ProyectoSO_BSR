@@ -45,7 +45,7 @@ public class Ensamblador extends Thread{
     public Ensamblador(Semaphore introduccion, Semaphore inicio, Semaphore plottwist, 
             Semaphore cierre, Semaphore creditos, Semaphore pIntroduccion, Semaphore pIntro, Semaphore pPTwist, Semaphore pCreditos, Semaphore pCierre,
             Semaphore eIntro, Semaphore eInicio, Semaphore ePTwist, Semaphore eCreditos, Semaphore eCierre,
-            Drive google, boolean empleado, int capitulos ){
+            Drive driveIntros, Drive driveInicio, Drive driveCred, Drive driveCierre, Drive drivePlot, boolean empleado, int capitulos ){
         
         this.introduccion = introduccion; 
         this.inicio = inicio; 
@@ -54,6 +54,16 @@ public class Ensamblador extends Thread{
         this.creditos = creditos;  
         this.empleado = empleado; 
         this.capitulos = capitulos;
+        this.pIntroduccion = pIntroduccion; 
+        this.pIntro = pIntro; 
+        this.pPTwist = pPTwist; 
+        this.pCreditos = pCreditos; 
+        this.pCierre = pCierre;
+        this.eIntro = eIntro; 
+        this.eInicio = eInicio; 
+        this.ePTwist = ePTwist; 
+        this.eCreditos = eCreditos; 
+        this.eCierre = eCierre;
         this.driveIntros = driveIntros; 
         this.driveInicio = driveInicio; 
         this.driveCred = driveCred; 
@@ -67,6 +77,7 @@ public class Ensamblador extends Thread{
     public void run(){
         while(empleado){
             try{
+                this. 
                 this.introduccion.acquire();
                 
             }catch (InterruptedException ex) {
