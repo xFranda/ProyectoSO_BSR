@@ -99,7 +99,7 @@ public class Ensamblador extends Thread{
                 ECred.acquire(1);
                 System.out.println("Ensambladores empezando el trabajo");
                 EPlot.acquire(2);
-                Thread.sleep(2000);
+                Thread.sleep(HBO1.DiaDuracion*2);
                 
                 
                 MInicio.acquire(1);
@@ -137,7 +137,7 @@ public class Ensamblador extends Thread{
                 ECred.acquire(1);
                 System.out.println("Ensambladores empezando el trabajo");
                 ECierre.acquire(2);
-                Thread.sleep(2000);
+                Thread.sleep(HBO1.DiaDuracion*2);
                 
                 MInicio.acquire(1);
                 MIntro.acquire(1);

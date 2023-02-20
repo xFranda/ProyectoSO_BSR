@@ -40,7 +40,7 @@ public class ProductorIntro extends Thread{
             try{
 
                 Productor.acquire(); //Trata de adquirir un espacio para subir la parte que le toca
-                this.sleep(1000); //Tiempo que tarda en subir su parte
+                this.sleep(HBO1.DiaDuracion); //Tiempo que tarda en subir su parte
                 
                 Mutex.acquire(); //Adquiere permiso total del drive
                 

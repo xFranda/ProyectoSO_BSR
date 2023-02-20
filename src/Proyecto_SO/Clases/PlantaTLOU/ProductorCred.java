@@ -41,7 +41,7 @@ public class ProductorCred extends Thread{
            
 
                 Productor.acquire(); //Trata de adquirir un espacio para subir la parte que le toca
-                this.sleep(250); //Tiempo que tarda en subir su parte
+                this.sleep(HBO1.DiaDuracion/4); //Tiempo que tarda en subir su parte
                 
                 Mutex.acquire(); //Adquiere permiso total del drive
                 

@@ -1,0 +1,13 @@
+DiaDuaracion:    2000    
+DiasParaCorte:   30      
+inicioDrive:     50      
+introDrive:      30      
+credDrive:       25      
+cierreDrive:     55      
+plotDrive:       40      
+prodInicio:      1       
+prodIntro:       1       
+prodCred:        1       
+prodCierre:      1       
+prodPlot:        1       
+ensamblador:     0       

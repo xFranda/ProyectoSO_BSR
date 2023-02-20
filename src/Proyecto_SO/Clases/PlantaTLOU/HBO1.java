@@ -5,10 +5,13 @@
  */
 package Proyecto_SO.Clases.PlantaTLOU;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import static java.lang.Integer.parseInt;
 import java.text.ParseException;
 import java.util.concurrent.Semaphore;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -94,7 +97,7 @@ public class HBO1 {
     }
     
     //Metodo que crea los semaforos
-    public void InicializarValores() throws InterruptedException {
+    public void InicializarValores() throws InterruptedException, FileNotFoundException {
     
         driveInicio = new Drive();
         driveIntros = new Drive();
@@ -103,12 +106,6 @@ public class HBO1 {
         drivePlot = new Drive();
         
         
-        PInicio = new Semaphore(50);
-        PIntro = new Semaphore(30);
-        PCred = new Semaphore(25);
-        PCierre = new Semaphore(55);
-        PPlot = new Semaphore(40);
-        
         
         Inicio = 0;
         Intro = 0;
@@ -116,41 +113,64 @@ public class HBO1 {
         Cierre = 0;
         Plot = 0;
         CapituloTLOU =0;
-        
-        DiaDuracion = 1;
-        DiasParaCorte = 30;
-        
-        inicioDrive = 50; //Almacenamiento de Inicios en el Drive
-        introDrive = 30; //Almacenamiento de Intros en el Drive
-        credDrive= 25; //Almacenamiento de Creditos en el Drive
-        cierreDrive= 55; //Almacenamiento de Cierres en el Drive
-        plotDrive=40; //Almacenamiento de Plot en el Drive
-        
         empleadosMax=10;
-        prodInicio =1; // Numero de productores de Inicio
-        prodIntro=2; // Numero de productores de Intros
-        prodCred=1; // Numero de productores de Creditos
-        prodCierre=3; // Numero de productores de Cierres
-        prodPlot=1; // Numero de productores de Plot
-        ensamblador=1;//Numeros de ensambladores 
+        
+        Scanner doc = new Scanner(new File("src/Proyecto_SO/Clases/PlantaTLOU/DatosTLOU.txt"));
+        String line = doc.nextLine();
+        
+        //Se procede a leer cada dato y se guardara en su respectiva variable.
+        DiaDuracion = parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine();
+        DiasParaCorte = parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine();
+        
+        inicioDrive = parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine(); //Almacenamiento de Inicios en el Drive
+        introDrive = parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine();; //Almacenamiento de Intros en el Drive
+        credDrive= parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine(); //Almacenamiento de Creditos en el Drive
+        cierreDrive= parseInt(line.substring(17,25).trim());
+        line = doc.nextLine();; //Almacenamiento de Cierres en el Drive
+        plotDrive=parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine();; //Almacenamiento de Plot en el Drive
+        
+        prodInicio =parseInt(line.substring(17,25).trim());
+        line = doc.nextLine(); // Numero de productores de Inicio
+        prodIntro=parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine(); // Numero de productores de Intros
+        prodCred=parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine(); // Numero de productores de Creditos
+        prodCierre=parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine(); // Numero de productores de Cierres
+        prodPlot=parseInt(line.substring(17, 25).trim());
+        line = doc.nextLine(); // Numero de productores de Plot
+        ensamblador=parseInt(line.substring(17, 25).trim()); //Numeros de ensambladores 
+        
+        PInicio = new Semaphore(inicioDrive);
+        PIntro = new Semaphore(introDrive);
+        PCred = new Semaphore(introDrive);
+        PCierre = new Semaphore(cierreDrive);
+        PPlot = new Semaphore(plotDrive);
         
         
-        vecProductoresIntro = new ProductorIntro[10];
-        vecProductoresInicio = new ProductorInicio[10];
-        vecProductoresCred = new ProductorCred[10];
-        vecProductoresCierre = new ProductorCierre[10];
-        vecProductoresPlot = new ProductorPlot[10];
+        vecProductoresIntro = new ProductorIntro[empleadosMax];
+        vecProductoresInicio = new ProductorInicio[empleadosMax];
+        vecProductoresCred = new ProductorCred[empleadosMax];
+        vecProductoresCierre = new ProductorCierre[empleadosMax];
+        vecProductoresPlot = new ProductorPlot[empleadosMax];
   
-        vecEnsamblador = new Ensamblador[10];
+        vecEnsamblador = new Ensamblador[empleadosMax];
         
     }
     
     
     //Metodo para craer Hilos y empleados
-    public void Start() throws ParseException, InterruptedException{
+    public void Start() throws ParseException, InterruptedException, FileNotFoundException{
         InicializarValores();
-        //CrearDirector();
-        //CrearProyectM();
+        CrearContadorDia();
+        CrearDirector();
+        CrearProyectM();
         if ((prodInicio+prodIntro+prodCred+prodCierre+prodPlot+ensamblador)<empleadosMax){
             for(int i=0; i < prodIntro; i++){  //1 productores iniciales
                 ProductorIntro ();
@@ -250,11 +270,11 @@ public class HBO1 {
         ProyectM PM = new ProyectM(Reloj);
         PM.start();
     }
-    /*
-    public void CrearContadoDia (){
+    
+    public void CrearContadorDia (){
         Dia Dia = new Dia();
         Dia.start();
-    }*/
+    }
     
     }
     
