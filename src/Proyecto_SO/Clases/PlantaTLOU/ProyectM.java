@@ -28,15 +28,15 @@ public class ProyectM extends Thread {
             while(true){
             
                 try{
-                    System.out.println("El PM esta viendo RM");
+                    //System.out.println("El PM esta viendo RM");
                     PM = "RM Time";
-                    Thread.sleep((HBO1.DiaDuracion/5));
+                    Thread.sleep((HBO1.DiaDuracion/72));
                     PM = "Sprint";
-                    Thread.sleep((HBO1.DiaDuracion/5));
-                    System.out.println("El PM esta revisando el contador");
+                    Thread.sleep((HBO1.DiaDuracion/72));
+                    //System.out.println("El PM esta revisando el contador");
                     Reloj.acquire();
                         PM = "Contador";
-                        Thread.sleep(200);
+                        Thread.sleep(HBO1.DiaDuracion/24);
                         DiasAntesCorte--;
                     Reloj.release();
                     

@@ -118,9 +118,17 @@ public class HBO1 {
         String line = doc.nextLine();
         
         //Se procede a leer cada dato y se guardara en su respectiva variable.
-        DiaDuracion = parseInt(line.substring(17, 25).trim())*1000;
+        DiaDuracion = parseInt(line.substring(17, 25).trim());
+        if (DiaDuracion <1){
+            DiaDuracion=5;
+        }
+        DiaDuracion=DiaDuracion*1000;
         line = doc.nextLine();
+        
         DiasParaCorte = parseInt(line.substring(17, 25).trim());
+        if (DiasParaCorte <1){
+            DiasParaCorte=30;
+        }
         line = doc.nextLine();
         
         inicioDrive = parseInt(line.substring(17, 25).trim());
@@ -184,7 +192,7 @@ public class HBO1 {
         
         PInicio = new Semaphore(inicioDrive);
         PIntro = new Semaphore(introDrive);
-        PCred = new Semaphore(introDrive);
+        PCred = new Semaphore(credDrive);
         PCierre = new Semaphore(cierreDrive);
         PPlot = new Semaphore(plotDrive);
         

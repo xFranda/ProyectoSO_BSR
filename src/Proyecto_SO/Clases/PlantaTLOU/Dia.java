@@ -26,6 +26,7 @@ public class Dia extends Thread {
                 Thread.sleep(HBO1.DiaDuracion);
                 System.out.println("\nDIA: "+(Dia-1));
                 Dia--;
+                Director.Mes--;
             } catch (InterruptedException ex) {System.out.println("Ocurrió un error!");}
         }
     }

@@ -22,6 +22,7 @@ public class Director extends Thread {
         int audiencia= 1100000;
         int dineroCap = 150000;
         public static int contadorRM =0;
+        public static int Mes = 30;
         
         public Director (Semaphore Reloj, Semaphore Capitulo){
             this.Reloj = Reloj;
@@ -37,11 +38,13 @@ public class Director extends Thread {
                     do {
                         Thread.sleep(round(Math.random()*(HBO1.DiaDuracion/16-HBO1.DiaDuracion/48)+HBO1.DiaDuracion/48));
                         //Thread.sleep(r.nextInt(1800-1200)+1200);
-                        System.out.println("Revisando al PM");
+                        //System.out.println("Revisando al PM");
                         DIR ="Revisando";
+                        
                         if ("RM Time".equals(ProyectM.PM)){
-                            System.out.println("Agarrado con las Manos en el Morty");
+                            //System.out.println("Agarrado con las Manos en el Morty");
                             contadorRM++;
+                            DIR="Divagando";
                         }
                         
                     
@@ -60,13 +63,19 @@ public class Director extends Thread {
                             }
                             HBO1.LoteTLOU = HBO1.CapituloTLOU;
                             HBO1.CapituloTLOU =0;
+                            if (Mes == 0){
                             HBO1.GastosM= HBO1.GastosM-contadorRM;
                             contadorRM=0;
+                            HBO1.GastosM = HBO1.Gastos;
+                            Mes=30;
+                            
+                            }
+                            
                             
                         Capitulo.release();
                         
                     Reloj.release();
-                    HBO1.GastosM = HBO1.Gastos;
+                    
                     
                 
                 
