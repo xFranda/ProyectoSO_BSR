@@ -33,7 +33,7 @@ public class ProductorCreditos extends Productor{
                 
                 this.productor.release();
                 this.ensamblador.release();
-                                        
+                System.out.println("Creditos");                          
                 
             }
             }catch (Exception e){

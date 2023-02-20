@@ -33,6 +33,7 @@ public class ProductorIntro extends Productor{
                 
                 this.productor.release();
                 this.ensamblador.release();
+                System.out.println("Intro");  
                                         
                 
             }

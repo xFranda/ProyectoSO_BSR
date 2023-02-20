@@ -56,11 +56,11 @@ public class HBO2 {
    
     // Semaforos de partes 
 
-     static Semaphore intr = new Semaphore(cantidadMaxIntro, true);
-     static Semaphore ini = new Semaphore(cantidadMaxInicio, true);
-     static Semaphore ptwist = new Semaphore(cantidadMaxPTwist, true);
+     static Semaphore intr = new Semaphore(1, true);
+     static Semaphore ini = new Semaphore(1, true);
+     static Semaphore ptwist = new Semaphore(1, true);
      static Semaphore cierre = new Semaphore(1, true);
-     static Semaphore cred = new Semaphore(cantidadMaxCreditos, true);
+     static Semaphore cred = new Semaphore(1, true);
      
      // Semaforos de productores  
 
@@ -126,16 +126,23 @@ public class HBO2 {
         capitulos = 0; 
         cantidadMaxProductores = 19; 
         
+        
+        // Gebrayel estos son pruebas de la capacidad en el Drive por favor no las veas que estan horribles
+        
         cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
         cierresProducciones.get(0).start(); 
-        openingProducciones.add(new ProductorInicio(driveIntros, intrProd, intr, EIntro ) );
+       
+       openingProducciones.add(new ProductorInicio(driveInicio, iniProd, ini, EInicio ) );
+       openingProducciones.get(0).start(); 
+        
+        introProducciones.add(new ProductorIntro(driveIntros, intrProd, intr, EIntro ) );
         introProducciones.get(0).start(); 
-        cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
-        cierresProducciones.get(0).start(); 
-        cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
-        cierresProducciones.get(0).start(); 
-        cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
-        cierresProducciones.get(0).start(); 
+        
+        creditosProducciones.add(new ProductorCreditos(driveCred, credProd, cred, ECred ) );
+        creditosProducciones.get(0).start(); 
+        
+        twistProducciones.add(new ProductorPTwist(drivePlot, ptwistProd, ptwist, EPlot ) );
+        twistProducciones.get(0).start(); 
         
     } 
      

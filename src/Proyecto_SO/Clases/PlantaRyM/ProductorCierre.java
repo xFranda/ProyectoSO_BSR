@@ -13,7 +13,7 @@ import java.util.concurrent.Semaphore;
 public class ProductorCierre extends Productor{
     
     public int dCantidadCierre; 
-    public int cantidadMaxCierre = 30; 
+    public int cantidadMaxCierre; 
     
     public ProductorCierre(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
         super(drive, ensamblador, productor, activo);
@@ -35,7 +35,7 @@ public class ProductorCierre extends Productor{
                 
                 this.productor.release();
                 this.ensamblador.release();
-                System.out.println("Aqui");                        
+                System.out.println("Cierre");                        
                 
             }
             
