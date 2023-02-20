@@ -26,14 +26,14 @@ public class ProductorInicio extends Productor{
             try{
             if(this.drive.getCantidad()< this.drive.getCapacidad()){
                 this.productor.acquire();
-                this.drive.setCantidad(this.drive.getCantidad()+1);
+                this.sleep(HBO2.duracionDia*4);
                 this.ensamblador.acquire();
-                
+                this.drive.setCantidad(this.drive.getCantidad()+1);
                 dCantidadInicio = this.drive.getCantidad();
-                
+                System.out.println("Inicio:" + dCantidadInicio);
                 this.productor.release();
                 this.ensamblador.release();
-                System.out.println("Inicio");  
+                
                                         
                 
             }

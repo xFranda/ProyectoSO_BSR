@@ -27,15 +27,16 @@ public class ProductorCierre extends Productor{
             if(this.drive.getCantidad()< this.drive.getCapacidad()){
        
                 this.productor.acquire();
+                this.sleep(HBO2.duracionDia*3);
+                this.ensamblador.acquire();
 
                 this.drive.setCantidad(this.drive.getCantidad()+1);
-                        
-                this.ensamblador.acquire();
+               
                 dCantidadCierre = this.drive.getCantidad();
-                
+                System.out.println("Cierre:" + dCantidadCierre);
                 this.productor.release();
                 this.ensamblador.release();
-                System.out.println("Cierre");                        
+                                       
                 
             }
             
