@@ -77,7 +77,6 @@ public class Ensamblador extends Thread{
     public void run(){
         while(empleado){
             try{
-                this. 
                 this.introduccion.acquire();
                 
             }catch (InterruptedException ex) {
