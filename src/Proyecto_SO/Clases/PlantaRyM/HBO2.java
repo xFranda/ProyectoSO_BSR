@@ -4,6 +4,7 @@
  */
 package Proyecto_SO.Clases.PlantaRyM;
 
+import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 
 /**
@@ -22,11 +23,11 @@ public class HBO2 {
     public static int duracionDia;
     
     // Numero de partes de episodio 
-    public static int cantidadIntro;
-    public static int cantidadInicio;
-    public static int cantidadPTwist;
-    public static int cantidadCierre;
-    public static int cantidadCreditos;
+    public int cantidadIntro;
+    public int cantidadInicio;
+    public int cantidadPTwist;
+    public int cantidadCierre;
+    public int cantidadCreditos;
     public static int cantidadMaxIntro;
     public static int cantidadMaxInicio;
     public static int cantidadMaxPTwist;
@@ -48,14 +49,22 @@ public class HBO2 {
     public int dCantidadCierre;
     public int dCantidadCreditos;
    
-    // Semaforos de productores
+    // Semaforos de partes 
 
-     static Semaphore intr = new Semaphore(1, true);
-     static Semaphore ini = new Semaphore(1, true);
-     static Semaphore ptwist = new Semaphore(1, true);
-     static Semaphore cierre = new Semaphore(1, true);
-     static Semaphore cred = new Semaphore(1, true);
+     static Semaphore intr = new Semaphore(cantidadMaxIntro, true);
+     static Semaphore ini = new Semaphore(cantidadMaxInicio, true);
+     static Semaphore ptwist = new Semaphore(cantidadMaxPTwist, true);
+     static Semaphore cierre = new Semaphore(cantidadMaxCierre, true);
+     static Semaphore cred = new Semaphore(cantidadMaxCreditos, true);
      
+     // Semaforos de productores  
+
+     static Semaphore intrProd = new Semaphore(1, true);
+     static Semaphore iniProd = new Semaphore(1, true);
+     static Semaphore ptwistProd = new Semaphore(1, true);
+     static Semaphore cierreProd = new Semaphore(1, true);
+     static Semaphore credProd = new Semaphore(1, true);
+       
      // Salarios 
      
      public static int salarioIntro;
@@ -64,7 +73,19 @@ public class HBO2 {
      public static int salarioCierre;
      public static int salarioCreditos;
      
+     //Listas de Productores y Ensambladores
      
+     public static ArrayList<ProductorIntro> introProducciones = new ArrayList<>();
+     public static ArrayList<ProductorIntro> openingProducciones = new ArrayList<>();
+     public static ArrayList<ProductorCierre> cierresProducciones = new ArrayList<>();
+     public static ArrayList<ProductorCreditos> creditosProducciones = new ArrayList<>();
+     public static ArrayList<ProductorPTwist> twistProducciones = new ArrayList<>();
+     
+     
+     
+    public void start(){
+        
+    } 
      
      
     
