@@ -5,7 +5,10 @@
  */
 package Proyecto_SO;
 
+import Proyecto_SO.Clases.PlantaTLOU.Dia;
+import Proyecto_SO.Clases.PlantaTLOU.Director;
 import Proyecto_SO.Clases.PlantaTLOU.HBO1;
+import Proyecto_SO.Clases.PlantaTLOU.ProyectM;
 import javax.swing.JFrame;
 /**
  *
@@ -44,7 +47,10 @@ public class Actualizador extends Thread{
        dashboard.NumEmpEnsamblador.setText(String.valueOf(HBO1.ensamblador));
        
        dashboard.NumEmpDispo.setText(String.valueOf(HBO1.empleadosMax-(HBO1.prodIntro+HBO1.prodInicio+HBO1.prodCred+HBO1.prodPlot+HBO1.prodCierre+HBO1.ensamblador)));
-               
+       
+       dashboard.PMStatus.setText(String.valueOf(ProyectM.PM));
+       dashboard.DirTLOU.setText(String.valueOf(Director.DIR));
+       dashboard.DiasRestantesTLOU.setText(String.valueOf(Dia.Dia));
        
         }
     
