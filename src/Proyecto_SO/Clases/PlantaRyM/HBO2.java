@@ -64,6 +64,16 @@ public class HBO2 {
      static Semaphore ptwistProd = new Semaphore(1, true);
      static Semaphore cierreProd = new Semaphore(1, true);
      static Semaphore credProd = new Semaphore(1, true);
+     
+     // Semaforo de ensambladores
+     
+     Semaphore EIntro = new Semaphore(0);
+     Semaphore EInicio = new Semaphore(0);
+     Semaphore ECred = new Semaphore(0);
+     Semaphore ECierre = new Semaphore(0);
+     Semaphore EPlot = new Semaphore(0);
+     
+     
        
      // Salarios 
      
@@ -81,6 +91,14 @@ public class HBO2 {
      public static ArrayList<ProductorCreditos> creditosProducciones = new ArrayList<>();
      public static ArrayList<ProductorPTwist> twistProducciones = new ArrayList<>();
      
+     //Drive de cada parte 
+     
+     Drive driveIntros; 
+     Drive driveInicio;
+     Drive driveCred; 
+     Drive driveCierre;
+     Drive drivePlot;
+    
      
      
     public void start(){

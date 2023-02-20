@@ -16,34 +16,58 @@ public class Ensamblador extends Thread{
     Semaphore plottwist; 
     Semaphore cierre;
     Semaphore creditos;
+    Semaphore pIntroduccion;
+    Semaphore pIntro;
+    Semaphore pPTwist;
+    Semaphore pCreditos;
+    Semaphore pCierre;
+    Semaphore eIntro;
+    Semaphore eInicio;
+    Semaphore ePTwist;
+    Semaphore eCreditos;
+    Semaphore eCierre;
     boolean introBoo = false; 
     boolean iniBoo = false; 
     boolean plotBoo = false; 
     boolean cierreBoo = false; 
     boolean credBoo = false; 
-    Drive google; 
+    Drive driveIntros; 
+    Drive driveInicio;
+    Drive driveCred;
+    Drive driveCierre;
+    Drive drivePlot; 
+    
     
     int capitulos; 
     
-    boolean empleado; 
+    boolean empleado = true;  
     
     public Ensamblador(Semaphore introduccion, Semaphore inicio, Semaphore plottwist, 
-            Semaphore cierre, Semaphore creditos, Drive google, boolean empleado, int capitulos ){
+            Semaphore cierre, Semaphore creditos, Semaphore pIntroduccion, Semaphore pIntro, Semaphore pPTwist, Semaphore pCreditos, Semaphore pCierre,
+            Semaphore eIntro, Semaphore eInicio, Semaphore ePTwist, Semaphore eCreditos, Semaphore eCierre,
+            Drive google, boolean empleado, int capitulos ){
         
         this.introduccion = introduccion; 
         this.inicio = inicio; 
         this.plottwist = plottwist; 
         this.cierre = cierre; 
-        this.creditos = creditos; 
-        this.google = google; 
+        this.creditos = creditos;  
         this.empleado = empleado; 
-        this.capitulos = capitulos; 
+        this.capitulos = capitulos;
+        this.driveIntros = driveIntros; 
+        this.driveInicio = driveInicio; 
+        this.driveCred = driveCred; 
+        this.driveCierre = driveCierre;
+        this.drivePlot = drivePlot; 
+        
+      
+        
     }
     
     public void run(){
-        while(true){
+        while(empleado){
             try{
-                this.inicio.acquire();
+                this.introduccion.acquire();
                 
             }catch (InterruptedException ex) {
         }
