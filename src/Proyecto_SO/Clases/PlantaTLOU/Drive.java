@@ -51,11 +51,11 @@ public class Drive {
     public Drive(){
         //Se inicializan los vectores indicando su tamano
         
-        this.intro = new int[30];
-        this.inicio = new int[50];
-        this.cred = new int [25];
-        this.cierre = new int [55];
-        this.plot = new int [40];
+        this.intro = new int[HBO1.introDrive];
+        this.inicio = new int[HBO1.inicioDrive];
+        this.cred = new int [HBO1.credDrive];
+        this.cierre = new int [HBO1.cierreDrive];
+        this.plot = new int [HBO1.plotDrive];
         
         //Posiciones de entrada y salida de las partes de los caps
         
@@ -77,13 +77,13 @@ public class Drive {
     
     public void producirIntro(){
         this.intro[introEntra]=1;
-        introEntra = (introEntra +1)%30;
+        introEntra = (introEntra +1)% HBO1.introDrive;
     
     }
     
     public void consumirIntro(){
         this.intro[introSale]=0;
-        introSale = (introSale +1)%30;
+        introSale = (introSale +1)%HBO1.introDrive;
     
     
     }
@@ -93,13 +93,13 @@ public class Drive {
     
     public void producirInicio(){
         this.inicio[inicioEntra]=1;
-        inicioEntra = (inicioEntra +1)%30;
+        inicioEntra = (inicioEntra +1)%HBO1.inicioDrive;
     
     }
     
     public void consumirInicio(){
         this.inicio[inicioSale]=0;
-        inicioSale = (inicioSale +1)%30;
+        inicioSale = (inicioSale +1)%HBO1.inicioDrive;
     
     
     }
@@ -109,13 +109,13 @@ public class Drive {
     
     public void producirCred(){
         this.cred[credEntra]=1;
-        credEntra = (credEntra +1)%30;
+        credEntra = (credEntra +1)%HBO1.credDrive;
     
     }
     
     public void consumirCred(){
         this.cred[credSale]=0;
-        credSale = (credSale +1)%30;
+        credSale = (credSale +1)%HBO1.credDrive;
     
     
     }
@@ -125,13 +125,13 @@ public class Drive {
     
     public void producirCierre(){
         this.cierre[cierreEntra]=1;
-        cierreEntra = (cierreEntra +1)%30;
+        cierreEntra = (cierreEntra +1)%HBO1.cierreDrive;
     
     }
     
     public void consumirCierre(){
         this.cierre[cierreSale]=0;
-        cierreSale = (cierreSale +1)%30;
+        cierreSale = (cierreSale +1)%HBO1.cierreDrive;
     
     
     }
@@ -141,13 +141,13 @@ public class Drive {
     
     public void producirPlot(){
         this.plot[plotEntra]=1;
-        plotEntra = (plotEntra +1)%30;
+        plotEntra = (plotEntra +1)%HBO1.plotDrive;
     
     }
     
     public void consumirPlot(){
         this.plot[plotSale]=0;
-        plotSale = (plotSale +1)%30;
+        plotSale = (plotSale +1)%HBO1.plotDrive;
     
     
     }

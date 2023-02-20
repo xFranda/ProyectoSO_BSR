@@ -14,8 +14,7 @@ import java.util.concurrent.Semaphore;
  */
 public class ProyectM extends Thread {
         Semaphore Reloj = new Semaphore(1);
-        Semaphore Capitulo = new Semaphore(1);
-        Random r = new Random();
+        public static int DiasAntesCorte;
         public static String PM;
         
         public ProyectM (Semaphore Reloj){
@@ -30,12 +29,15 @@ public class ProyectM extends Thread {
             
                 try{
                     System.out.println("El PM esta viendo RM");
-                    PM = "Rick y Morty Time!";
-                    Thread.sleep(100);
+                    PM = "RM Time";
+                    Thread.sleep((HBO1.DiaDuracion/5));
+                    PM = "Sprint";
+                    Thread.sleep((HBO1.DiaDuracion/5));
                     System.out.println("El PM esta revisando el contador");
                     Reloj.acquire();
                         PM = "Contador";
                         Thread.sleep(200);
+                        DiasAntesCorte--;
                     Reloj.release();
                     
                 

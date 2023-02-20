@@ -51,6 +51,10 @@ public class Actualizador extends Thread{
        dashboard.PMStatus.setText(String.valueOf(ProyectM.PM));
        dashboard.DirTLOU.setText(String.valueOf(Director.DIR));
        dashboard.DiasRestantesTLOU.setText(String.valueOf(Dia.Dia));
+       dashboard.GananciasTLOU.setText(String.valueOf(HBO1.Ganancias));
+       dashboard.FallasPM.setText(String.valueOf(Director.contadorRM));
+       dashboard.GastosMensuales.setText(String.valueOf(HBO1.GastosM));
+       dashboard.UltimoLoteTLOU.setText(String.valueOf(HBO1.LoteTLOU));
        
         }
     

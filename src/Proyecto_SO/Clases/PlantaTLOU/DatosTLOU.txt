@@ -1,4 +1,4 @@
-DiaDuaracion:    2000    
+DiaDuaracion:    2       
 DiasParaCorte:   30      
 inicioDrive:     50      
 introDrive:      30      

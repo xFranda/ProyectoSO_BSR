@@ -8,6 +8,8 @@ package Proyecto_SO;
 import Proyecto_SO.Clases.PlantaTLOU.HBO1;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -94,6 +96,12 @@ public class Dashboard extends javax.swing.JFrame {
         GananciasTextTLOU = new javax.swing.JLabel();
         DiasRestantesTLOU = new javax.swing.JTextField();
         DiasRestantesTextTLOU = new javax.swing.JLabel();
+        FallasPM = new javax.swing.JTextField();
+        Fallas = new javax.swing.JLabel();
+        GastosMensuales = new javax.swing.JTextField();
+        GastosM = new javax.swing.JLabel();
+        UltimoLoteTLOU = new javax.swing.JTextField();
+        UL = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -211,12 +219,12 @@ public class Dashboard extends javax.swing.JFrame {
                 CapsTLOUActionPerformed(evt);
             }
         });
-        jPanel1.add(CapsTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 320, 30, 30));
+        jPanel1.add(CapsTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 300, 30, 30));
 
         CapitulosTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         CapitulosTLOU.setForeground(new java.awt.Color(255, 255, 255));
         CapitulosTLOU.setText("Capitulos");
-        jPanel1.add(CapitulosTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 330, -1, -1));
+        jPanel1.add(CapitulosTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 310, -1, -1));
 
         NumEmpIntros.setEditable(false);
         NumEmpIntros.setBackground(new java.awt.Color(0, 39, 76));
@@ -486,12 +494,12 @@ public class Dashboard extends javax.swing.JFrame {
                 PMStatusActionPerformed(evt);
             }
         });
-        jPanel1.add(PMStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 70, 120, 30));
+        jPanel1.add(PMStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, 120, 30));
 
         ProyectMTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ProyectMTLOU.setForeground(new java.awt.Color(255, 255, 255));
         ProyectMTLOU.setText("Proyect Manager");
-        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 50, -1, -1));
+        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
 
         DirTLOU.setEditable(false);
         DirTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -503,13 +511,13 @@ public class Dashboard extends javax.swing.JFrame {
                 DirTLOUActionPerformed(evt);
             }
         });
-        jPanel1.add(DirTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 130, 120, 30));
+        jPanel1.add(DirTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 130, 120, 30));
 
         DirTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         DirTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
         DirTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         DirTextTLOU.setText("Director");
-        jPanel1.add(DirTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 110, 120, -1));
+        jPanel1.add(DirTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 110, 120, -1));
 
         GananciasTLOU.setEditable(false);
         GananciasTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -521,13 +529,13 @@ public class Dashboard extends javax.swing.JFrame {
                 GananciasTLOUActionPerformed(evt);
             }
         });
-        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 290, 120, 30));
+        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 200, 160, 30));
 
         GananciasTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         GananciasTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
         GananciasTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         GananciasTextTLOU.setText("Ganancias");
-        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 270, 120, -1));
+        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 180, 160, -1));
 
         DiasRestantesTLOU.setEditable(false);
         DiasRestantesTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -540,13 +548,68 @@ public class Dashboard extends javax.swing.JFrame {
                 DiasRestantesTLOUActionPerformed(evt);
             }
         });
-        jPanel1.add(DiasRestantesTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 210, 40, 40));
+        jPanel1.add(DiasRestantesTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 50, 40, 40));
 
         DiasRestantesTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         DiasRestantesTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
         DiasRestantesTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         DiasRestantesTextTLOU.setText("Dias restantes");
-        jPanel1.add(DiasRestantesTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 190, 120, -1));
+        jPanel1.add(DiasRestantesTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 120, -1));
+
+        FallasPM.setEditable(false);
+        FallasPM.setBackground(new java.awt.Color(0, 39, 76));
+        FallasPM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        FallasPM.setForeground(new java.awt.Color(255, 255, 255));
+        FallasPM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        FallasPM.setText("0");
+        FallasPM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FallasPMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(FallasPM, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 50, 40, 40));
+
+        Fallas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Fallas.setForeground(new java.awt.Color(255, 255, 255));
+        Fallas.setText("Faltas");
+        jPanel1.add(Fallas, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 90, -1, -1));
+
+        GastosMensuales.setEditable(false);
+        GastosMensuales.setBackground(new java.awt.Color(0, 39, 76));
+        GastosMensuales.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GastosMensuales.setForeground(new java.awt.Color(255, 255, 255));
+        GastosMensuales.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GastosMensuales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GastosMensualesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GastosMensuales, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 260, 120, 30));
+
+        GastosM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GastosM.setForeground(new java.awt.Color(255, 255, 255));
+        GastosM.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        GastosM.setText("Gastos");
+        jPanel1.add(GastosM, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 240, 120, -1));
+
+        UltimoLoteTLOU.setEditable(false);
+        UltimoLoteTLOU.setBackground(new java.awt.Color(0, 39, 76));
+        UltimoLoteTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        UltimoLoteTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        UltimoLoteTLOU.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        UltimoLoteTLOU.setText("0");
+        UltimoLoteTLOU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UltimoLoteTLOUActionPerformed(evt);
+            }
+        });
+        jPanel1.add(UltimoLoteTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 200, 30, 30));
+
+        UL.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        UL.setForeground(new java.awt.Color(255, 255, 255));
+        UL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UL.setText("UL");
+        jPanel1.add(UL, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 180, 30, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
@@ -669,7 +732,11 @@ public class Dashboard extends javax.swing.JFrame {
     private void EmpIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpIntroActionPerformed
         // TODO add your handling code here:
         if (hbo.PosVecIntro < hbo.empleadosMax && (hbo.empleadosMax -(hbo.prodIntro+hbo.prodInicio+hbo.prodCred+hbo.prodPlot+hbo.prodCierre+hbo.ensamblador) !=0)) {
-            hbo.ProductorIntro();
+            try {
+                hbo.ProductorIntro();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+            }
             hbo.prodIntro++;
         }
     }//GEN-LAST:event_EmpIntroActionPerformed
@@ -731,6 +798,18 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_DiasRestantesTLOUActionPerformed
 
+    private void FallasPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FallasPMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FallasPMActionPerformed
+
+    private void GastosMensualesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GastosMensualesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GastosMensualesActionPerformed
+
+    private void UltimoLoteTLOUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UltimoLoteTLOUActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UltimoLoteTLOUActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -765,9 +844,13 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton EmpPlotDesp;
     private javax.swing.JLabel EmpPlotTLO;
     private javax.swing.JLabel Empleados;
+    private javax.swing.JLabel Fallas;
+    public javax.swing.JTextField FallasPM;
     private javax.swing.JLabel Fondo;
     public javax.swing.JTextField GananciasTLOU;
     private javax.swing.JLabel GananciasTextTLOU;
+    private javax.swing.JLabel GastosM;
+    public javax.swing.JTextField GastosMensuales;
     private javax.swing.JLabel IniciosTLOU;
     private javax.swing.JLabel IntrosTLOU;
     public javax.swing.JTextField NumCierre;
@@ -786,6 +869,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel PlotTLOU;
     private javax.swing.JLabel Produccion;
     private javax.swing.JLabel ProyectMTLOU;
+    private javax.swing.JLabel UL;
+    public javax.swing.JTextField UltimoLoteTLOU;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
