@@ -5,6 +5,7 @@
  */
 package Proyecto_SO;
 
+import Proyecto_SO.Clases.PlantaRyM.HBO2;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
 
@@ -21,7 +22,8 @@ public class Main {
         // TODO code application logic here
         System.out.println("Hola Gebrayel");
         Dashboard dashboard = new Dashboard();
-        
+        HBO2 gab = new HBO2(); 
+        gab.start();
         }
     
 }
