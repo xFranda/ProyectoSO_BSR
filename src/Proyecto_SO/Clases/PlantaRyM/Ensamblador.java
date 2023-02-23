@@ -88,7 +88,8 @@ public class Ensamblador extends Thread{
  
                 if((this.driveIntros.getCantidad() >= 1 )&&(this.introBoo==false)){
                     this.introBoo = true; 
-                    this.driveIntros.setCantidad(this.driveIntros.getCantidad()-1);
+                    
+                    
                    
                     
                 }
@@ -101,7 +102,7 @@ public class Ensamblador extends Thread{
                 this.inicio.acquire();
                 if((this.driveInicio.getCantidad() >= 2 )&&(this.iniBoo==false)){
                     this.iniBoo = true;                    
-                    this.driveInicio.setCantidad(this.driveInicio.getCantidad()-2);
+                    
                      
                     
                 }
@@ -113,7 +114,7 @@ public class Ensamblador extends Thread{
                 this.cierre.acquire();
                 if((this.driveCierre.getCantidad() >= 1 )&&(this.cierreBoo==false)){
                     this.cierreBoo = true;                     
-                    this.driveCierre.setCantidad(this.driveCierre.getCantidad()-1);
+                   
                     
                     
                 }
@@ -125,7 +126,7 @@ public class Ensamblador extends Thread{
                 this.ePTwist.acquire();
                 this.plottwist.acquire();
                 if((this.drivePlot.getCantidad() >= 1 )&&(this.plotBoo==false)){                    
-                    this.drivePlot.setCantidad(this.drivePlot.getCantidad()-1);
+                    
                     this.plotBoo = true; 
                     
                 }
@@ -136,7 +137,7 @@ public class Ensamblador extends Thread{
                 this.eCreditos.acquire();
                 this.creditos.acquire();
                 if((this.driveCred.getCantidad() >= 1 )&&(this.credBoo==false)){                    
-                    this.driveCred.setCantidad(this.driveCred.getCantidad()-1);
+                    
                     this.credBoo = true; 
                     
                 }
@@ -146,14 +147,20 @@ public class Ensamblador extends Thread{
                
                 
                   if((this.introBoo==true)&&(this.iniBoo==true)&&(this.cierreBoo==true)&&(this.plotBoo==true)&&(this.credBoo==true)){
+                      Thread.sleep(HBO2.duracionDia * 2); 
                         this.introBoo=false;
+                        this.driveIntros.setCantidad(this.driveIntros.getCantidad()-1);
                         this.iniBoo=false;
+                        this.driveInicio.setCantidad(this.driveInicio.getCantidad()-2);
                         this.cierreBoo=false;
+                         this.driveCierre.setCantidad(this.driveCierre.getCantidad()-1);
                         this.plotBoo=false;
+                        this.drivePlot.setCantidad(this.drivePlot.getCantidad()-1);
                         this.credBoo=false;
-                       Thread.sleep(HBO2.duracionDia * 2); 
+                        this.driveCred.setCantidad(this.driveCred.getCantidad()-1);
+                       
                         this.capitulos++;
-                        
+                        HBO2.capitulos = capitulos; 
                     }
                 
             }catch (InterruptedException ex) {

@@ -33,6 +33,7 @@ public class ProductorPTwist extends Productor{
 
 
                 dCantidadPTwist = this.drive.getCantidad();
+                HBO2.cantidadPTwist = drive.getCantidad();
                  this.activo.release();
                  this.ensamblador.release();
                 this.productor.release();

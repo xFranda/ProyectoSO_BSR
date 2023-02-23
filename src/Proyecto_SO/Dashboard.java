@@ -50,7 +50,13 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Produccion = new javax.swing.JLabel();
         Empleados = new javax.swing.JLabel();
+        NumIntrosRM = new javax.swing.JTextField();
+        NumIniciosRM = new javax.swing.JTextField();
+        NumCreditosRM = new javax.swing.JTextField();
+        NumCierresRM = new javax.swing.JTextField();
         NumIntros = new javax.swing.JTextField();
+        NumPTwistRM = new javax.swing.JTextField();
+        NumCapRM = new javax.swing.JTextField();
         IntrosTLOU = new javax.swing.JLabel();
         NumInicios = new javax.swing.JTextField();
         IniciosTLOU = new javax.swing.JLabel();
@@ -88,6 +94,7 @@ public class Dashboard extends javax.swing.JFrame {
         EmpPlot = new javax.swing.JButton();
         EmpCierre = new javax.swing.JButton();
         EmpEnsamblador = new javax.swing.JButton();
+        Produccion4 = new javax.swing.JLabel();
         PMStatus = new javax.swing.JTextField();
         ProyectMTLOU = new javax.swing.JLabel();
         DirTLOU = new javax.swing.JTextField();
@@ -110,13 +117,65 @@ public class Dashboard extends javax.swing.JFrame {
 
         Produccion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Produccion.setForeground(new java.awt.Color(255, 255, 255));
-        Produccion.setText("Produccion");
-        jPanel1.add(Produccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, -1, -1));
+        Produccion.setText("Produccion 2");
+        jPanel1.add(Produccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, -1, -1));
 
         Empleados.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Empleados.setForeground(new java.awt.Color(255, 255, 255));
         Empleados.setText("Empleados");
         jPanel1.add(Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 60, -1, -1));
+
+        NumIntrosRM.setEditable(false);
+        NumIntrosRM.setBackground(new java.awt.Color(0, 39, 76));
+        NumIntrosRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NumIntrosRM.setForeground(new java.awt.Color(255, 255, 255));
+        NumIntrosRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NumIntrosRM.setText("0");
+        NumIntrosRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumIntrosRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumIntrosRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 30, 30));
+
+        NumIniciosRM.setEditable(false);
+        NumIniciosRM.setBackground(new java.awt.Color(0, 39, 76));
+        NumIniciosRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NumIniciosRM.setForeground(new java.awt.Color(255, 255, 255));
+        NumIniciosRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NumIniciosRM.setText("0");
+        NumIniciosRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumIniciosRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumIniciosRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 30, 30));
+
+        NumCreditosRM.setEditable(false);
+        NumCreditosRM.setBackground(new java.awt.Color(0, 39, 76));
+        NumCreditosRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NumCreditosRM.setForeground(new java.awt.Color(255, 255, 255));
+        NumCreditosRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NumCreditosRM.setText("0");
+        NumCreditosRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumCreditosRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumCreditosRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 30, 30));
+
+        NumCierresRM.setEditable(false);
+        NumCierresRM.setBackground(new java.awt.Color(0, 39, 76));
+        NumCierresRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NumCierresRM.setForeground(new java.awt.Color(255, 255, 255));
+        NumCierresRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NumCierresRM.setText("0");
+        NumCierresRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumCierresRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumCierresRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 650, 30, 30));
 
         NumIntros.setEditable(false);
         NumIntros.setBackground(new java.awt.Color(0, 39, 76));
@@ -130,6 +189,32 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NumIntros, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 100, 30, 30));
+
+        NumPTwistRM.setEditable(false);
+        NumPTwistRM.setBackground(new java.awt.Color(0, 39, 76));
+        NumPTwistRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NumPTwistRM.setForeground(new java.awt.Color(255, 255, 255));
+        NumPTwistRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NumPTwistRM.setText("0");
+        NumPTwistRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumPTwistRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumPTwistRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, 30, 30));
+
+        NumCapRM.setEditable(false);
+        NumCapRM.setBackground(new java.awt.Color(0, 39, 76));
+        NumCapRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NumCapRM.setForeground(new java.awt.Color(255, 255, 255));
+        NumCapRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        NumCapRM.setText("0");
+        NumCapRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumCapRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumCapRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 30, 30));
 
         IntrosTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         IntrosTLOU.setForeground(new java.awt.Color(255, 255, 255));
@@ -484,6 +569,11 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(EmpEnsamblador, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 300, -1, 30));
 
+        Produccion4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Produccion4.setForeground(new java.awt.Color(255, 255, 255));
+        Produccion4.setText("Produccion");
+        jPanel1.add(Produccion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, -1, -1));
+
         PMStatus.setEditable(false);
         PMStatus.setBackground(new java.awt.Color(0, 39, 76));
         PMStatus.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -613,7 +703,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -810,6 +900,30 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UltimoLoteTLOUActionPerformed
 
+    private void NumIntrosRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumIntrosRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumIntrosRMActionPerformed
+
+    private void NumIniciosRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumIniciosRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumIniciosRMActionPerformed
+
+    private void NumCreditosRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCreditosRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumCreditosRMActionPerformed
+
+    private void NumCierresRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCierresRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumCierresRMActionPerformed
+
+    private void NumPTwistRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumPTwistRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumPTwistRMActionPerformed
+
+    private void NumCapRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumCapRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumCapRMActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -853,8 +967,11 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField GastosMensuales;
     private javax.swing.JLabel IniciosTLOU;
     private javax.swing.JLabel IntrosTLOU;
+    public javax.swing.JTextField NumCapRM;
     public javax.swing.JTextField NumCierre;
+    public javax.swing.JTextField NumCierresRM;
     public javax.swing.JTextField NumCred;
+    public javax.swing.JTextField NumCreditosRM;
     public javax.swing.JTextField NumEmpCierre;
     public javax.swing.JTextField NumEmpCred;
     public javax.swing.JTextField NumEmpDispo;
@@ -863,11 +980,15 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField NumEmpIntros;
     public javax.swing.JTextField NumEmpPlot;
     public javax.swing.JTextField NumInicios;
+    public javax.swing.JTextField NumIniciosRM;
     public javax.swing.JTextField NumIntros;
+    public javax.swing.JTextField NumIntrosRM;
+    public javax.swing.JTextField NumPTwistRM;
     public javax.swing.JTextField NumPlot;
     public javax.swing.JTextField PMStatus;
     private javax.swing.JLabel PlotTLOU;
     private javax.swing.JLabel Produccion;
+    private javax.swing.JLabel Produccion4;
     private javax.swing.JLabel ProyectMTLOU;
     private javax.swing.JLabel UL;
     public javax.swing.JTextField UltimoLoteTLOU;
