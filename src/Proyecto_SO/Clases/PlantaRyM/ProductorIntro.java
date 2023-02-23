@@ -27,8 +27,9 @@ public class ProductorIntro extends Productor{
             if(this.drive.getCantidad()< this.drive.getCapacidad()){
            
                 this.productor.acquire();
+                this.sleep(HBO2.duracionDia/3);
                 this.activo.acquire(); 
-                Thread.sleep(HBO2.duracionDia/3);
+               
                 this.drive.setCantidad(this.drive.getCantidad()+1);
            
                 dCantidadIntro = this.drive.getCantidad();

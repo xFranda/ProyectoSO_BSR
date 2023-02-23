@@ -72,7 +72,7 @@ public class HBO2 {
      
      // Semaforo de ensambladores
      
-     Semaphore EIntro = new Semaphore(1);
+     Semaphore EIntro = new Semaphore(0);
      Semaphore EInicio = new Semaphore(0);
      Semaphore ECred = new Semaphore(0);
      Semaphore ECierre = new Semaphore(0);
@@ -108,7 +108,7 @@ public class HBO2 {
    
      
     public void start(){
-        duracionDia = 100;
+        duracionDia = 1000;
         
         driveIntros = new Drive(30, 0 ); 
         driveInicio = new Drive(50, 0 );     

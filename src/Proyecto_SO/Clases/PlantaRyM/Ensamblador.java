@@ -79,6 +79,7 @@ public class Ensamblador extends Thread{
     
     public void run(){
         while(empleado){
+           
             try{
                 // introducciones
                 this.eIntro.acquire();
@@ -100,7 +101,7 @@ public class Ensamblador extends Thread{
                 this.inicio.acquire();
                 if((this.driveInicio.getCantidad() >= 2 )&&(this.iniBoo==false)){
                     this.iniBoo = true;                    
-                    this.driveInicio.setCantidad(this.driveInicio.getCantidad()-1);
+                    this.driveInicio.setCantidad(this.driveInicio.getCantidad()-2);
                      
                     
                 }
@@ -142,7 +143,7 @@ public class Ensamblador extends Thread{
                 this.creditos.release(); 
                 this.pCreditos.release();
                 
-                
+               
                 
                   if((this.introBoo==true)&&(this.iniBoo==true)&&(this.cierreBoo==true)&&(this.plotBoo==true)&&(this.credBoo==true)){
                         this.introBoo=false;
@@ -150,14 +151,8 @@ public class Ensamblador extends Thread{
                         this.cierreBoo=false;
                         this.plotBoo=false;
                         this.credBoo=false;
-                       
+                       Thread.sleep(HBO2.duracionDia * 2); 
                         this.capitulos++;
-                        System.out.println("Intro" + driveIntros.getCantidad());
-                        System.out.println("Inicio" + driveInicio.getCantidad());
-                        System.out.println("Cred" + driveCred.getCantidad());
-                        System.out.println("Cierre" + driveCierre.getCantidad());
-                        System.out.println("Ptwist" + drivePlot.getCantidad());
-                        System.out.println("Capitulos" + capitulos);
                         
                     }
                 
