@@ -28,15 +28,15 @@ public class ProductorCierre extends Productor{
        
                 this.productor.acquire();
                 this.sleep(HBO2.duracionDia*3);
-                this.ensamblador.acquire();
+                this.activo.acquire();
 
                 this.drive.setCantidad(this.drive.getCantidad()+1);
-               
+
                 dCantidadCierre = this.drive.getCantidad();
-                
-                this.productor.release();
+                this.activo.release();
+               
                 this.ensamblador.release();
-                                       
+                 this.productor.release();                       
                 
             }
             

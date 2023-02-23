@@ -25,14 +25,17 @@ public class ProductorIntro extends Productor{
         while(true){
             try{
             if(this.drive.getCantidad()< this.drive.getCapacidad()){
+           
                 this.productor.acquire();
-                this.sleep(HBO2.duracionDia/3);
-                this.ensamblador.acquire();
+                this.activo.acquire(); 
+                Thread.sleep(HBO2.duracionDia/3);
                 this.drive.setCantidad(this.drive.getCantidad()+1);
+           
                 dCantidadIntro = this.drive.getCantidad();
-                
-                this.productor.release();
+
+                this.activo.release();
                 this.ensamblador.release();
+                this.productor.release();
              
                                         
                 

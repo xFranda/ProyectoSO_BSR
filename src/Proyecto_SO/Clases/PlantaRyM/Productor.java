@@ -18,6 +18,7 @@ public abstract class Productor extends Thread {
     protected Semaphore activo; 
     protected Drive drive; 
     
+    
 
     public Productor(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo) {
         this.ensamblador = ensamblador;

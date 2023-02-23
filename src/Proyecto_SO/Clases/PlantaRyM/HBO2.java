@@ -72,11 +72,11 @@ public class HBO2 {
      
      // Semaforo de ensambladores
      
-     Semaphore EIntro = new Semaphore(2);
-     Semaphore EInicio = new Semaphore(1);
-     Semaphore ECred = new Semaphore(1);
-     Semaphore ECierre = new Semaphore(1);
-     Semaphore EPlot = new Semaphore(1);
+     Semaphore EIntro = new Semaphore(1);
+     Semaphore EInicio = new Semaphore(0);
+     Semaphore ECred = new Semaphore(0);
+     Semaphore ECierre = new Semaphore(0);
+     Semaphore EPlot = new Semaphore(0);
      
      
        
@@ -128,32 +128,37 @@ public class HBO2 {
         
         // Gebrayel estos son pruebas de la capacidad en el Drive por favor no las veas que estan horribles
         
-        cierresProducciones.add(new ProductorCierre(driveCierre, cierreProd, cierre, ECierre ) );
+        cierresProducciones.add(new ProductorCierre(driveCierre, ECierre, cierreProd, cierre ) );
         cierresProducciones.get(0).start();
        
   
-       openingProducciones.add(new ProductorInicio(driveInicio, iniProd, ini, EInicio ) );
+       openingProducciones.add(new ProductorInicio(driveInicio, EInicio, iniProd, ini ) );
        openingProducciones.get(0).start(); 
         
         
        
-        introProducciones.add(new ProductorIntro(driveIntros, intrProd, intr, EIntro ) );
+        introProducciones.add(new ProductorIntro(driveIntros, EIntro, intrProd, intr ) );
         introProducciones.get(0).start(); 
         
         
-        creditosProducciones.add(new ProductorCreditos(driveCred, credProd, cred, ECred ) );
+        creditosProducciones.add(new ProductorCreditos(driveCred, ECred, credProd, cred ) );
         creditosProducciones.get(0).start(); 
 
-        twistProducciones.add(new ProductorPTwist(drivePlot, ptwistProd, ptwist, EPlot ) );
+        twistProducciones.add(new ProductorPTwist(drivePlot, EPlot, ptwistProd, ptwist ) );
         twistProducciones.get(0).start(); 
        
         
-        ensambladorLista.add(new Ensamblador(intr, ini, ptwist, cierre, cred, intrProd,iniProd , ptwistProd, credProd, cierreProd,EIntro , EInicio, 
-        EPlot, ECred, ECierre , driveIntros, driveInicio, driveCred, driveCierre, drivePlot, true, 0));
-        ensambladorLista.get(0).start();
+    
+
+        ensambladorLista.add(new Ensamblador(intr, ini, ptwist, cierre, cred, EIntro, EInicio, EPlot, ECred, ECierre, 
+                intrProd, iniProd, ptwistProd, credProd, cierreProd, driveIntros, driveInicio, driveCred, driveCierre, drivePlot,
+                true, 0));
+       ensambladorLista.get(0).start();
+       
         
     } 
 }
+
      
     
 

@@ -27,12 +27,16 @@ public class ProductorPTwist extends Productor{
             if(this.drive.getCantidad()< this.drive.getCapacidad()){
                 this.productor.acquire();
                 this.sleep(HBO2.duracionDia*3);
-                this.ensamblador.acquire();
-                this.drive.setCantidad(this.drive.getCantidad()+1);
-                dCantidadPTwist = this.drive.getCantidad();
+                this.activo.acquire();
                 
+                this.drive.setCantidad(this.drive.getCantidad()+1);
+
+
+                dCantidadPTwist = this.drive.getCantidad();
+                 this.activo.release();
+                 this.ensamblador.release();
                 this.productor.release();
-                this.ensamblador.release();
+                
               
                                         
                 
