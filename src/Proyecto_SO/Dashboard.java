@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JLabel;
 
 /**
  *
@@ -25,6 +26,7 @@ public class Dashboard extends javax.swing.JFrame {
     private Actualizador up;
     HBO1 hbo = new HBO1();
     int inicios =0;
+    private JLabel Produccion1;
     
     public Dashboard() throws FileNotFoundException, InterruptedException, ParseException{
         initComponents();
@@ -32,7 +34,8 @@ public class Dashboard extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
-        
+        hbo.Start();
+        up.start();
         
         
       
