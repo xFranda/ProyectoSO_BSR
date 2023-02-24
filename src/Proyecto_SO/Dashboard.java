@@ -129,6 +129,10 @@ public class Dashboard extends javax.swing.JFrame {
         EmpIntroDesp2 = new javax.swing.JButton();
         EmpIntroDesp1 = new javax.swing.JButton();
         ProyectMTLOU1 = new javax.swing.JLabel();
+        DirStatuRM = new javax.swing.JTextField();
+        DiasRestantesTextTLOU1 = new javax.swing.JLabel();
+        DiasRestantesRM = new javax.swing.JTextField();
+        ProyectMTLOU2 = new javax.swing.JLabel();
         PMStatuRM = new javax.swing.JTextField();
         Fondo = new javax.swing.JLabel();
 
@@ -609,8 +613,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         ProyectMTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ProyectMTLOU.setForeground(new java.awt.Color(255, 255, 255));
-        ProyectMTLOU.setText("Proyect Manager");
-        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, -1, -1));
+        ProyectMTLOU.setText("Director");
+        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 580, -1, -1));
 
         DirTLOU.setEditable(false);
         DirTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -665,7 +669,7 @@ public class Dashboard extends javax.swing.JFrame {
         DiasRestantesTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
         DiasRestantesTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         DiasRestantesTextTLOU.setText("Dias restantes");
-        jPanel1.add(DiasRestantesTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 120, -1));
+        jPanel1.add(DiasRestantesTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 490, 120, -1));
 
         FallasPM.setEditable(false);
         FallasPM.setBackground(new java.awt.Color(0, 39, 76));
@@ -906,6 +910,42 @@ public class Dashboard extends javax.swing.JFrame {
         ProyectMTLOU1.setForeground(new java.awt.Color(255, 255, 255));
         ProyectMTLOU1.setText("Proyect Manager");
         jPanel1.add(ProyectMTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
+
+        DirStatuRM.setEditable(false);
+        DirStatuRM.setBackground(new java.awt.Color(0, 39, 76));
+        DirStatuRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DirStatuRM.setForeground(new java.awt.Color(255, 255, 255));
+        DirStatuRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        DirStatuRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DirStatuRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DirStatuRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 120, 30));
+
+        DiasRestantesTextTLOU1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DiasRestantesTextTLOU1.setForeground(new java.awt.Color(255, 255, 255));
+        DiasRestantesTextTLOU1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DiasRestantesTextTLOU1.setText("Dias restantes");
+        jPanel1.add(DiasRestantesTextTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 120, -1));
+
+        DiasRestantesRM.setEditable(false);
+        DiasRestantesRM.setBackground(new java.awt.Color(0, 39, 76));
+        DiasRestantesRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DiasRestantesRM.setForeground(new java.awt.Color(255, 255, 255));
+        DiasRestantesRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        DiasRestantesRM.setText("0");
+        DiasRestantesRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DiasRestantesRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DiasRestantesRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 520, 40, 40));
+
+        ProyectMTLOU2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ProyectMTLOU2.setForeground(new java.awt.Color(255, 255, 255));
+        ProyectMTLOU2.setText("Proyect Manager");
+        jPanel1.add(ProyectMTLOU2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, -1, -1));
 
         PMStatuRM.setEditable(false);
         PMStatuRM.setBackground(new java.awt.Color(0, 39, 76));
@@ -1190,6 +1230,14 @@ public class Dashboard extends javax.swing.JFrame {
        
     }//GEN-LAST:event_EmpIntroDesp2ActionPerformed
 
+    private void DirStatuRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirStatuRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DirStatuRMActionPerformed
+
+    private void DiasRestantesRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiasRestantesRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DiasRestantesRMActionPerformed
+
     private void PMStatuRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PMStatuRMActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PMStatuRMActionPerformed
@@ -1207,8 +1255,11 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel CierreTLOU;
     private javax.swing.JLabel CredRM;
     private javax.swing.JLabel CredTLOU;
+    public javax.swing.JTextField DiasRestantesRM;
     public javax.swing.JTextField DiasRestantesTLOU;
     private javax.swing.JLabel DiasRestantesTextTLOU;
+    private javax.swing.JLabel DiasRestantesTextTLOU1;
+    public javax.swing.JTextField DirStatuRM;
     public javax.swing.JTextField DirTLOU;
     private javax.swing.JLabel DirTextTLOU;
     private javax.swing.JButton EmpCierre;
@@ -1279,6 +1330,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Produccion4;
     private javax.swing.JLabel ProyectMTLOU;
     private javax.swing.JLabel ProyectMTLOU1;
+    private javax.swing.JLabel ProyectMTLOU2;
     private javax.swing.JButton Start;
     private javax.swing.JButton Stop;
     private javax.swing.JLabel Titulo;
