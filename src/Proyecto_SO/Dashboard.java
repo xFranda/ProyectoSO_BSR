@@ -111,6 +111,12 @@ public class Dashboard extends javax.swing.JFrame {
         Titulo = new javax.swing.JLabel();
         Start = new javax.swing.JButton();
         Stop = new javax.swing.JButton();
+        IntrosRM = new javax.swing.JLabel();
+        IniciosRM = new javax.swing.JLabel();
+        CredRM = new javax.swing.JLabel();
+        PlotRM = new javax.swing.JLabel();
+        CierreRM = new javax.swing.JLabel();
+        CapitulosRM = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -748,6 +754,36 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(Stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, -1, -1));
 
+        IntrosRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        IntrosRM.setForeground(new java.awt.Color(255, 255, 255));
+        IntrosRM.setText("Intros");
+        jPanel1.add(IntrosRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 500, -1, -1));
+
+        IniciosRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        IniciosRM.setForeground(new java.awt.Color(255, 255, 255));
+        IniciosRM.setText("Inicios");
+        jPanel1.add(IniciosRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, -1, -1));
+
+        CredRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        CredRM.setForeground(new java.awt.Color(255, 255, 255));
+        CredRM.setText("Creditos");
+        jPanel1.add(CredRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, -1, -1));
+
+        PlotRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        PlotRM.setForeground(new java.awt.Color(255, 255, 255));
+        PlotRM.setText("Plot Twist");
+        jPanel1.add(PlotRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 620, -1, -1));
+
+        CierreRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        CierreRM.setForeground(new java.awt.Color(255, 255, 255));
+        CierreRM.setText("Cierres");
+        jPanel1.add(CierreRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 660, -1, -1));
+
+        CapitulosRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        CapitulosRM.setForeground(new java.awt.Color(255, 255, 255));
+        CapitulosRM.setText("Capitulos");
+        jPanel1.add(CapitulosRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, -1, -1));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
@@ -992,9 +1028,12 @@ public class Dashboard extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CapitulosRM;
     private javax.swing.JLabel CapitulosTLOU;
     public javax.swing.JTextField CapsTLOU;
+    private javax.swing.JLabel CierreRM;
     private javax.swing.JLabel CierreTLOU;
+    private javax.swing.JLabel CredRM;
     private javax.swing.JLabel CredTLOU;
     public javax.swing.JTextField DiasRestantesTLOU;
     private javax.swing.JLabel DiasRestantesTextTLOU;
@@ -1029,7 +1068,9 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField GananciasUL;
     private javax.swing.JLabel GastosM;
     public javax.swing.JTextField GastosMensuales;
+    private javax.swing.JLabel IniciosRM;
     private javax.swing.JLabel IniciosTLOU;
+    private javax.swing.JLabel IntrosRM;
     private javax.swing.JLabel IntrosTLOU;
     public javax.swing.JTextField NumCapRM;
     public javax.swing.JTextField NumCierre;
@@ -1050,6 +1091,7 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField NumPTwistRM;
     public javax.swing.JTextField NumPlot;
     public javax.swing.JTextField PMStatus;
+    private javax.swing.JLabel PlotRM;
     private javax.swing.JLabel PlotTLOU;
     private javax.swing.JLabel Produccion;
     private javax.swing.JLabel Produccion4;
