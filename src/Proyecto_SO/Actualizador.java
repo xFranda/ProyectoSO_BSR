@@ -75,8 +75,7 @@ public class Actualizador extends Thread{
        
        //Game of Thrones
        try{
-       dashboard.GoTGanan.setText(new BigDecimal(HBO3.ganancia).toPlainString());
-       dashboard.GoTGastos.setText(new BigDecimal(HBO3.gastos).toPlainString());
+       
        dashboard.GoTIntros.setText(String.valueOf(HBO3.almacenamiento.get("intro")));
        dashboard.GoTInicio.setText(String.valueOf(HBO3.almacenamiento.get("inicio")));
        dashboard.GoTCierres.setText(String.valueOf(HBO3.almacenamiento.get("cierres")));
@@ -86,6 +85,8 @@ public class Actualizador extends Thread{
        dashboard.GoTDisp.setText(String.valueOf(HBO3.productores));
        dashboard.GoTDias.setText(String.valueOf(30 - (HBO3.dia)));
        while(HBO3.dia == 30){
+           dashboard.GoTGanan.setText(new BigDecimal(HBO3.ganancia).toPlainString());
+           dashboard.GoTGastos.setText(new BigDecimal(HBO3.gastos).toPlainString());
            dashboard.GoTPausa();
            HBO3.almacenamiento.put("intro", 0);
            HBO3.almacenamiento.put("inicio", 0);
