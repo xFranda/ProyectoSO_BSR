@@ -5,12 +5,14 @@
  */
 package Proyecto_SO;
 
+import Proyecto_SO.Clases.PlantaRyM.GananciasRM;
 import Proyecto_SO.Clases.PlantaRyM.HBO2;
 import Proyecto_SO.Clases.PlantaRyM.PM;
 import Proyecto_SO.Clases.PlantaRyM.Tiempo;
 import Proyecto_SO.Clases.PlantaTLOU.Dia;
 import Proyecto_SO.Clases.PlantaTLOU.Director;
 import Proyecto_SO.Clases.PlantaTLOU.HBO1;
+import static Proyecto_SO.Clases.PlantaTLOU.HBO1.Ganancias;
 import Proyecto_SO.Clases.PlantaTLOU.ProyectM;
 import javax.swing.JFrame;
 /**
@@ -81,7 +83,8 @@ public class Actualizador extends Thread{
        dashboard.EmpCierreRM.setText(String.valueOf(HBO2.cierresProducciones.size()));
        dashboard.PMStatuRM.setText(String.valueOf(PM.status));
        dashboard.DiasRestantesRM.setText(String.valueOf(Tiempo.Dia));
-       dashboard.DirStatuRM.setText(String.valueOf(Director.status));
+       dashboard.DirStatuRM1.setText(String.valueOf(Director.status));
+       dashboard.FinanzasRM.setText(String.valueOf(GananciasRM.Finanzas));
         }
         
     

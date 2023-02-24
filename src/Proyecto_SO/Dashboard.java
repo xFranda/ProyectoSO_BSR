@@ -129,11 +129,13 @@ public class Dashboard extends javax.swing.JFrame {
         EmpIntroDesp2 = new javax.swing.JButton();
         EmpIntroDesp1 = new javax.swing.JButton();
         ProyectMTLOU1 = new javax.swing.JLabel();
-        DirStatuRM = new javax.swing.JTextField();
+        FinanzasRM = new javax.swing.JTextField();
         DiasRestantesTextTLOU1 = new javax.swing.JLabel();
         DiasRestantesRM = new javax.swing.JTextField();
         ProyectMTLOU2 = new javax.swing.JLabel();
         PMStatuRM = new javax.swing.JTextField();
+        ProyectMTLOU3 = new javax.swing.JLabel();
+        DirStatuRM1 = new javax.swing.JTextField();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -613,8 +615,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         ProyectMTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ProyectMTLOU.setForeground(new java.awt.Color(255, 255, 255));
-        ProyectMTLOU.setText("Director");
-        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 580, -1, -1));
+        ProyectMTLOU.setText("Finanzas");
+        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 650, -1, -1));
 
         DirTLOU.setEditable(false);
         DirTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -911,17 +913,17 @@ public class Dashboard extends javax.swing.JFrame {
         ProyectMTLOU1.setText("Proyect Manager");
         jPanel1.add(ProyectMTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
 
-        DirStatuRM.setEditable(false);
-        DirStatuRM.setBackground(new java.awt.Color(0, 39, 76));
-        DirStatuRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        DirStatuRM.setForeground(new java.awt.Color(255, 255, 255));
-        DirStatuRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        DirStatuRM.addActionListener(new java.awt.event.ActionListener() {
+        FinanzasRM.setEditable(false);
+        FinanzasRM.setBackground(new java.awt.Color(0, 39, 76));
+        FinanzasRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        FinanzasRM.setForeground(new java.awt.Color(255, 255, 255));
+        FinanzasRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        FinanzasRM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DirStatuRMActionPerformed(evt);
+                FinanzasRMActionPerformed(evt);
             }
         });
-        jPanel1.add(DirStatuRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 120, 30));
+        jPanel1.add(FinanzasRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 680, 200, 50));
 
         DiasRestantesTextTLOU1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         DiasRestantesTextTLOU1.setForeground(new java.awt.Color(255, 255, 255));
@@ -959,9 +961,26 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(PMStatuRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, 120, 30));
 
+        ProyectMTLOU3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ProyectMTLOU3.setForeground(new java.awt.Color(255, 255, 255));
+        ProyectMTLOU3.setText("Director");
+        jPanel1.add(ProyectMTLOU3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 580, -1, -1));
+
+        DirStatuRM1.setEditable(false);
+        DirStatuRM1.setBackground(new java.awt.Color(0, 39, 76));
+        DirStatuRM1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DirStatuRM1.setForeground(new java.awt.Color(255, 255, 255));
+        DirStatuRM1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        DirStatuRM1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DirStatuRM1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DirStatuRM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, 120, 30));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1230,9 +1249,9 @@ public class Dashboard extends javax.swing.JFrame {
        
     }//GEN-LAST:event_EmpIntroDesp2ActionPerformed
 
-    private void DirStatuRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirStatuRMActionPerformed
+    private void FinanzasRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinanzasRMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DirStatuRMActionPerformed
+    }//GEN-LAST:event_FinanzasRMActionPerformed
 
     private void DiasRestantesRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiasRestantesRMActionPerformed
         // TODO add your handling code here:
@@ -1241,6 +1260,10 @@ public class Dashboard extends javax.swing.JFrame {
     private void PMStatuRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PMStatuRMActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PMStatuRMActionPerformed
+
+    private void DirStatuRM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirStatuRM1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DirStatuRM1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1259,7 +1282,7 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField DiasRestantesTLOU;
     private javax.swing.JLabel DiasRestantesTextTLOU;
     private javax.swing.JLabel DiasRestantesTextTLOU1;
-    public javax.swing.JTextField DirStatuRM;
+    public javax.swing.JTextField DirStatuRM1;
     public javax.swing.JTextField DirTLOU;
     private javax.swing.JLabel DirTextTLOU;
     private javax.swing.JButton EmpCierre;
@@ -1293,6 +1316,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Empleados1;
     private javax.swing.JLabel Fallas;
     public javax.swing.JTextField FallasPM;
+    public javax.swing.JTextField FinanzasRM;
     private javax.swing.JLabel Fondo;
     public javax.swing.JTextField GananciasTLOU;
     private javax.swing.JLabel GananciasTextTLOU;
@@ -1331,6 +1355,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel ProyectMTLOU;
     private javax.swing.JLabel ProyectMTLOU1;
     private javax.swing.JLabel ProyectMTLOU2;
+    private javax.swing.JLabel ProyectMTLOU3;
     private javax.swing.JButton Start;
     private javax.swing.JButton Stop;
     private javax.swing.JLabel Titulo;

@@ -109,6 +109,9 @@ public class HBO2 {
      public Drive drivePlot;
      
      Semaphore Reloj = new Semaphore(1);
+     
+     Semaphore Capitulos = new Semaphore(1);
+
 
     
    
@@ -132,6 +135,15 @@ public class HBO2 {
         
         PM projectm = new PM(Reloj);  
         projectm.start();
+        
+        Director gab = new Director(Reloj, Capitulos);
+        gab.start();
+        
+        Tiempo jimin = new Tiempo();
+        GananciasRM yoongi = new GananciasRM(); 
+        yoongi.start();
+        
+  
         
         capitulos = 0; 
         cantidadMaxProductores = 19; 
