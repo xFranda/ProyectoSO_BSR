@@ -117,6 +117,13 @@ public class Dashboard extends javax.swing.JFrame {
         PlotRM = new javax.swing.JLabel();
         CierreRM = new javax.swing.JLabel();
         CapitulosRM = new javax.swing.JLabel();
+        Empleados1 = new javax.swing.JLabel();
+        EmpEmbRM = new javax.swing.JTextField();
+        EmpCierreRM = new javax.swing.JTextField();
+        EmpPTwistRM = new javax.swing.JTextField();
+        EmpCredRM = new javax.swing.JTextField();
+        EmpInicioRM = new javax.swing.JTextField();
+        EmpIntroRM = new javax.swing.JTextField();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -131,7 +138,7 @@ public class Dashboard extends javax.swing.JFrame {
         Empleados.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Empleados.setForeground(new java.awt.Color(255, 255, 255));
         Empleados.setText("Empleados");
-        jPanel1.add(Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 60, -1, -1));
+        jPanel1.add(Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, -1, -1));
 
         NumIntrosRM.setEditable(false);
         NumIntrosRM.setBackground(new java.awt.Color(0, 39, 76));
@@ -784,6 +791,89 @@ public class Dashboard extends javax.swing.JFrame {
         CapitulosRM.setText("Capitulos");
         jPanel1.add(CapitulosRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, -1, -1));
 
+        Empleados1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Empleados1.setForeground(new java.awt.Color(255, 255, 255));
+        Empleados1.setText("Empleados");
+        jPanel1.add(Empleados1, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 60, -1, -1));
+
+        EmpEmbRM.setEditable(false);
+        EmpEmbRM.setBackground(new java.awt.Color(0, 39, 76));
+        EmpEmbRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpEmbRM.setForeground(new java.awt.Color(255, 255, 255));
+        EmpEmbRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmpEmbRM.setText("0");
+        EmpEmbRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpEmbRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpEmbRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 690, 30, 30));
+
+        EmpCierreRM.setEditable(false);
+        EmpCierreRM.setBackground(new java.awt.Color(0, 39, 76));
+        EmpCierreRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpCierreRM.setForeground(new java.awt.Color(255, 255, 255));
+        EmpCierreRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmpCierreRM.setText("0");
+        EmpCierreRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpCierreRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpCierreRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 650, 30, 30));
+
+        EmpPTwistRM.setEditable(false);
+        EmpPTwistRM.setBackground(new java.awt.Color(0, 39, 76));
+        EmpPTwistRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpPTwistRM.setForeground(new java.awt.Color(255, 255, 255));
+        EmpPTwistRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmpPTwistRM.setText("0");
+        EmpPTwistRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpPTwistRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpPTwistRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 610, 30, 30));
+
+        EmpCredRM.setEditable(false);
+        EmpCredRM.setBackground(new java.awt.Color(0, 39, 76));
+        EmpCredRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpCredRM.setForeground(new java.awt.Color(255, 255, 255));
+        EmpCredRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmpCredRM.setText("0");
+        EmpCredRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpCredRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpCredRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 570, 30, 30));
+
+        EmpInicioRM.setEditable(false);
+        EmpInicioRM.setBackground(new java.awt.Color(0, 39, 76));
+        EmpInicioRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpInicioRM.setForeground(new java.awt.Color(255, 255, 255));
+        EmpInicioRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmpInicioRM.setText("0");
+        EmpInicioRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpInicioRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpInicioRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 530, 30, 30));
+
+        EmpIntroRM.setEditable(false);
+        EmpIntroRM.setBackground(new java.awt.Color(0, 39, 76));
+        EmpIntroRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        EmpIntroRM.setForeground(new java.awt.Color(255, 255, 255));
+        EmpIntroRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmpIntroRM.setText("0");
+        EmpIntroRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpIntroRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmpIntroRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 490, 30, 30));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
@@ -1013,7 +1103,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
         // TODO add your handling code here:
-        hbo.Start();
+        //hbo.Start();
         up.start();
     }//GEN-LAST:event_StartActionPerformed
 
@@ -1021,6 +1111,30 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         hbo.StopAll();
     }//GEN-LAST:event_StopActionPerformed
+
+    private void EmpIntroRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpIntroRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpIntroRMActionPerformed
+
+    private void EmpInicioRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpInicioRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpInicioRMActionPerformed
+
+    private void EmpCredRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCredRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpCredRMActionPerformed
+
+    private void EmpPTwistRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpPTwistRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpPTwistRMActionPerformed
+
+    private void EmpCierreRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCierreRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpCierreRMActionPerformed
+
+    private void EmpEmbRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpEmbRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpEmbRMActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1041,24 +1155,31 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel DirTextTLOU;
     private javax.swing.JButton EmpCierre;
     private javax.swing.JButton EmpCierreDesp;
+    public javax.swing.JTextField EmpCierreRM;
     private javax.swing.JLabel EmpCierreTLOU;
     private javax.swing.JButton EmpCred;
     private javax.swing.JButton EmpCredDesp;
+    public javax.swing.JTextField EmpCredRM;
     private javax.swing.JLabel EmpCredsTLOU;
     private javax.swing.JLabel EmpDispoTLOU;
+    public javax.swing.JTextField EmpEmbRM;
     private javax.swing.JButton EmpEnsamblador;
     private javax.swing.JButton EmpEnsambladorDesp;
     private javax.swing.JLabel EmpEnsambladorTLOU;
     private javax.swing.JButton EmpInicio;
     private javax.swing.JButton EmpInicioDesp;
+    public javax.swing.JTextField EmpInicioRM;
     private javax.swing.JLabel EmpIniciosTLOU;
     private javax.swing.JButton EmpIntro;
     private javax.swing.JButton EmpIntroDesp;
+    public javax.swing.JTextField EmpIntroRM;
     private javax.swing.JLabel EmpIntrosTLOU;
+    public javax.swing.JTextField EmpPTwistRM;
     private javax.swing.JButton EmpPlot;
     private javax.swing.JButton EmpPlotDesp;
     private javax.swing.JLabel EmpPlotTLO;
     private javax.swing.JLabel Empleados;
+    private javax.swing.JLabel Empleados1;
     private javax.swing.JLabel Fallas;
     public javax.swing.JTextField FallasPM;
     private javax.swing.JLabel Fondo;

@@ -70,6 +70,12 @@ public class Actualizador extends Thread{
        dashboard.NumCierresRM.setText(String.valueOf(HBO2.cantidadCierre));
        dashboard.NumCapRM.setText(String.valueOf(HBO2.capitulos));
        
+       dashboard.EmpIntroRM.setText(String.valueOf(HBO2.introProducciones.size()));
+       dashboard.EmpInicioRM.setText(String.valueOf(HBO2.openingProducciones.size()));
+       dashboard.EmpCredRM.setText(String.valueOf(HBO2.creditosProducciones.size()));
+       dashboard.EmpPTwistRM.setText(String.valueOf(HBO2.twistProducciones.size()));
+       dashboard.EmpEmbRM.setText(String.valueOf(HBO2.ensambladorLista.size()));
+       dashboard.EmpCierreRM.setText(String.valueOf(HBO2.cierresProducciones.size()));
         }
     
     }
