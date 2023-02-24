@@ -89,6 +89,7 @@ public class Ensamblador extends Thread{
     
     }
     
+    @Override
     public void run() {
                         System.out.println("Ensamblando...");
         while (activo){

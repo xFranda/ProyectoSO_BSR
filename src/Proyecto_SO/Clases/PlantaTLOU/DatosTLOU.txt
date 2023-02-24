@@ -1,5 +1,5 @@
-DiaDuracion:     4           
-DiasParaCorte:   30          
+DiaDuracion:     1           
+DiasParaCorte:   15          
 inicioDrive:     0           
 introDrive:      0           
 credDrive:       0           
@@ -10,4 +10,4 @@ prodIntro:       0
 prodCred:        0           
 prodCierre:      0           
 prodPlot:        0           
-ensamblador:     0           
+ensamblador:     1           

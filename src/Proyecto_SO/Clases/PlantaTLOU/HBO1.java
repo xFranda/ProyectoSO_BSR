@@ -5,6 +5,7 @@
  */
 package Proyecto_SO.Clases.PlantaTLOU;
 
+import Proyecto_SO.Actualizador;
 import java.io.File;
 import java.io.FileNotFoundException;
 import static java.lang.Integer.parseInt;
@@ -31,6 +32,7 @@ public class HBO1 {
     public static int empleadosMax; // Cantidad maxima de empleados
     public static double Ganancias; //Ganancias que se obtienen por la publicacion de los capitulos
     public static double Gastos; // Gastos en salarios que se tienen en la planta hora a hora
+    public static double GananciasLote;//Ganancias que se obtienen por la publicacion del ultimo lote
     public static int LoteTLOU; //Ultimo lore de episodios
     public static double GastosM; //Gastos en salarios mensuales
     
@@ -324,6 +326,52 @@ public class HBO1 {
         Cobros cobro = new Cobros();
         cobro.start();
     }
+     public void StopAll(){
+        for(int i=ensamblador; i > 0; i--){  //1
+            ensamblador--;
+            PosVecEnsamblador--;
+            vecEnsamblador[PosVecEnsamblador].DespedirEnsamblador();
+
+            }
+        for(int i=prodIntro; i > 0; i--){  //1
+            prodIntro--;
+            PosVecIntro--;
+            vecProductoresIntro[PosVecIntro].DespProdIntro();
+
+            }
+        for(int i=prodInicio; i > 0; i--){  //1
+            prodInicio--;
+            PosVecInicio--;
+            vecProductoresInicio[PosVecInicio].DespProdInicio();
+
+            }
+        for(int i=prodCred; i > 0; i--){  //1
+            prodCred--;
+            PosVecCred--;
+            vecProductoresCred[PosVecCred].DespProdCred();
+
+            }
+        for(int i=prodPlot; i > 0; i--){  //1
+            prodPlot--;
+            PosVecPlot--;
+            vecProductoresPlot[PosVecPlot].DespProdPlot();
+            }
+        for(int i=prodCierre; i > 0; i--){  //1
+            prodCierre--;
+            PosVecCierre--;
+            vecProductoresCierre[PosVecCierre].DespProdCierre();
+
+            }
+        ProyectM.DespPM();
+        Director.DespDir();
+        Dia.StopDia();
+        Cobros.StopCobros();
+        Actualizador.Stop();
+
+    }
+
+
+
     
     }
     

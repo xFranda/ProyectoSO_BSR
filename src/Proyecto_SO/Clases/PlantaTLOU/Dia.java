@@ -13,6 +13,8 @@ public class Dia extends Thread {
     
     public static int Dia;
     public int contador; 
+    private static boolean activo = true;
+
     
     public Dia(){        
         this.Dia=HBO1.DiasParaCorte;
@@ -30,5 +32,7 @@ public class Dia extends Thread {
             } catch (InterruptedException ex) {System.out.println("Ocurrió un error!");}
         }
     }
-    
+    public static void StopDia(){
+    activo = false;
+    }
 }

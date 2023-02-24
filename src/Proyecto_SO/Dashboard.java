@@ -108,7 +108,10 @@ public class Dashboard extends javax.swing.JFrame {
         GastosMensuales = new javax.swing.JTextField();
         GastosM = new javax.swing.JLabel();
         UltimoLoteTLOU = new javax.swing.JTextField();
+        GananciasTextTLOU1 = new javax.swing.JLabel();
+        GananciasUL = new javax.swing.JTextField();
         UL = new javax.swing.JLabel();
+        Titulo = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -572,7 +575,7 @@ public class Dashboard extends javax.swing.JFrame {
         Produccion4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Produccion4.setForeground(new java.awt.Color(255, 255, 255));
         Produccion4.setText("Produccion");
-        jPanel1.add(Produccion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, -1, -1));
+        jPanel1.add(Produccion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 60, -1, -1));
 
         PMStatus.setEditable(false);
         PMStatus.setBackground(new java.awt.Color(0, 39, 76));
@@ -619,13 +622,13 @@ public class Dashboard extends javax.swing.JFrame {
                 GananciasTLOUActionPerformed(evt);
             }
         });
-        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 200, 160, 30));
+        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 160, 30));
 
         GananciasTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         GananciasTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
         GananciasTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        GananciasTextTLOU.setText("Ganancias");
-        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 180, 160, -1));
+        GananciasTextTLOU.setText("Ganancias totales");
+        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 160, -1));
 
         DiasRestantesTLOU.setEditable(false);
         DiasRestantesTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -695,11 +698,34 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(UltimoLoteTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 200, 30, 30));
 
+        GananciasTextTLOU1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GananciasTextTLOU1.setForeground(new java.awt.Color(255, 255, 255));
+        GananciasTextTLOU1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        GananciasTextTLOU1.setText("Ganancias Lote");
+        jPanel1.add(GananciasTextTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 180, 160, -1));
+
+        GananciasUL.setEditable(false);
+        GananciasUL.setBackground(new java.awt.Color(0, 39, 76));
+        GananciasUL.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GananciasUL.setForeground(new java.awt.Color(255, 255, 255));
+        GananciasUL.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GananciasUL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GananciasULActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GananciasUL, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 200, 160, 30));
+
         UL.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         UL.setForeground(new java.awt.Color(255, 255, 255));
         UL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         UL.setText("UL");
         jPanel1.add(UL, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 180, 30, -1));
+
+        Titulo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo.setText("Planta 1: The Last Of US");
+        jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, -1, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
@@ -924,6 +950,10 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NumCapRMActionPerformed
 
+    private void GananciasULActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GananciasULActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GananciasULActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -963,6 +993,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Fondo;
     public javax.swing.JTextField GananciasTLOU;
     private javax.swing.JLabel GananciasTextTLOU;
+    private javax.swing.JLabel GananciasTextTLOU1;
+    public javax.swing.JTextField GananciasUL;
     private javax.swing.JLabel GastosM;
     public javax.swing.JTextField GastosMensuales;
     private javax.swing.JLabel IniciosTLOU;
@@ -990,6 +1022,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Produccion;
     private javax.swing.JLabel Produccion4;
     private javax.swing.JLabel ProyectMTLOU;
+    private javax.swing.JLabel Titulo;
     private javax.swing.JLabel UL;
     public javax.swing.JTextField UltimoLoteTLOU;
     private javax.swing.JPanel jPanel1;

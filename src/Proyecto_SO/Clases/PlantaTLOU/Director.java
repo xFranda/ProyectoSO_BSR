@@ -23,6 +23,7 @@ public class Director extends Thread {
         int dineroCap = 150000;
         public static int contadorRM =0;
         public static int Mes = 30;
+        private static boolean activo = true;
         
         public Director (Semaphore Reloj, Semaphore Capitulo){
             this.Reloj = Reloj;
@@ -58,9 +59,9 @@ public class Director extends Thread {
                         DIR = "Despachado";
                         Thread.sleep(HBO1.DiaDuracion/4);
                         Capitulo.acquire();
-                            for (int i=0;i<HBO1.CapituloTLOU-1;i++){
-                                HBO1.Ganancias = HBO1.Ganancias + (7.333*100000*(i+1));
-                            }
+                            
+                            HBO1.Ganancias = HBO1.Ganancias + (7.333*100000*(HBO1.CapituloTLOU));
+                            HBO1.GananciasLote = HBO1.CapituloTLOU * (7.333*100000);
                             HBO1.LoteTLOU = HBO1.CapituloTLOU;
                             HBO1.CapituloTLOU =0;
                             if (Mes == 0){
@@ -87,4 +88,11 @@ public class Director extends Thread {
         
         
         }
+        public static void DespDir(){
+        activo = false;
+        DIR="STOP";
+
+        }
+        
+        
 }

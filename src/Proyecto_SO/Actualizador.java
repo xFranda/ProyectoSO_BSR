@@ -20,6 +20,7 @@ public class Actualizador extends Thread{
     Dashboard dashboard;
     HBO1 hbo1;
     HBO2 hbo2; 
+    private static boolean activo = true;
     
     public Actualizador(Dashboard dashboard, HBO1 hbo1){
         this.dashboard = dashboard;
@@ -31,7 +32,7 @@ public class Actualizador extends Thread{
     @Override
     public void run(){
     
-        while(true){
+        while(activo){
         
             
       // The Last of Us
@@ -59,6 +60,7 @@ public class Actualizador extends Thread{
        dashboard.FallasPM.setText(String.valueOf(Director.contadorRM));
        dashboard.GastosMensuales.setText(String.valueOf(HBO1.GastosM));
        dashboard.UltimoLoteTLOU.setText(String.valueOf(HBO1.LoteTLOU));
+       dashboard.GananciasUL.setText(String.valueOf(HBO1.GananciasLote));
        
        // Rick y Morty
        dashboard.NumIntrosRM.setText(String.valueOf(HBO2.cantidadIntro));
@@ -69,6 +71,11 @@ public class Actualizador extends Thread{
        dashboard.NumCapRM.setText(String.valueOf(HBO2.capitulos));
        
         }
+    
+    }
+    
+    public static void Stop(){
+    activo = false;
     
     }
 }
