@@ -8,7 +8,7 @@ package Proyecto_SO.Clases.PlantaRyM;
  *
  * @author Gab
  */
-public class Tiempo {
+public class Tiempo extends Thread{
      public static int Dia;
     public int counter; 
 
@@ -19,11 +19,11 @@ public class Tiempo {
         this.counter=0;         
     }
     
-    public void run(){  //Va contando los dias que van pasando        
+    public void run(){         
         while(true){   
             try {
                 Thread.sleep(HBO2.duracionDia);
-                System.out.println("\nDIA: "+(Dia-1));
+               
                 Dia--;
                 Director.Mes--;
             } catch (InterruptedException ex) {System.out.println("Ocurrió un error!");}

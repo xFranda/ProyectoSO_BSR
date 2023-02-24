@@ -182,6 +182,7 @@ public class HBO2 {
         gab.start();
         
         Tiempo jimin = new Tiempo();
+        jimin.start();
         GananciasRM yoongi = new GananciasRM(); 
         yoongi.start();
         
