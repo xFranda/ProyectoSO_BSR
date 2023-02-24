@@ -14,6 +14,8 @@ import java.util.concurrent.Semaphore;
  * @author frand
  */
 public class Director extends Thread {
+
+    public static Object status;
         Semaphore Reloj = new Semaphore(1);
         Semaphore Capitulo = new Semaphore(1);
         Random r = new Random();

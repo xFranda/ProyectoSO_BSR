@@ -14,6 +14,7 @@ public class ProductorCreditos extends Productor{
     
       public int dCantidadCreditos; 
       public int cantidadMaxCreditos; 
+      public boolean empleado = true;
     
     public ProductorCreditos(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
         super(drive, ensamblador, productor, activo);
@@ -22,7 +23,7 @@ public class ProductorCreditos extends Productor{
     @Override
     public void run(){
         
-        while(true){
+        while(empleado){
             try{
             if(this.drive.getCantidad()< this.drive.getCapacidad()){
                 this.productor.acquire();
