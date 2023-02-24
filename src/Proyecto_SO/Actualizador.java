@@ -18,6 +18,7 @@ public class Actualizador extends Thread{
     
     Dashboard dashboard;
     HBO1 hbo1;
+    private static boolean activo = true;
     
     public Actualizador(Dashboard dashboard, HBO1 hbo1){
         this.dashboard = dashboard;
@@ -29,7 +30,7 @@ public class Actualizador extends Thread{
     @Override
     public void run(){
     
-        while(true){
+        while(activo){
         
        dashboard.NumIntros.setText(String.valueOf(HBO1.Intro));
        dashboard.NumInicios.setText(String.valueOf(HBO1.Inicio));
@@ -55,8 +56,15 @@ public class Actualizador extends Thread{
        dashboard.FallasPM.setText(String.valueOf(Director.contadorRM));
        dashboard.GastosMensuales.setText(String.valueOf(HBO1.GastosM));
        dashboard.UltimoLoteTLOU.setText(String.valueOf(HBO1.LoteTLOU));
+       dashboard.GananciasUL.setText(String.valueOf(HBO1.GananciasLote));
        
         }
     
     }
+    public static void Stop(){
+    activo=false;
+    }
+    /**public void Reinicio(){
+    this.start();
+    }*/
 }
