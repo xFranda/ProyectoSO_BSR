@@ -13,6 +13,7 @@ public class Cobros extends Thread {
     
     public static int DiaDuracion;
     public int contador; 
+    private static boolean activo = true;
     
     public Cobros(){        
         this.DiaDuracion =HBO1.DiaDuracion;
@@ -36,6 +37,9 @@ public class Cobros extends Thread {
                 
             } catch (InterruptedException ex) {System.out.println("Ocurrió un error!");}
         }
+    }
+    public static void StopCobros(){
+    activo = false;
     }
     
 }

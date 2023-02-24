@@ -89,8 +89,8 @@ public class Ensamblador extends Thread{
     
     }
     
+    @Override
     public void run() {
-                        System.out.println("Ensamblando...");
         while (activo){
             try {
                 if (HBO1.CapituloTLOU %5 == 0/* && HBO1.CapituloTLOU > 1*/){

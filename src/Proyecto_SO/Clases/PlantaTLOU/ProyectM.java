@@ -16,6 +16,7 @@ public class ProyectM extends Thread {
         Semaphore Reloj = new Semaphore(1);
         public static int DiasAntesCorte;
         public static String PM;
+        private static boolean activo = true;
         
         public ProyectM (Semaphore Reloj){
             this.Reloj = Reloj;
@@ -25,7 +26,7 @@ public class ProyectM extends Thread {
         
         @Override
         public void run (){
-            while(true){
+            while(activo){
             
                 try{
                     //System.out.println("El PM esta viendo RM");
@@ -48,6 +49,10 @@ public class ProyectM extends Thread {
             
             }
         
+        
+        }
+        public static void DespPM(){
+        activo = false;
         
         }
 }
