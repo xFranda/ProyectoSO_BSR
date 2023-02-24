@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JLabel;
 
 /**
  *
@@ -23,9 +24,11 @@ public class Dashboard extends javax.swing.JFrame {
      * 
      */
     
-    private final Actualizador up;
+    private Actualizador up;
     HBO1 hbo = new HBO1();
     HBO3 hbo3 = new HBO3();
+    int inicios =0;
+    private JLabel Produccion1;
     
     public Dashboard() throws FileNotFoundException, InterruptedException, ParseException{
         initComponents();
@@ -36,10 +39,14 @@ public class Dashboard extends javax.swing.JFrame {
         hbo.Start();
         //hbo3.start();
         this.up.start();
+        up.start();
         
         
       
     }
+    /**public void Reinicio(){
+    up.Reinicio();
+    }*/
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -111,6 +118,7 @@ public class Dashboard extends javax.swing.JFrame {
         GastosMensuales = new javax.swing.JTextField();
         GastosM = new javax.swing.JLabel();
         UltimoLoteTLOU = new javax.swing.JTextField();
+        GananciasUL = new javax.swing.JTextField();
         UL = new javax.swing.JLabel();
         IntrosTLOU1 = new javax.swing.JLabel();
         IniciosTLOU1 = new javax.swing.JLabel();
@@ -154,6 +162,10 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         GoTDisp = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
+        GananciasULTextTLOU1 = new javax.swing.JLabel();
+        InicioProdu = new javax.swing.JButton();
+        StopProdu = new javax.swing.JButton();
+        Produccion1 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -664,13 +676,13 @@ public class Dashboard extends javax.swing.JFrame {
                 GananciasTLOUActionPerformed(evt);
             }
         });
-        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 200, 160, 30));
+        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 260, 30));
 
         GananciasTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         GananciasTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
         GananciasTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        GananciasTextTLOU.setText("Ganancias");
-        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 180, 160, -1));
+        GananciasTextTLOU.setText("Ganancias totales:");
+        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 117, 260, 20));
 
         DiasRestantesTLOU.setEditable(false);
         DiasRestantesTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -739,6 +751,18 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         jPanel1.add(UltimoLoteTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 200, 30, 30));
+
+        GananciasUL.setEditable(false);
+        GananciasUL.setBackground(new java.awt.Color(0, 39, 76));
+        GananciasUL.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GananciasUL.setForeground(new java.awt.Color(255, 255, 255));
+        GananciasUL.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GananciasUL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GananciasULActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GananciasUL, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 200, 160, 30));
 
         UL.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         UL.setForeground(new java.awt.Color(255, 255, 255));
@@ -1287,6 +1311,33 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UltimoLoteTLOUActionPerformed
 
+
+    private void InicioProduActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicioProduActionPerformed
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            hbo.Start();
+        } catch (ParseException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.up.start();
+    
+    }//GEN-LAST:event_InicioProduActionPerformed
+
+    private void StopProduActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopProduActionPerformed
+        // TODO add your handling code here:
+        //this.up.stop();
+        hbo.StopAll();
+    }//GEN-LAST:event_StopProduActionPerformed
+
+    private void GananciasULActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GananciasULActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GananciasULActionPerformed
+
     private void NumIntrosRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumIntrosRMActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NumIntrosRMActionPerformed
@@ -1422,6 +1473,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Fondo;
     public javax.swing.JTextField GananciasTLOU;
     private javax.swing.JLabel GananciasTextTLOU;
+    public javax.swing.JTextField GananciasUL;
+    private javax.swing.JLabel GananciasULTextTLOU1;
     private javax.swing.JLabel GastosM;
     public javax.swing.JTextField GastosMensuales;
     public javax.swing.JTextField GoTAssemblerEmp;
@@ -1439,6 +1492,7 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField GoTPlot;
     public javax.swing.JTextField GoTPlotEmp;
     public javax.swing.JButton GoTStart;
+    private javax.swing.JButton InicioProdu;
     private javax.swing.JLabel IniciosTLOU;
     private javax.swing.JLabel IniciosTLOU1;
     private javax.swing.JLabel IntrosTLOU;
@@ -1474,6 +1528,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Produccion4;
     private javax.swing.JLabel Produccion5;
     private javax.swing.JLabel ProyectMTLOU;
+    private javax.swing.JButton StopProdu;
     private javax.swing.JLabel UL;
     public javax.swing.JTextField UltimoLoteTLOU;
     private javax.swing.JLabel jLabel1;

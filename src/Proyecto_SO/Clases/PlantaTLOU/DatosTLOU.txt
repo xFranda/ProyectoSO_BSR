@@ -1,4 +1,4 @@
-DiaDuracion:     4           
+DiaDuracion:     3           
 DiasParaCorte:   30          
 inicioDrive:     0           
 introDrive:      0           
