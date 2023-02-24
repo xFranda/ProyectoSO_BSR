@@ -4,6 +4,7 @@
  */
 package Proyecto_SO.Clases.PlantaRyM;
 
+
 import java.util.concurrent.Semaphore;
 
 /**
@@ -11,7 +12,7 @@ import java.util.concurrent.Semaphore;
  * @author Gab
  */
 public class ProductorIntro extends Productor{
-    
+  
       public int dCantidadIntro; 
       public int cantidadMaxInicio;
     
@@ -31,8 +32,10 @@ public class ProductorIntro extends Productor{
                 this.activo.acquire(); 
                
                 this.drive.setCantidad(this.drive.getCantidad()+1);
-           
-                dCantidadIntro = this.drive.getCantidad();
+                
+                HBO2.cantidadIntro = drive.getCantidad();
+                
+
 
                 this.activo.release();
                 this.ensamblador.release();

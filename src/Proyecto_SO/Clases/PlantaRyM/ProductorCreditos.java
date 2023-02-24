@@ -30,8 +30,8 @@ public class ProductorCreditos extends Productor{
                 this.activo.acquire();
                
                 this.drive.setCantidad(this.drive.getCantidad()+1);
-                dCantidadCreditos = this.drive.getCantidad();
-
+                HBO2.cantidadCreditos = drive.getCantidad();
+             
                this.activo.release();
                this.ensamblador.release();
                 this.productor.release();

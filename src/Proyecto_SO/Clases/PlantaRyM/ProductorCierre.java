@@ -31,12 +31,13 @@ public class ProductorCierre extends Productor{
                 this.activo.acquire();
 
                 this.drive.setCantidad(this.drive.getCantidad()+1);
+                
 
-                dCantidadCierre = this.drive.getCantidad();
+                HBO2.cantidadCierre = drive.getCantidad();
                 this.activo.release();
                
                 this.ensamblador.release();
-                 this.productor.release();                       
+                this.productor.release();                       
                 
             }
             

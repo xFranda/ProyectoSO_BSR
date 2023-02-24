@@ -16,7 +16,7 @@ public class HBO2 {
     
     //Cantidad episodios 
     
-    public int capitulos; 
+    public static int capitulos; 
     
     // Limites empleados
     public static int cantidadMaxProductores; 
@@ -28,11 +28,11 @@ public class HBO2 {
     public static int duracionDia;
     
     // Numero de partes de episodio 
-    public int cantidadIntro;
-    public int cantidadInicio;
-    public int cantidadPTwist;
-    public int cantidadCierre;
-    public int cantidadCreditos;
+    public static int cantidadIntro;
+    public static int cantidadInicio;
+    public static int cantidadPTwist;
+    public static int cantidadCierre;
+    public static int cantidadCreditos;
     public static int cantidadMaxIntro;
     public static int cantidadMaxInicio;
     public static int cantidadMaxPTwist;
@@ -99,22 +99,28 @@ public class HBO2 {
      
      //Drive de cada parte 
      
-     Drive driveIntros; 
-     Drive driveInicio;
-     Drive driveCred; 
-     Drive driveCierre;
-     Drive drivePlot;
+     public Drive driveIntros; 
+     public Drive driveInicio;
+     public Drive driveCred; 
+     public Drive driveCierre;
+     public Drive drivePlot;
+     
+     Semaphore Reloj = new Semaphore(1);
+
     
    
      
     public void start(){
-        duracionDia = 1000;
+        duracionDia = 4000;
         
         driveIntros = new Drive(30, 0 ); 
         driveInicio = new Drive(50, 0 );     
         driveCred = new Drive(25, 0 ); 
         driveCierre = new Drive(55, 0 ); 
         drivePlot = new Drive(40, 0 );         
+        
+        PM hola = new PM(Reloj);  
+        hola.start();
         
         cantidadIntro =0; 
         cantidadInicio =0; 
@@ -155,7 +161,8 @@ public class HBO2 {
                 true, 0));
        ensambladorLista.get(0).start();
        
-        
+       
+       
     } 
 }
 
