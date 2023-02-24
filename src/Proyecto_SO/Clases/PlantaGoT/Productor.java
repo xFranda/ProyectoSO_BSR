@@ -82,7 +82,7 @@ public class Productor {
     }}
 
     public void ensamblar(int dia, int capitulos) {
-        if (dia % 4 == 0 && dia != 0) {
+        if (dia % 2 == 0 && dia != 0) {
             if (capitulos % 5 == 0 && capitulos != 0) {
                 if (almacenamiento.get("intro") > 0 && almacenamiento.get("inicio") > 0 && almacenamiento.get("creditos") > 0 && almacenamiento.get("plot") > 0 && almacenamiento.get("cierres") > 1) {
                     almacenamiento.put("intro", almacenamiento.get("intro") - 1);

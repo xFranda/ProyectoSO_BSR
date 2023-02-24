@@ -118,7 +118,6 @@ public class Dashboard extends javax.swing.JFrame {
         GastosMensuales = new javax.swing.JTextField();
         GastosM = new javax.swing.JLabel();
         UltimoLoteTLOU = new javax.swing.JTextField();
-        GananciasUL = new javax.swing.JTextField();
         UL = new javax.swing.JLabel();
         IntrosTLOU1 = new javax.swing.JLabel();
         IniciosTLOU1 = new javax.swing.JLabel();
@@ -139,7 +138,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         GoTIntros = new javax.swing.JTextField();
-        GoTStart = new javax.swing.JButton();
         GoTInicio = new javax.swing.JTextField();
         GoTCred = new javax.swing.JTextField();
         GoTPlot = new javax.swing.JTextField();
@@ -161,11 +159,12 @@ public class Dashboard extends javax.swing.JFrame {
         GoTCierreEmp = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         GoTDisp = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        GananciasULTextTLOU1 = new javax.swing.JLabel();
-        InicioProdu = new javax.swing.JButton();
-        StopProdu = new javax.swing.JButton();
-        Produccion1 = new javax.swing.JLabel();
+        DisponiblesLabel = new javax.swing.JLabel();
+        GoTGananciasLabel = new javax.swing.JLabel();
+        GoTGastosLabel = new javax.swing.JLabel();
+        GoTGastos = new javax.swing.JTextField();
+        GoTStart = new javax.swing.JButton();
+        GoTGanan = new javax.swing.JTextField();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -676,13 +675,13 @@ public class Dashboard extends javax.swing.JFrame {
                 GananciasTLOUActionPerformed(evt);
             }
         });
-        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 260, 30));
+        jPanel1.add(GananciasTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 200, 160, 30));
 
         GananciasTextTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         GananciasTextTLOU.setForeground(new java.awt.Color(255, 255, 255));
         GananciasTextTLOU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        GananciasTextTLOU.setText("Ganancias totales:");
-        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 117, 260, 20));
+        GananciasTextTLOU.setText("Ganancias");
+        jPanel1.add(GananciasTextTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 180, 160, -1));
 
         DiasRestantesTLOU.setEditable(false);
         DiasRestantesTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -751,18 +750,6 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         jPanel1.add(UltimoLoteTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 200, 30, 30));
-
-        GananciasUL.setEditable(false);
-        GananciasUL.setBackground(new java.awt.Color(0, 39, 76));
-        GananciasUL.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        GananciasUL.setForeground(new java.awt.Color(255, 255, 255));
-        GananciasUL.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        GananciasUL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GananciasULActionPerformed(evt);
-            }
-        });
-        jPanel1.add(GananciasUL, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 200, 160, 30));
 
         UL.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         UL.setForeground(new java.awt.Color(255, 255, 255));
@@ -924,17 +911,6 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(GoTIntros, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 510, 30, 30));
 
-        GoTStart.setBackground(new java.awt.Color(0, 39, 76));
-        GoTStart.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        GoTStart.setForeground(new java.awt.Color(255, 255, 255));
-        GoTStart.setText("Empezar Sim GoT");
-        GoTStart.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GoTStartActionPerformed(evt);
-            }
-        });
-        jPanel1.add(GoTStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 520, -1, -1));
-
         GoTInicio.setEditable(false);
         GoTInicio.setBackground(new java.awt.Color(0, 39, 76));
         GoTInicio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1041,6 +1017,11 @@ public class Dashboard extends javax.swing.JFrame {
         GoTIntroEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         GoTIntroEmp.setText("1");
         GoTIntroEmp.setToolTipText("");
+        GoTIntroEmp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                GoTIntroEmpKeyTyped(evt);
+            }
+        });
         jPanel1.add(GoTIntroEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 510, 50, 30));
 
         GoTInicioEmp.setBackground(new java.awt.Color(0, 39, 76));
@@ -1054,6 +1035,11 @@ public class Dashboard extends javax.swing.JFrame {
                 GoTInicioEmpActionPerformed(evt);
             }
         });
+        GoTInicioEmp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                GoTInicioEmpKeyTyped(evt);
+            }
+        });
         jPanel1.add(GoTInicioEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 550, 50, 30));
 
         GoTCredEmp.setBackground(new java.awt.Color(0, 39, 76));
@@ -1062,6 +1048,11 @@ public class Dashboard extends javax.swing.JFrame {
         GoTCredEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         GoTCredEmp.setText("1");
         GoTCredEmp.setToolTipText("");
+        GoTCredEmp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                GoTCredEmpKeyTyped(evt);
+            }
+        });
         jPanel1.add(GoTCredEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 590, 50, 30));
 
         GoTPlotEmp.setBackground(new java.awt.Color(0, 39, 76));
@@ -1070,6 +1061,11 @@ public class Dashboard extends javax.swing.JFrame {
         GoTPlotEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         GoTPlotEmp.setText("1");
         GoTPlotEmp.setToolTipText("");
+        GoTPlotEmp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                GoTPlotEmpKeyTyped(evt);
+            }
+        });
         jPanel1.add(GoTPlotEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 630, 50, 30));
 
         GoTAssemblerEmp.setBackground(new java.awt.Color(0, 39, 76));
@@ -1078,6 +1074,11 @@ public class Dashboard extends javax.swing.JFrame {
         GoTAssemblerEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         GoTAssemblerEmp.setText("1");
         GoTAssemblerEmp.setToolTipText("");
+        GoTAssemblerEmp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                GoTAssemblerEmpKeyTyped(evt);
+            }
+        });
         jPanel1.add(GoTAssemblerEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 710, 50, 30));
 
         GoTCierreEmp.setBackground(new java.awt.Color(0, 39, 76));
@@ -1086,6 +1087,11 @@ public class Dashboard extends javax.swing.JFrame {
         GoTCierreEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         GoTCierreEmp.setText("1");
         GoTCierreEmp.setToolTipText("");
+        GoTCierreEmp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                GoTCierreEmpKeyTyped(evt);
+            }
+        });
         jPanel1.add(GoTCierreEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 670, 50, 30));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1099,7 +1105,7 @@ public class Dashboard extends javax.swing.JFrame {
         GoTDisp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         GoTDisp.setForeground(new java.awt.Color(255, 255, 255));
         GoTDisp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        GoTDisp.setText("-");
+        GoTDisp.setText("8");
         GoTDisp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GoTDispActionPerformed(evt);
@@ -1107,10 +1113,54 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(GoTDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 710, 50, 30));
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Disponibles");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 680, 90, 20));
+        DisponiblesLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        DisponiblesLabel.setForeground(new java.awt.Color(255, 255, 255));
+        DisponiblesLabel.setText("Disponibles");
+        jPanel1.add(DisponiblesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 680, 90, 20));
+
+        GoTGananciasLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTGananciasLabel.setForeground(new java.awt.Color(255, 255, 255));
+        GoTGananciasLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        GoTGananciasLabel.setText("Ganancias");
+        jPanel1.add(GoTGananciasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 570, -1, -1));
+
+        GoTGastosLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTGastosLabel.setForeground(new java.awt.Color(255, 255, 255));
+        GoTGastosLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        GoTGastosLabel.setText("Gastos");
+        jPanel1.add(GoTGastosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 640, -1, -1));
+
+        GoTGastos.setEditable(false);
+        GoTGastos.setBackground(new java.awt.Color(0, 39, 76));
+        GoTGastos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTGastos.setForeground(new java.awt.Color(255, 255, 255));
+        GoTGastos.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTGastos.setText("0");
+        GoTGastos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTGastosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTGastos, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 660, 190, -1));
+
+        GoTStart.setBackground(new java.awt.Color(0, 39, 76));
+        GoTStart.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTStart.setForeground(new java.awt.Color(255, 255, 255));
+        GoTStart.setText("Empezar Sim GoT");
+        GoTStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTStartActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 500, 190, 30));
+
+        GoTGanan.setEditable(false);
+        GoTGanan.setBackground(new java.awt.Color(0, 39, 76));
+        GoTGanan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTGanan.setForeground(new java.awt.Color(255, 255, 255));
+        GoTGanan.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTGanan.setText("0");
+        jPanel1.add(GoTGanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 590, 190, 30));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
@@ -1310,7 +1360,31 @@ public class Dashboard extends javax.swing.JFrame {
     private void UltimoLoteTLOUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UltimoLoteTLOUActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_UltimoLoteTLOUActionPerformed
-
+    
+    private void actualizarProd(){
+        int total = 14;
+        int Intro = Integer.parseInt(GoTIntroEmp.getText());
+        int Cred = Integer.parseInt(GoTCredEmp.getText());
+        int Inicio = Integer.parseInt(GoTInicioEmp.getText());
+        int Cierre = Integer.parseInt(GoTCierreEmp.getText());
+        int Plot = Integer.parseInt(GoTPlotEmp.getText());
+        int Assembler = Integer.parseInt(GoTAssemblerEmp.getText());
+        total = total - Intro - Cred- Inicio- Cierre - Plot - Assembler;
+        GoTDisp.setText(Integer.toString(total));
+    }
+    
+    public void GoTPausa(){
+        GoTStart.setVisible(true);
+        GoTDisp.setVisible(true);
+        DisponiblesLabel.setVisible(true);
+        GoTIntroEmp.setEditable(true);
+        GoTCredEmp.setEditable(true);
+        GoTInicioEmp.setEditable(true);
+        GoTCierreEmp.setEditable(true);
+        GoTPlotEmp.setEditable(true);
+        GoTAssemblerEmp.setEditable(true);
+    }
+    
 
     private void InicioProduActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicioProduActionPerformed
         // TODO add your handling code here:
@@ -1410,17 +1484,53 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_GoTDispActionPerformed
 
+    private void GoTIntroEmpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GoTIntroEmpKeyTyped
+        // TODO add your handling code here:
+        actualizarProd();
+    }//GEN-LAST:event_GoTIntroEmpKeyTyped
+
+    private void GoTInicioEmpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GoTInicioEmpKeyTyped
+        // TODO add your handling code here:
+        actualizarProd();
+    }//GEN-LAST:event_GoTInicioEmpKeyTyped
+
+    private void GoTCredEmpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GoTCredEmpKeyTyped
+        // TODO add your handling code here:
+        actualizarProd();
+    }//GEN-LAST:event_GoTCredEmpKeyTyped
+
+    private void GoTPlotEmpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GoTPlotEmpKeyTyped
+        // TODO add your handling code here:
+        actualizarProd();
+    }//GEN-LAST:event_GoTPlotEmpKeyTyped
+
+    private void GoTCierreEmpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GoTCierreEmpKeyTyped
+        // TODO add your handling code here:
+        actualizarProd();
+    }//GEN-LAST:event_GoTCierreEmpKeyTyped
+
+    private void GoTAssemblerEmpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GoTAssemblerEmpKeyTyped
+        // TODO add your handling code here:
+        actualizarProd();
+    }//GEN-LAST:event_GoTAssemblerEmpKeyTyped
+
+    private void GoTGastosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTGastosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GoTGastosActionPerformed
+
     private void GoTStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTStartActionPerformed
         // TODO add your handling code here:
-        
         int Intro = Integer.parseInt(GoTIntroEmp.getText());
         int Cred = Integer.parseInt(GoTCredEmp.getText());
         int Inicio = Integer.parseInt(GoTInicioEmp.getText());
         int Cierre = Integer.parseInt(GoTCierreEmp.getText());
         int Plot = Integer.parseInt(GoTPlotEmp.getText());
         int Assembler = Integer.parseInt(GoTAssemblerEmp.getText());
-        hbo3.start(Intro, Cred, Inicio, Cierre, Plot, Assembler);
+        int dia = 0;
+        hbo3.start(Intro, Cred, Inicio, Cierre, Plot, Assembler, dia);
         GoTStart.setVisible(false);
+        GoTDisp.setVisible(false);
+        DisponiblesLabel.setVisible(false);
         GoTIntroEmp.setEditable(false);
         GoTCredEmp.setEditable(false);
         GoTInicioEmp.setEditable(false);
@@ -1447,6 +1557,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel DiasRestantesTextTLOU1;
     public javax.swing.JTextField DirTLOU;
     private javax.swing.JLabel DirTextTLOU;
+    private javax.swing.JLabel DisponiblesLabel;
     private javax.swing.JButton EmpCierre;
     private javax.swing.JButton EmpCierreDesp;
     private javax.swing.JLabel EmpCierreTLOU;
@@ -1473,8 +1584,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Fondo;
     public javax.swing.JTextField GananciasTLOU;
     private javax.swing.JLabel GananciasTextTLOU;
-    public javax.swing.JTextField GananciasUL;
-    private javax.swing.JLabel GananciasULTextTLOU1;
     private javax.swing.JLabel GastosM;
     public javax.swing.JTextField GastosMensuales;
     public javax.swing.JTextField GoTAssemblerEmp;
@@ -1485,6 +1594,10 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField GoTCredEmp;
     public javax.swing.JTextField GoTDias;
     public javax.swing.JTextField GoTDisp;
+    public javax.swing.JTextField GoTGanan;
+    public javax.swing.JLabel GoTGananciasLabel;
+    public javax.swing.JTextField GoTGastos;
+    public javax.swing.JLabel GoTGastosLabel;
     public javax.swing.JTextField GoTInicio;
     public javax.swing.JTextField GoTInicioEmp;
     public javax.swing.JTextField GoTIntroEmp;
@@ -1492,7 +1605,6 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField GoTPlot;
     public javax.swing.JTextField GoTPlotEmp;
     public javax.swing.JButton GoTStart;
-    private javax.swing.JButton InicioProdu;
     private javax.swing.JLabel IniciosTLOU;
     private javax.swing.JLabel IniciosTLOU1;
     private javax.swing.JLabel IntrosTLOU;
@@ -1528,13 +1640,11 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Produccion4;
     private javax.swing.JLabel Produccion5;
     private javax.swing.JLabel ProyectMTLOU;
-    private javax.swing.JButton StopProdu;
     private javax.swing.JLabel UL;
     public javax.swing.JTextField UltimoLoteTLOU;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

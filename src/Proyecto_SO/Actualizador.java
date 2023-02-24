@@ -11,6 +11,7 @@ import Proyecto_SO.Clases.PlantaTLOU.Dia;
 import Proyecto_SO.Clases.PlantaTLOU.Director;
 import Proyecto_SO.Clases.PlantaTLOU.HBO1;
 import Proyecto_SO.Clases.PlantaTLOU.ProyectM;
+import java.math.BigDecimal;
 import javax.swing.JFrame;
 /**
  *
@@ -61,7 +62,7 @@ public class Actualizador extends Thread{
        dashboard.FallasPM.setText(String.valueOf(Director.contadorRM));
        dashboard.GastosMensuales.setText(String.valueOf(HBO1.GastosM));
        dashboard.UltimoLoteTLOU.setText(String.valueOf(HBO1.LoteTLOU));
-       dashboard.GananciasUL.setText(String.valueOf(HBO1.GananciasLote));
+       //dashboard.GananciasUL.setText(String.valueOf(HBO1.GananciasLote));
        
        // Rick y Morty
        dashboard.NumIntrosRM.setText(String.valueOf(HBO2.cantidadIntro));
@@ -74,6 +75,8 @@ public class Actualizador extends Thread{
        
        //Game of Thrones
        try{
+       dashboard.GoTGanan.setText(new BigDecimal(HBO3.ganancia).toPlainString());
+       dashboard.GoTGastos.setText(new BigDecimal(HBO3.gastos).toPlainString());
        dashboard.GoTIntros.setText(String.valueOf(HBO3.almacenamiento.get("intro")));
        dashboard.GoTInicio.setText(String.valueOf(HBO3.almacenamiento.get("inicio")));
        dashboard.GoTCierres.setText(String.valueOf(HBO3.almacenamiento.get("cierres")));
@@ -82,6 +85,14 @@ public class Actualizador extends Thread{
        dashboard.GoTCaps.setText(String.valueOf(HBO3.capitulo));
        dashboard.GoTDisp.setText(String.valueOf(HBO3.productores));
        dashboard.GoTDias.setText(String.valueOf(30 - (HBO3.dia)));
+       while(HBO3.dia == 30){
+           dashboard.GoTPausa();
+           HBO3.almacenamiento.put("intro", 0);
+           HBO3.almacenamiento.put("inicio", 0);
+           HBO3.almacenamiento.put("cierres", 0);
+           HBO3.almacenamiento.put("plot", 0);
+           HBO3.almacenamiento.put("creditos", 0);
+       }
        } catch (NullPointerException e){
            
        }
