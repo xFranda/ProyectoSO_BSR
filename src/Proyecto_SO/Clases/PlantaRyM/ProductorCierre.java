@@ -14,6 +14,7 @@ public class ProductorCierre extends Productor{
     
     public int dCantidadCierre; 
     public int cantidadMaxCierre; 
+    public boolean empleado = true;
     
     public ProductorCierre(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
         super(drive, ensamblador, productor, activo);
@@ -21,7 +22,7 @@ public class ProductorCierre extends Productor{
     }
     @Override
     public void run(){
-        while(true){
+        while(empleado){
             try{
                 
             if(this.drive.getCantidad()< this.drive.getCapacidad()){

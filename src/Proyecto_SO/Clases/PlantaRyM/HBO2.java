@@ -5,7 +5,14 @@
 package Proyecto_SO.Clases.PlantaRyM;
 
 import Proyecto_SO.Dashboard;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import static java.lang.Integer.parseInt;
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.concurrent.Semaphore;
 import javax.swing.JOptionPane;
 
@@ -29,6 +36,7 @@ public class HBO2 {
     
     // Tiempo
     public static int duracionDia;
+    public static int limiteDia;
     
     // Numero de partes de episodio 
     public static int cantidadIntro;
@@ -114,19 +122,49 @@ public class HBO2 {
      
      public static int pGastos;
      public static int pGanancias; 
+     
+     public static ArrayList<Integer> infoDocumento = new ArrayList<>();
 
 
     
    
      
-    public void start(){
-        duracionDia = 4000;
+    public void start() throws FileNotFoundException, IOException{
         
-        driveIntros = new Drive(30, 0 ); 
-        driveInicio = new Drive(50, 0 );     
-        driveCred = new Drive(25, 0 ); 
-        driveCierre = new Drive(55, 0 ); 
-        drivePlot = new Drive(40, 0 );         
+        
+        
+         BufferedReader br = new BufferedReader(new FileReader("src/Proyecto_SO/Clases/PlantaRyM/DatosRM.txt"));       
+        String line = null;
+         while((line = br.readLine()) != null){
+        String[] values = line.split(",");
+         
+        int[] intValues = new int[values.length];
+        for (int i = 0; i < values.length; i++) {
+            try{
+             intValues[i] = Integer.parseInt(values[i]);
+             infoDocumento.add(intValues[i]);
+    }catch (NumberFormatException nfe) {
+        continue;
+    }
+            
+        }  
+         }
+        
+
+             br.close();            
+
+    
+    
+        duracionDia = infoDocumento.get(0) * 4000;
+        limiteDia = infoDocumento.get(1) * 1000;
+      
+
+        
+        driveIntros = new Drive(30, infoDocumento.get(2)); 
+        driveInicio = new Drive(50, infoDocumento.get(3));     
+        driveCred = new Drive(25, infoDocumento.get(4)); 
+        driveCierre = new Drive(55, infoDocumento.get(5) ); 
+        drivePlot = new Drive(40, infoDocumento.get(6) );         
         
         
         pGanancias = 0; 
@@ -156,23 +194,23 @@ public class HBO2 {
         // Gebrayel estos son pruebas de la capacidad en el Drive por favor no las veas que estan horribles
         
         cierresProducciones.add(new ProductorCierre(driveCierre, ECierre, cierreProd, cierre ) );
-        cierresProducciones.get(0).start();
+        cierresProducciones.get(infoDocumento.get(7)).start();
        
   
        openingProducciones.add(new ProductorInicio(driveInicio, EInicio, iniProd, ini ) );
-       openingProducciones.get(0).start(); 
+       openingProducciones.get(infoDocumento.get(7)).start(); 
         
         
        
         introProducciones.add(new ProductorIntro(driveIntros, EIntro, intrProd, intr ) );
-        introProducciones.get(0).start(); 
+        introProducciones.get(infoDocumento.get(7)).start(); 
         
         
         creditosProducciones.add(new ProductorCreditos(driveCred, ECred, credProd, cred ) );
-        creditosProducciones.get(0).start(); 
+        creditosProducciones.get(infoDocumento.get(7)).start(); 
 
         twistProducciones.add(new ProductorPTwist(drivePlot, EPlot, ptwistProd, ptwist ) );
-        twistProducciones.get(0).start(); 
+        twistProducciones.get(infoDocumento.get(7)).start(); 
        
         
     
@@ -180,7 +218,7 @@ public class HBO2 {
         ensambladorLista.add(new Ensamblador(intr, ini, ptwist, cierre, cred, EIntro, EInicio, EPlot, ECred, ECierre, 
                 intrProd, iniProd, ptwistProd, credProd, cierreProd, driveIntros, driveInicio, driveCred, driveCierre, drivePlot,
                 true, 0));
-       ensambladorLista.get(0).start();
+       ensambladorLista.get(infoDocumento.get(7)).start();
        
        
       
@@ -191,9 +229,7 @@ public class HBO2 {
     
     public void contratarProductorIntros() {
         int x = introProducciones.size();
-        System.out.println(x);
-        System.out.println(x);
-      System.out.println(introProducciones.get(x-1));
+    
    if (x < 19 ) { 
         
             introProducciones.add(new ProductorIntro(driveIntros, EIntro, intrProd, intr ) );
@@ -204,26 +240,18 @@ public class HBO2 {
         
         }
     }
-    
- public void despedirProductorIntros() {
-     int x = introProducciones.size(); 
-        if (x > 0) {
-            try {
-                intrProd.acquire();
-                intr.acquire();
-                ProductorIntro despedido = introProducciones.get(x - 1);
-               
-                despedido.empleado = false; 
-                introProducciones.remove(introProducciones.size() - 1);
-                intrProd.release();
-                intr.release();
 
-            } catch (InterruptedException ex) {
-                System.out.println(ex);
-            }
-}
-     } 
-}
+  
+}    
+        
+        
+        
+        
+        
+        
+        
+     
+
 
      
     

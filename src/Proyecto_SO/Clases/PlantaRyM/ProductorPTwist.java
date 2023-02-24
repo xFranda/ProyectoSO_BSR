@@ -14,6 +14,7 @@ public class ProductorPTwist extends Productor{
     
       public int dCantidadPTwist; 
       public int cantidadMaxPTwist; 
+      public boolean empleado = true;
     
     public ProductorPTwist(Drive drive, Semaphore ensamblador, Semaphore productor, Semaphore activo){
         super(drive, ensamblador, productor, activo);
@@ -22,7 +23,7 @@ public class ProductorPTwist extends Productor{
     @Override
     public void run(){
         
-        while(true){
+        while(empleado){
             try{
             if(this.drive.getCantidad()< this.drive.getCapacidad()){
                 this.productor.acquire();

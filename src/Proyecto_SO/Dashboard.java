@@ -126,8 +126,7 @@ public class Dashboard extends javax.swing.JFrame {
         EmpCredRM = new javax.swing.JTextField();
         EmpInicioRM = new javax.swing.JTextField();
         EmpIntroRM = new javax.swing.JTextField();
-        EmpIntroDesp2 = new javax.swing.JButton();
-        EmpIntroDesp1 = new javax.swing.JButton();
+        EmpIntroDespRM = new javax.swing.JButton();
         ProyectMTLOU1 = new javax.swing.JLabel();
         FinanzasRM = new javax.swing.JTextField();
         DiasRestantesTextTLOU1 = new javax.swing.JLabel();
@@ -888,27 +887,16 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(EmpIntroRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 490, 30, 30));
 
-        EmpIntroDesp2.setBackground(new java.awt.Color(0, 39, 76));
-        EmpIntroDesp2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        EmpIntroDesp2.setForeground(new java.awt.Color(255, 255, 255));
-        EmpIntroDesp2.setText("+");
-        EmpIntroDesp2.addActionListener(new java.awt.event.ActionListener() {
+        EmpIntroDespRM.setBackground(new java.awt.Color(0, 39, 76));
+        EmpIntroDespRM.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        EmpIntroDespRM.setForeground(new java.awt.Color(255, 255, 255));
+        EmpIntroDespRM.setText("-");
+        EmpIntroDespRM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmpIntroDesp2ActionPerformed(evt);
+                EmpIntroDespRMActionPerformed(evt);
             }
         });
-        jPanel1.add(EmpIntroDesp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 30, 30));
-
-        EmpIntroDesp1.setBackground(new java.awt.Color(0, 39, 76));
-        EmpIntroDesp1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        EmpIntroDesp1.setForeground(new java.awt.Color(255, 255, 255));
-        EmpIntroDesp1.setText("-");
-        EmpIntroDesp1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmpIntroDesp1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(EmpIntroDesp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 30, 30));
+        jPanel1.add(EmpIntroDespRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 30, 30));
 
         ProyectMTLOU1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ProyectMTLOU1.setForeground(new java.awt.Color(255, 255, 255));
@@ -925,7 +913,7 @@ public class Dashboard extends javax.swing.JFrame {
                 FinanzasRMActionPerformed(evt);
             }
         });
-        jPanel1.add(FinanzasRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 590, 160, 40));
+        jPanel1.add(FinanzasRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 580, 160, 40));
 
         DiasRestantesTextTLOU1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         DiasRestantesTextTLOU1.setForeground(new java.awt.Color(255, 255, 255));
@@ -995,7 +983,7 @@ public class Dashboard extends javax.swing.JFrame {
                 GananciasRM1ActionPerformed(evt);
             }
         });
-        jPanel1.add(GananciasRM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 700, 160, 40));
+        jPanel1.add(GananciasRM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 690, 160, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
@@ -1259,14 +1247,9 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpEmbRMActionPerformed
 
-    private void EmpIntroDesp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpIntroDesp1ActionPerformed
-         hbo2.despedirProductorIntros(); 
-    }//GEN-LAST:event_EmpIntroDesp1ActionPerformed
-
-    private void EmpIntroDesp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpIntroDesp2ActionPerformed
-       hbo2.contratarProductorIntros();
-       
-    }//GEN-LAST:event_EmpIntroDesp2ActionPerformed
+    private void EmpIntroDespRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpIntroDespRMActionPerformed
+          
+    }//GEN-LAST:event_EmpIntroDespRMActionPerformed
 
     private void FinanzasRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinanzasRMActionPerformed
         // TODO add your handling code here:
@@ -1327,8 +1310,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel EmpIniciosTLOU;
     private javax.swing.JButton EmpIntro;
     private javax.swing.JButton EmpIntroDesp;
-    private javax.swing.JButton EmpIntroDesp1;
-    private javax.swing.JButton EmpIntroDesp2;
+    private javax.swing.JButton EmpIntroDespRM;
     public javax.swing.JTextField EmpIntroRM;
     private javax.swing.JLabel EmpIntrosTLOU;
     public javax.swing.JTextField EmpPTwistRM;
