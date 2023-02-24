@@ -4,8 +4,11 @@
  */
 package Proyecto_SO.Clases.PlantaRyM;
 
+import Proyecto_SO.Dashboard;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -13,7 +16,7 @@ import java.util.concurrent.Semaphore;
  */
 public class HBO2 {
     
-    
+    Dashboard dashboard;
     //Cantidad episodios 
     
     public static int capitulos; 
@@ -162,8 +165,46 @@ public class HBO2 {
        ensambladorLista.get(0).start();
        
        
-       
+      
+      
+               
     } 
+    
+    public void contratarProductorIntros() {
+        int x = introProducciones.size();
+        System.out.println(x);
+        System.out.println(x);
+      System.out.println(introProducciones.get(x-1));
+   if (x < 19 ) { 
+        
+            introProducciones.add(new ProductorIntro(driveIntros, EIntro, intrProd, intr ) );
+            introProducciones.get(x).start(); 
+              System.out.println(introProducciones.get(x));
+            
+
+
+        
+        }
+    }
+    
+ public void despedirProductorIntros() {
+     int x = introProducciones.size(); 
+        if (x > 0) {
+            try {
+                intrProd.acquire();
+                intr.acquire();
+                ProductorIntro despedido = introProducciones.get(x - 1);
+               
+                despedido.empleado = false; 
+                introProducciones.remove(introProducciones.size() - 1);
+                intrProd.release();
+                intr.release();
+
+            } catch (InterruptedException ex) {
+                System.out.println(ex);
+            }
+}
+     } 
 }
 
      
