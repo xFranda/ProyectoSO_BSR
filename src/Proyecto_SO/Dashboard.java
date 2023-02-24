@@ -5,6 +5,7 @@
  */
 package Proyecto_SO;
 
+import Proyecto_SO.Clases.PlantaGoT.HBO3;
 import Proyecto_SO.Clases.PlantaTLOU.HBO1;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
@@ -24,14 +25,16 @@ public class Dashboard extends javax.swing.JFrame {
     
     private final Actualizador up;
     HBO1 hbo = new HBO1();
+    HBO3 hbo3 = new HBO3();
     
     public Dashboard() throws FileNotFoundException, InterruptedException, ParseException{
         initComponents();
-        this.up = new Actualizador(this, this.hbo);
+        this.up = new Actualizador(this, this.hbo, this.hbo3);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
         hbo.Start();
+        //hbo3.start();
         this.up.start();
         
         
@@ -123,6 +126,34 @@ public class Dashboard extends javax.swing.JFrame {
         NumCapRM4 = new javax.swing.JTextField();
         NumCapRM5 = new javax.swing.JTextField();
         NumCapRM6 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        Produccion5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        GoTIntros = new javax.swing.JTextField();
+        GoTStart = new javax.swing.JButton();
+        GoTInicio = new javax.swing.JTextField();
+        GoTCred = new javax.swing.JTextField();
+        GoTPlot = new javax.swing.JTextField();
+        GoTCierres = new javax.swing.JTextField();
+        GoTCaps = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        GoTDias = new javax.swing.JTextField();
+        GoTIntroEmp = new javax.swing.JTextField();
+        GoTInicioEmp = new javax.swing.JTextField();
+        GoTCredEmp = new javax.swing.JTextField();
+        GoTPlotEmp = new javax.swing.JTextField();
+        GoTAssemblerEmp = new javax.swing.JTextField();
+        GoTCierreEmp = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        GoTDisp = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -834,6 +865,229 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(NumCapRM6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 650, 30, 30));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Produccion");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 470, -1, -1));
+
+        Produccion5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Produccion5.setForeground(new java.awt.Color(255, 255, 255));
+        Produccion5.setText("Produccion");
+        jPanel1.add(Produccion5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Produccion");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 470, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Empleados");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 470, -1, -1));
+
+        GoTIntros.setEditable(false);
+        GoTIntros.setBackground(new java.awt.Color(0, 39, 76));
+        GoTIntros.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTIntros.setForeground(new java.awt.Color(255, 255, 255));
+        GoTIntros.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTIntros.setText("-");
+        GoTIntros.setFocusable(false);
+        GoTIntros.setRequestFocusEnabled(false);
+        GoTIntros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTIntrosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTIntros, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 510, 30, 30));
+
+        GoTStart.setBackground(new java.awt.Color(0, 39, 76));
+        GoTStart.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTStart.setForeground(new java.awt.Color(255, 255, 255));
+        GoTStart.setText("Empezar Sim GoT");
+        GoTStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTStartActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 520, -1, -1));
+
+        GoTInicio.setEditable(false);
+        GoTInicio.setBackground(new java.awt.Color(0, 39, 76));
+        GoTInicio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTInicio.setForeground(new java.awt.Color(255, 255, 255));
+        GoTInicio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTInicio.setText("-");
+        GoTInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTInicioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 550, 30, 30));
+
+        GoTCred.setEditable(false);
+        GoTCred.setBackground(new java.awt.Color(0, 39, 76));
+        GoTCred.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTCred.setForeground(new java.awt.Color(255, 255, 255));
+        GoTCred.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTCred.setText("-");
+        GoTCred.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTCredActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 590, 30, 30));
+
+        GoTPlot.setEditable(false);
+        GoTPlot.setBackground(new java.awt.Color(0, 39, 76));
+        GoTPlot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTPlot.setForeground(new java.awt.Color(255, 255, 255));
+        GoTPlot.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTPlot.setText("-");
+        jPanel1.add(GoTPlot, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 630, 30, 30));
+
+        GoTCierres.setEditable(false);
+        GoTCierres.setBackground(new java.awt.Color(0, 39, 76));
+        GoTCierres.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTCierres.setForeground(new java.awt.Color(255, 255, 255));
+        GoTCierres.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTCierres.setText("-");
+        jPanel1.add(GoTCierres, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 670, 30, 30));
+
+        GoTCaps.setEditable(false);
+        GoTCaps.setBackground(new java.awt.Color(0, 39, 76));
+        GoTCaps.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTCaps.setForeground(new java.awt.Color(255, 255, 255));
+        GoTCaps.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTCaps.setText("-");
+        jPanel1.add(GoTCaps, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 710, 30, 30));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Capitulos");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 720, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Cierres");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 680, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Plot Twist");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 640, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Creditos");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 600, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Inicios");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 560, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Intros");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 520, -1, -1));
+
+        jLabel10.setBackground(new java.awt.Color(0, 39, 76));
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Dias Restantes");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 410, -1, -1));
+
+        GoTDias.setEditable(false);
+        GoTDias.setBackground(new java.awt.Color(0, 39, 76));
+        GoTDias.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTDias.setForeground(new java.awt.Color(255, 255, 255));
+        GoTDias.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTDias.setText("-");
+        GoTDias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTDiasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 440, 40, 30));
+
+        GoTIntroEmp.setBackground(new java.awt.Color(0, 39, 76));
+        GoTIntroEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTIntroEmp.setForeground(new java.awt.Color(255, 255, 255));
+        GoTIntroEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTIntroEmp.setText("1");
+        GoTIntroEmp.setToolTipText("");
+        jPanel1.add(GoTIntroEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 510, 50, 30));
+
+        GoTInicioEmp.setBackground(new java.awt.Color(0, 39, 76));
+        GoTInicioEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTInicioEmp.setForeground(new java.awt.Color(255, 255, 255));
+        GoTInicioEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTInicioEmp.setText("1");
+        GoTInicioEmp.setToolTipText("");
+        GoTInicioEmp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTInicioEmpActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTInicioEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 550, 50, 30));
+
+        GoTCredEmp.setBackground(new java.awt.Color(0, 39, 76));
+        GoTCredEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTCredEmp.setForeground(new java.awt.Color(255, 255, 255));
+        GoTCredEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTCredEmp.setText("1");
+        GoTCredEmp.setToolTipText("");
+        jPanel1.add(GoTCredEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 590, 50, 30));
+
+        GoTPlotEmp.setBackground(new java.awt.Color(0, 39, 76));
+        GoTPlotEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTPlotEmp.setForeground(new java.awt.Color(255, 255, 255));
+        GoTPlotEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTPlotEmp.setText("1");
+        GoTPlotEmp.setToolTipText("");
+        jPanel1.add(GoTPlotEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 630, 50, 30));
+
+        GoTAssemblerEmp.setBackground(new java.awt.Color(0, 39, 76));
+        GoTAssemblerEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTAssemblerEmp.setForeground(new java.awt.Color(255, 255, 255));
+        GoTAssemblerEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTAssemblerEmp.setText("1");
+        GoTAssemblerEmp.setToolTipText("");
+        jPanel1.add(GoTAssemblerEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 710, 50, 30));
+
+        GoTCierreEmp.setBackground(new java.awt.Color(0, 39, 76));
+        GoTCierreEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTCierreEmp.setForeground(new java.awt.Color(255, 255, 255));
+        GoTCierreEmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTCierreEmp.setText("1");
+        GoTCierreEmp.setToolTipText("");
+        jPanel1.add(GoTCierreEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 670, 50, 30));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel11.setText("Ensambladores");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 720, -1, -1));
+
+        GoTDisp.setEditable(false);
+        GoTDisp.setBackground(new java.awt.Color(0, 39, 76));
+        GoTDisp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GoTDisp.setForeground(new java.awt.Color(255, 255, 255));
+        GoTDisp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        GoTDisp.setText("-");
+        GoTDisp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoTDispActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GoTDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 710, 50, 30));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Disponibles");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 680, 90, 20));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
@@ -1081,6 +1335,49 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NumCapRM6ActionPerformed
 
+    private void GoTIntrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTIntrosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GoTIntrosActionPerformed
+
+    private void GoTCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTCredActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GoTCredActionPerformed
+
+    private void GoTInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTInicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GoTInicioActionPerformed
+
+    private void GoTDiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTDiasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GoTDiasActionPerformed
+
+    private void GoTInicioEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTInicioEmpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GoTInicioEmpActionPerformed
+
+    private void GoTDispActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTDispActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GoTDispActionPerformed
+
+    private void GoTStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoTStartActionPerformed
+        // TODO add your handling code here:
+        
+        int Intro = Integer.parseInt(GoTIntroEmp.getText());
+        int Cred = Integer.parseInt(GoTCredEmp.getText());
+        int Inicio = Integer.parseInt(GoTInicioEmp.getText());
+        int Cierre = Integer.parseInt(GoTCierreEmp.getText());
+        int Plot = Integer.parseInt(GoTPlotEmp.getText());
+        int Assembler = Integer.parseInt(GoTAssemblerEmp.getText());
+        hbo3.start(Intro, Cred, Inicio, Cierre, Plot, Assembler);
+        GoTStart.setVisible(false);
+        GoTIntroEmp.setEditable(false);
+        GoTCredEmp.setEditable(false);
+        GoTInicioEmp.setEditable(false);
+        GoTCierreEmp.setEditable(false);
+        GoTPlotEmp.setEditable(false);
+        GoTAssemblerEmp.setEditable(false);
+    }//GEN-LAST:event_GoTStartActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1127,6 +1424,21 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel GananciasTextTLOU;
     private javax.swing.JLabel GastosM;
     public javax.swing.JTextField GastosMensuales;
+    public javax.swing.JTextField GoTAssemblerEmp;
+    public javax.swing.JTextField GoTCaps;
+    public javax.swing.JTextField GoTCierreEmp;
+    public javax.swing.JTextField GoTCierres;
+    public javax.swing.JTextField GoTCred;
+    public javax.swing.JTextField GoTCredEmp;
+    public javax.swing.JTextField GoTDias;
+    public javax.swing.JTextField GoTDisp;
+    public javax.swing.JTextField GoTInicio;
+    public javax.swing.JTextField GoTInicioEmp;
+    public javax.swing.JTextField GoTIntroEmp;
+    public javax.swing.JTextField GoTIntros;
+    public javax.swing.JTextField GoTPlot;
+    public javax.swing.JTextField GoTPlotEmp;
+    public javax.swing.JButton GoTStart;
     private javax.swing.JLabel IniciosTLOU;
     private javax.swing.JLabel IniciosTLOU1;
     private javax.swing.JLabel IntrosTLOU;
@@ -1160,9 +1472,22 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel PlotTLOU1;
     private javax.swing.JLabel Produccion;
     private javax.swing.JLabel Produccion4;
+    private javax.swing.JLabel Produccion5;
     private javax.swing.JLabel ProyectMTLOU;
     private javax.swing.JLabel UL;
     public javax.swing.JTextField UltimoLoteTLOU;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

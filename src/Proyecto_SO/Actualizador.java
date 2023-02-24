@@ -5,6 +5,7 @@
  */
 package Proyecto_SO;
 
+import Proyecto_SO.Clases.PlantaGoT.HBO3;
 import Proyecto_SO.Clases.PlantaRyM.HBO2;
 import Proyecto_SO.Clases.PlantaTLOU.Dia;
 import Proyecto_SO.Clases.PlantaTLOU.Director;
@@ -19,13 +20,13 @@ public class Actualizador extends Thread{
     
     Dashboard dashboard;
     HBO1 hbo1;
-    HBO2 hbo2; 
+    HBO2 hbo2;
+    HBO3 hbo3;
     
-    public Actualizador(Dashboard dashboard, HBO1 hbo1){
+    public Actualizador(Dashboard dashboard, HBO1 hbo1, HBO3 hbo3){
         this.dashboard = dashboard;
         this.hbo1 = hbo1;
-        
-    
+        this.hbo3 = hbo3;
     }
     
     @Override
@@ -68,6 +69,20 @@ public class Actualizador extends Thread{
        dashboard.NumCierresRM.setText(String.valueOf(HBO2.cantidadCierre));
        dashboard.NumCapRM.setText(String.valueOf(HBO2.capitulos));
        
+       
+       //Game of Thrones
+       try{
+       dashboard.GoTIntros.setText(String.valueOf(HBO3.almacenamiento.get("intro")));
+       dashboard.GoTInicio.setText(String.valueOf(HBO3.almacenamiento.get("inicio")));
+       dashboard.GoTCierres.setText(String.valueOf(HBO3.almacenamiento.get("cierres")));
+       dashboard.GoTPlot.setText(String.valueOf(HBO3.almacenamiento.get("plot")));
+       dashboard.GoTCred.setText(String.valueOf(HBO3.almacenamiento.get("creditos")));
+       dashboard.GoTCaps.setText(String.valueOf(HBO3.capitulo));
+       dashboard.GoTDisp.setText(String.valueOf(HBO3.productores));
+       dashboard.GoTDias.setText(String.valueOf(30 - (HBO3.dia)));
+       } catch (NullPointerException e){
+           
+       }
         }
     
     }
