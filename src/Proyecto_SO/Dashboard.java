@@ -31,11 +31,8 @@ public class Dashboard extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
-        hbo.Start();
-        this.up.start();
         
         
-      
     }
 
     /**
@@ -112,6 +109,8 @@ public class Dashboard extends javax.swing.JFrame {
         GananciasUL = new javax.swing.JTextField();
         UL = new javax.swing.JLabel();
         Titulo = new javax.swing.JLabel();
+        Start = new javax.swing.JButton();
+        Stop = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -727,6 +726,28 @@ public class Dashboard extends javax.swing.JFrame {
         Titulo.setText("Planta 1: The Last Of US");
         jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, -1, -1));
 
+        Start.setBackground(new java.awt.Color(51, 255, 0));
+        Start.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Start.setForeground(new java.awt.Color(255, 255, 255));
+        Start.setText("Start");
+        Start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, -1, -1));
+
+        Stop.setBackground(new java.awt.Color(255, 0, 0));
+        Stop.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Stop.setForeground(new java.awt.Color(255, 255, 255));
+        Stop.setText("Stop");
+        Stop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StopActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, -1, -1));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
@@ -954,6 +975,17 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_GananciasULActionPerformed
 
+    private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
+        // TODO add your handling code here:
+        hbo.Start();
+        up.start();
+    }//GEN-LAST:event_StartActionPerformed
+
+    private void StopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopActionPerformed
+        // TODO add your handling code here:
+        hbo.StopAll();
+    }//GEN-LAST:event_StopActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1022,6 +1054,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Produccion;
     private javax.swing.JLabel Produccion4;
     private javax.swing.JLabel ProyectMTLOU;
+    private javax.swing.JButton Start;
+    private javax.swing.JButton Stop;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel UL;
     public javax.swing.JTextField UltimoLoteTLOU;

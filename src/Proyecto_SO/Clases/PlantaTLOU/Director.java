@@ -33,7 +33,7 @@ public class Director extends Thread {
         
         @Override
         public void run (){
-            while(true){
+            while(activo){
             
                 try{
                     do {

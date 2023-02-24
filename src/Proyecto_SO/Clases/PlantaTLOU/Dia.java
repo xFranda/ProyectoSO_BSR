@@ -23,7 +23,7 @@ public class Dia extends Thread {
     
     @Override
     public void run(){  //Va contando los dias que van pasando        
-        while(true){   
+        while(activo){   
             try {
                 Thread.sleep(HBO1.DiaDuracion);
                 System.out.println("\nDIA: "+(Dia-1));
