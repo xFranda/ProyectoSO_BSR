@@ -6,6 +6,7 @@
 package Proyecto_SO;
 
 import Proyecto_SO.Clases.PlantaRyM.HBO2;
+import Proyecto_SO.Clases.PlantaRyM.PM;
 import Proyecto_SO.Clases.PlantaTLOU.Dia;
 import Proyecto_SO.Clases.PlantaTLOU.Director;
 import Proyecto_SO.Clases.PlantaTLOU.HBO1;
@@ -25,6 +26,7 @@ public class Actualizador extends Thread{
     public Actualizador(Dashboard dashboard, HBO1 hbo1){
         this.dashboard = dashboard;
         this.hbo1 = hbo1;
+        this.hbo2 =hbo2; 
         
     
     }
@@ -76,7 +78,9 @@ public class Actualizador extends Thread{
        dashboard.EmpPTwistRM.setText(String.valueOf(HBO2.twistProducciones.size()));
        dashboard.EmpEmbRM.setText(String.valueOf(HBO2.ensambladorLista.size()));
        dashboard.EmpCierreRM.setText(String.valueOf(HBO2.cierresProducciones.size()));
+       dashboard.PMStatuRM.setText(String.valueOf(PM.status));
         }
+        
     
     }
     

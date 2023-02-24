@@ -13,7 +13,7 @@ import java.util.concurrent.Semaphore;
 public class PM extends Thread{
                                                                    
     int duracionDia;                                                           
-    String status;                                                              
+    public static String status;                                                              
     Semaphore reloj = new Semaphore(1); 
     int limite; 
 
@@ -47,7 +47,7 @@ public class PM extends Thread{
             
                 
             } catch (Exception e) {
-                System.out.println("Se fundio el PM");
+                System.out.println("F project manager o7");
             }
         }  
     }

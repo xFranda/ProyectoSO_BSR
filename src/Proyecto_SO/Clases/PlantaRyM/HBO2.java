@@ -122,14 +122,16 @@ public class HBO2 {
         driveCierre = new Drive(55, 0 ); 
         drivePlot = new Drive(40, 0 );         
         
-        PM hola = new PM(Reloj);  
-        hola.start();
+        
         
         cantidadIntro =0; 
         cantidadInicio =0; 
         cantidadCreditos =0; 
         cantidadCierre =0; 
         cantidadPTwist =0; 
+        
+        PM projectm = new PM(Reloj);  
+        projectm.start();
         
         capitulos = 0; 
         cantidadMaxProductores = 19; 
@@ -167,6 +169,7 @@ public class HBO2 {
        
       
       
+
                
     } 
     
@@ -181,7 +184,6 @@ public class HBO2 {
             introProducciones.get(x).start(); 
               System.out.println(introProducciones.get(x));
             
-
 
         
         }

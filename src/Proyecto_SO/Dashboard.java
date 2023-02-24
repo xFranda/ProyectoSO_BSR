@@ -128,6 +128,8 @@ public class Dashboard extends javax.swing.JFrame {
         EmpIntroRM = new javax.swing.JTextField();
         EmpIntroDesp2 = new javax.swing.JButton();
         EmpIntroDesp1 = new javax.swing.JButton();
+        ProyectMTLOU1 = new javax.swing.JLabel();
+        PMStatuRM = new javax.swing.JTextField();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -603,12 +605,12 @@ public class Dashboard extends javax.swing.JFrame {
                 PMStatusActionPerformed(evt);
             }
         });
-        jPanel1.add(PMStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, 120, 30));
+        jPanel1.add(PMStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 60, 120, 30));
 
         ProyectMTLOU.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ProyectMTLOU.setForeground(new java.awt.Color(255, 255, 255));
         ProyectMTLOU.setText("Proyect Manager");
-        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
+        jPanel1.add(ProyectMTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, -1, -1));
 
         DirTLOU.setEditable(false);
         DirTLOU.setBackground(new java.awt.Color(0, 39, 76));
@@ -900,6 +902,23 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(EmpIntroDesp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 30, 30));
 
+        ProyectMTLOU1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ProyectMTLOU1.setForeground(new java.awt.Color(255, 255, 255));
+        ProyectMTLOU1.setText("Proyect Manager");
+        jPanel1.add(ProyectMTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
+
+        PMStatuRM.setEditable(false);
+        PMStatuRM.setBackground(new java.awt.Color(0, 39, 76));
+        PMStatuRM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        PMStatuRM.setForeground(new java.awt.Color(255, 255, 255));
+        PMStatuRM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PMStatuRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PMStatuRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(PMStatuRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, 120, 30));
+
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Proyecto SO HboMax Interface (1366 × 768 px).png"))); // NOI18N
         Fondo.setRequestFocusEnabled(false);
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
@@ -1171,6 +1190,10 @@ public class Dashboard extends javax.swing.JFrame {
        
     }//GEN-LAST:event_EmpIntroDesp2ActionPerformed
 
+    private void PMStatuRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PMStatuRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PMStatuRMActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1248,12 +1271,14 @@ public class Dashboard extends javax.swing.JFrame {
     public javax.swing.JTextField NumIntrosRM;
     public javax.swing.JTextField NumPTwistRM;
     public javax.swing.JTextField NumPlot;
+    public javax.swing.JTextField PMStatuRM;
     public javax.swing.JTextField PMStatus;
     private javax.swing.JLabel PlotRM;
     private javax.swing.JLabel PlotTLOU;
     private javax.swing.JLabel Produccion;
     private javax.swing.JLabel Produccion4;
     private javax.swing.JLabel ProyectMTLOU;
+    private javax.swing.JLabel ProyectMTLOU1;
     private javax.swing.JButton Start;
     private javax.swing.JButton Stop;
     private javax.swing.JLabel Titulo;
