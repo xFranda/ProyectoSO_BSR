@@ -84,7 +84,9 @@ public class Actualizador extends Thread{
        dashboard.PMStatuRM.setText(String.valueOf(PM.status));
        dashboard.DiasRestantesRM.setText(String.valueOf(Tiempo.Dia));
        dashboard.DirStatuRM1.setText(String.valueOf(Director.status));
-       dashboard.FinanzasRM.setText(String.valueOf(GananciasRM.Finanzas));
+       dashboard.FinanzasRM.setText(String.valueOf(GananciasRM.Gastos));
+       dashboard.GananciasRM1.setText(String.valueOf(GananciasRM.Ganancias));
+       
         }
         
     

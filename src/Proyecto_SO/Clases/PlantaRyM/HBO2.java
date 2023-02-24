@@ -111,6 +111,9 @@ public class HBO2 {
      Semaphore Reloj = new Semaphore(1);
      
      Semaphore Capitulos = new Semaphore(1);
+     
+     public static int pGastos;
+     public static int pGanancias; 
 
 
     
@@ -126,7 +129,8 @@ public class HBO2 {
         drivePlot = new Drive(40, 0 );         
         
         
-        
+        pGanancias = 0; 
+        pGastos = 0;
         cantidadIntro =0; 
         cantidadInicio =0; 
         cantidadCreditos =0; 

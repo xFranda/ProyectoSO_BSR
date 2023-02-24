@@ -29,7 +29,8 @@ public class GananciasRM extends Thread{
     public static int PmSueldo;
     public static int ensamCant;
     public static int EnsamSueldo;
-    public static int Finanzas; 
+    public static int Ganancias; 
+    public static int Gastos; 
     
     public GananciasRM(){
         this.duracionDia = HBO2.duracionDia;
@@ -40,7 +41,9 @@ public class GananciasRM extends Thread{
         this.cantProdCred =  HBO2.creditosProducciones.size();
         this.cantPTwist =  HBO2.twistProducciones.size();
         this.ensamCant = HBO2.ensambladorLista.size();
-        this.Finanzas = Finanzas; 
+        this.Ganancias = HBO2.pGanancias;
+         this.Gastos = HBO2.pGastos;
+        
     }
     
     public void run(){
@@ -48,7 +51,7 @@ public class GananciasRM extends Thread{
             try{
                 
                 Thread.sleep(HBO2.duracionDia/24);
-                capiGanan = capitulos * 1000000;
+                capiGanan = HBO2.capitulos * 1000000;
                 intrSueldo = 5  * cantProdIntro ; 
                 iniSueldo = 7 * cantProdInicio;
                 cierreSueldo = (int) (7.5 * cantProdCierre); 
@@ -57,8 +60,9 @@ public class GananciasRM extends Thread{
                 dirSueldo = 100/24 ;
                 PmSueldo = 7 ; 
                 EnsamSueldo = ensamCant *8 ;  
-                System.out.println(Finanzas);
-                Finanzas  = capiGanan - (intrSueldo + iniSueldo + cierreSueldo + credSueldo + ptwistSueldo + dirSueldo + PmSueldo + EnsamSueldo);
+                
+                Gastos  += intrSueldo + iniSueldo + cierreSueldo + credSueldo + ptwistSueldo + dirSueldo + PmSueldo + EnsamSueldo; 
+                Ganancias = capiGanan;  
                 
             }catch (Exception e){
                 
