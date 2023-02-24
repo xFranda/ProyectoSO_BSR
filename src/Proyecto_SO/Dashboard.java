@@ -1012,8 +1012,16 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_GananciasULActionPerformed
 
     private void StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartActionPerformed
-        // TODO add your handling code here:
-        hbo.Start();
+        try {
+            // TODO add your handling code here:
+            hbo.Start();
+        } catch (ParseException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
         up.start();
     }//GEN-LAST:event_StartActionPerformed
 
